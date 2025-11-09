@@ -14,10 +14,10 @@ interface PageProps {
   searchParams: Promise<{ type?: string }>;
 }
 
-export default async function WalkingPage({ searchParams }: PageProps) {
+export default async function PointExchangePage({ searchParams }: PageProps) {
   const params = await searchParams;
   const diagnosisType = getDiagnosisTypeFromId(params.type);
-  const services = getServicesByCategory("walking");
+  const services = getServicesByCategory("point-exchange");
 
   return (
     <main className="min-h-screen">

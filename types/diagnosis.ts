@@ -17,7 +17,7 @@ export type CategoryPage =
   | "poi-katsu"
   | "credit-card"
   | "investment"
-  | "walking";
+  | "point-exchange";
 
 // 診断結果タイプの情報
 export interface DiagnosisTypeInfo {
@@ -36,7 +36,7 @@ export const diagnosisTypes: Record<DiagnosisType, DiagnosisTypeInfo> = {
   コスパ重視で少し動ける: {
     id: "cost-effective",
     label: "コスパ重視で少し動ける",
-    page: "walking",
+    page: "point-exchange",
   },
   支出インパクト大きめ: {
     id: "high-impact",

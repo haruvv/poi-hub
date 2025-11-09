@@ -17,9 +17,9 @@ const categoryMeta = {
     label: "投資サービス一覧へ戻る",
     href: "/diagnosis/investment",
   },
-  walking: {
+  "point-exchange": {
     label: "ポイント交換アプリ一覧へ戻る",
-    href: "/diagnosis/walking",
+    href: "/diagnosis/point-exchange",
   },
 } as const;
 

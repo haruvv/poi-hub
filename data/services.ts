@@ -71,7 +71,7 @@ export const services: Service[] = [
     name: "Cashwalk",
     description:
       "歩くだけでコインが貯まり、ギフト券に交換できるシンプルな歩数計アプリ。動画広告なしで続けやすいのが魅力。",
-    category: "walking",
+    category: "point-exchange",
     affiliateUrl: "https://example.com/cashwalk",
     tags: ["広告なし", "歩くだけ", "お手軽"],
   },
@@ -80,7 +80,7 @@ export const services: Service[] = [
     name: "PUI",
     description:
       "歩数やミッション達成でポイントが貯まり、キャラ育成やイベント要素でゲーム感覚で続けられる歩数計アプリ。",
-    category: "walking",
+    category: "point-exchange",
     affiliateUrl: "https://example.com/pui",
     tags: ["キャラ育成", "初心者向け", "使いやすい"],
   },
@@ -89,7 +89,7 @@ export const services: Service[] = [
     name: "Powl",
     description:
       "アンケート回答やミニゲーム、サービス利用でポイントを貯めて、少額からギフト券などに交換できるお小遣いアプリ。",
-    category: "walking",
+    category: "point-exchange",
     affiliateUrl: "https://example.com/powl",
     tags: ["アンケートで貯まる", "ミニゲーム", "少額交換"],
   },
@@ -98,7 +98,7 @@ export const services: Service[] = [
     name: "トリマ",
     description:
       "歩数と移動距離でマイルが貯まり、動画視聴で効率アップできる「通勤・通学」と相性の良いポイ活アプリ。",
-    category: "walking",
+    category: "point-exchange",
     affiliateUrl: "https://example.com/torima",
     tags: ["移動で貯まる", "通勤・通学向け", "動画でブースト"],
   },

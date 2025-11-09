@@ -3,7 +3,7 @@ export type ServiceCategory =
   | "poi-katsu"
   | "credit-card"
   | "investment"
-  | "walking";
+  | "point-exchange";
 
 // サービス情報
 export interface Service {
