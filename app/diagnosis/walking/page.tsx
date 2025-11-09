@@ -6,18 +6,18 @@ import { getDiagnosisTypeFromId } from "@/types/diagnosis";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "お得ナビ Hub｜投資サービスおすすめ",
-  description: "診断結果に基づいた投資サービスおすすめ一覧",
+  title: "お得ナビ Hub｜ポイント貯めて交換できるアプリおすすめ",
+  description: "診断結果に基づいたポイント貯めて交換できるアプリおすすめ一覧",
 };
 
 interface PageProps {
   searchParams: Promise<{ type?: string }>;
 }
 
-export default async function InvestmentPage({ searchParams }: PageProps) {
+export default async function WalkingPage({ searchParams }: PageProps) {
   const params = await searchParams;
   const diagnosisType = getDiagnosisTypeFromId(params.type);
-  const services = getServicesByCategory("investment");
+  const services = getServicesByCategory("walking");
 
   return (
     <main className="min-h-screen">
@@ -33,7 +33,7 @@ export default async function InvestmentPage({ searchParams }: PageProps) {
               {diagnosisType}
             </h1>
             <p className="text-xs text-slate-600 mt-2">
-              このタイプにおすすめの投資サービスをご紹介します。
+              このタイプにおすすめのポイント貯めて交換できるアプリをご紹介します。
             </p>
           </div>
         )}
@@ -42,7 +42,7 @@ export default async function InvestmentPage({ searchParams }: PageProps) {
         <div className="space-y-4">
           <div className="flex items-center justify-between">
             <h2 className="text-lg font-semibold text-slate-900">
-              投資サービス
+              ポイント貯めて交換できるアプリ
             </h2>
             <span className="text-xs text-slate-500">{services.length}件</span>
           </div>

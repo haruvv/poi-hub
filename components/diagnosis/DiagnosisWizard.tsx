@@ -19,6 +19,7 @@ export const DiagnosisWizard = () => {
     ""
   );
   const [tolerance, setTolerance] = useState<"low" | "mid" | "high" | "">("");
+  const [isNavigating, setIsNavigating] = useState(false);
 
   const canNext1 = cardUse !== "";
   const canNext2 = spareTime !== "";
@@ -29,16 +30,21 @@ export const DiagnosisWizard = () => {
     setCardUse("");
     setSpareTime("");
     setTolerance("");
+    setIsNavigating(false);
   };
 
   const result = buildResult({ cardUse, spareTime, tolerance });
 
   const handleShowResults = () => {
+    if (isNavigating) return;
     const diagnosisType = result.label as DiagnosisType;
     const typeId = getDiagnosisTypeId(diagnosisType);
     const typeInfo = diagnosisTypes[diagnosisType];
     const url = `/diagnosis/${typeInfo.page}?type=${typeId}`;
-    router.push(url);
+    setIsNavigating(true);
+    setTimeout(() => {
+      router.push(url);
+    }, 600);
   };
 
   return (
@@ -168,25 +174,51 @@ export const DiagnosisWizard = () => {
           <div className="flex flex-col gap-2 mt-3">
             <button
               type="button"
+              disabled={isNavigating}
               onClick={handleShowResults}
-              className="result-cta w-full inline-flex items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-blue-600 to-blue-500 text-white text-sm font-semibold py-2.5 hover:from-blue-500 hover:to-blue-400 active:scale-[0.97] transition-all duration-200 shadow-lg hover:shadow-xl"
+              aria-live="polite"
+              className={`result-cta w-full inline-flex items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-blue-600 to-blue-500 text-white text-sm font-semibold py-2.5 transition-all duration-200 shadow-lg hover:shadow-xl ${
+                isNavigating
+                  ? "cursor-wait opacity-90 ring-2 ring-blue-300/60 hover:from-blue-600 hover:to-blue-500"
+                  : "hover:from-blue-500 hover:to-blue-400 active:scale-[0.97]"
+              }`}
             >
-              <span>診断結果に合う候補を表示する</span>
-              <svg
-                className="w-4 h-4"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M13 7l5 5m0 0l-5 5m5-5H6"
-                />
-              </svg>
+              {isNavigating ? (
+                <span className="flex items-center gap-2 text-sm font-semibold tracking-wide">
+                  <span
+                    className="inline-block h-4 w-4 rounded-full border-2 border-white/70 border-t-transparent animate-spin"
+                    aria-hidden="true"
+                  />
+                  診断中...
+                </span>
+              ) : (
+                <>
+                  <span>診断結果に合う候補を表示する</span>
+                  <svg
+                    className="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M13 7l5 5m0 0l-5 5m5-5H6"
+                    />
+                  </svg>
+                </>
+              )}
             </button>
+            {isNavigating && (
+              <p
+                className="text-[11px] text-blue-500 text-center animate-pulse"
+                aria-live="polite"
+              >
+                結果画面を準備しています...
+              </p>
+            )}
             <button
               type="button"
               onClick={handleReset}

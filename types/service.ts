@@ -1,5 +1,9 @@
 // サービスカテゴリ
-export type ServiceCategory = "poi-katsu" | "credit-card" | "investment";
+export type ServiceCategory =
+  | "poi-katsu"
+  | "credit-card"
+  | "investment"
+  | "walking";
 
 // サービス情報
 export interface Service {

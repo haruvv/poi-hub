@@ -6,27 +6,19 @@ export const services: Service[] = [
     id: "poi-1",
     name: "ハピタス",
     description:
-      "ポイ活の定番。ECサイト経由でポイント還元。登録だけでもポイントがもらえる案件も多数。",
+      "いつものネットショッピングがそのままポイントに！迷ったらハピタス！ポイ活デビューにちょうどいい定番サイト！",
     category: "poi-katsu",
     affiliateUrl: "https://example.com/hapitas",
-    tags: ["登録特典あり", "初心者向け", "高還元率"],
+    tags: ["高還元", "手数料ほぼなし", "初心者"],
   },
   {
     id: "poi-2",
     name: "モッピー",
-    description: "アンケートやゲームでポイント獲得。スマホで手軽に始められる。",
+    description:
+      "案件もゲームも盛りだくさんでワクワク！「しっかり貯めたい！」人の心強い相棒サイト！",
     category: "poi-katsu",
     affiliateUrl: "https://example.com/moppy",
-    tags: ["アンケート", "ゲーム", "手軽"],
-  },
-  {
-    id: "poi-3",
-    name: "楽天ポイント",
-    description:
-      "楽天市場での買い物でポイント還元。楽天カードと組み合わせると還元率アップ。",
-    category: "poi-katsu",
-    affiliateUrl: "https://example.com/rakuten",
-    tags: ["楽天市場", "ポイント還元", "定番"],
+    tags: ["高額案件", "ミッション充実", "手軽"],
   },
   // クレカカテゴリ
   {
@@ -73,8 +65,53 @@ export const services: Service[] = [
     affiliateUrl: "https://example.com/sbi-securities",
     tags: ["手数料安", "投資信託", "長期投資"],
   },
+  // ポイント貯めて交換できるアプリカテゴリ
+  {
+    id: "walk-1",
+    name: "Cashwalk",
+    description:
+      "歩くだけでコインが貯まり、ギフト券に交換できるシンプルな歩数計アプリ。動画広告なしで続けやすいのが魅力。",
+    category: "walking",
+    affiliateUrl: "https://example.com/cashwalk",
+    tags: ["広告なし", "歩くだけ", "お手軽"],
+  },
+  {
+    id: "walk-2",
+    name: "PUI",
+    description:
+      "歩数やミッション達成でポイントが貯まり、キャラ育成やイベント要素でゲーム感覚で続けられる歩数計アプリ。",
+    category: "walking",
+    affiliateUrl: "https://example.com/pui",
+    tags: ["キャラ育成", "初心者向け", "使いやすい"],
+  },
+  {
+    id: "walk-3",
+    name: "Powl",
+    description:
+      "アンケート回答やミニゲーム、サービス利用でポイントを貯めて、少額からギフト券などに交換できるお小遣いアプリ。",
+    category: "walking",
+    affiliateUrl: "https://example.com/powl",
+    tags: ["アンケートで貯まる", "ミニゲーム", "少額交換"],
+  },
+  {
+    id: "walk-4",
+    name: "トリマ",
+    description:
+      "歩数と移動距離でマイルが貯まり、動画視聴で効率アップできる「通勤・通学」と相性の良いポイ活アプリ。",
+    category: "walking",
+    affiliateUrl: "https://example.com/torima",
+    tags: ["移動で貯まる", "通勤・通学向け", "動画でブースト"],
+  },
 ];
 
 export function getServicesByCategory(category: ServiceCategory): Service[] {
   return services.filter((service) => service.category === category);
+}
+
+export function getServiceById(id: string): Service | undefined {
+  return services.find((service) => service.id === id);
+}
+
+export function getAllServices(): Service[] {
+  return services;
 }

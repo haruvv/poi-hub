@@ -47,8 +47,12 @@ export default async function PoiKatsuPage({ searchParams }: PageProps) {
             <span className="text-xs text-slate-500">{services.length}件</span>
           </div>
           <div className="space-y-3">
-            {services.map((service) => (
-              <ServiceCard key={service.id} service={service} />
+            {services.map((service, index) => (
+              <ServiceCard
+                key={service.id}
+                service={service}
+                rank={index + 1}
+              />
             ))}
           </div>
         </div>
