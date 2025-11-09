@@ -1,26 +1,211 @@
 @import "tailwindcss";
 
+/* ========= Base (ライト固定) ========= */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f8fafc; /* bg-slate-50 */
+  --foreground: #0f172a; /* text-slate-900 */
+
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, monospace;
+
+  color-scheme: light;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 body {
-  background: var(--background);
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+}
+
+/* ========= Hero / トップページ用アニメ ========= */
+
+/* 1) ヒーロー背面の赤系グラデーション */
+.hero-gradient {
+  position: absolute;
+  inset: -40px -32px auto;
+  z-index: -1;
+  pointer-events: none;
+  background: radial-gradient(
+      circle at 0% 0%,
+      rgba(248, 113, 113, 0.26),
+      transparent 70%
+    ),
+    radial-gradient(
+      circle at 100% 0%,
+      rgba(248, 150, 113, 0.16),
+      transparent 70%
+    );
+  opacity: 0.5;
+  filter: blur(12px);
+  animation: heroGradientMove 10s ease-in-out infinite alternate;
+}
+
+@keyframes heroGradientMove {
+  0% {
+    transform: translate3d(-12px, 0, 0) scale(1);
+    opacity: 0.42;
+  }
+  50% {
+    transform: translate3d(6px, 6px, 0) scale(1.08);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translate3d(10px, -4px, 0) scale(1.02);
+    opacity: 0.48;
+  }
+}
+
+/* 2) ヒーローの白カード（診断エリア）をふわっと浮かせる */
+.hero-card {
+  background-color: #ffffff;
+  border-radius: 24px;
+  padding: 18px 16px 16px;
+  border: 1px solid rgba(148, 163, 253, 0.08);
+  box-shadow:
+    0 10px 30px rgba(15, 23, 42, 0.1),
+    0 0 0 1px rgba(148, 163, 253, 0.02);
+  animation: heroFloat 7s ease-in-out infinite;
+}
+
+@keyframes heroFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+/* 3) ラベル左の赤丸をピコッと光らせる */
+.badge-dot {
+  position: relative;
+  display: inline-block;
+}
+
+.badge-dot::after {
+  content: "";
+  position: absolute;
+  inset: -5px;
+  border-radius: 9999px;
+  border: 1px solid rgba(59, 130, 246, 0.7);
+  opacity: 0;
+  animation: badgePing 1.6s cubic-bezier(0.2, 0, 0.3, 1) infinite;
+}
+
+@keyframes badgePing {
+  0% {
+    transform: scale(0.4);
+    opacity: 0.7;
+  }
+  70% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.9);
+    opacity: 0;
+  }
+}
+
+/* 4) ヒーローのメインボタンを魅力的に目立たせる */
+.hero-cta {
+  animation: ctaPulse 2.5s ease-in-out infinite;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-cta::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.5s;
+}
+
+.hero-cta:hover::before {
+  left: 100%;
+}
+
+@keyframes ctaPulse {
+  0%,
+  100% {
+    transform: scale(1);
+    box-shadow:
+      0 8px 24px rgba(239, 68, 68, 0.35),
+      0 0 0 0 rgba(239, 68, 68, 0.4);
+  }
+  50% {
+    transform: scale(1.02);
+    box-shadow:
+      0 12px 32px rgba(239, 68, 68, 0.45),
+      0 0 0 4px rgba(239, 68, 68, 0.1);
+  }
+}
+
+/* 5) 診断結果ページのCTAボタンにもアニメーション */
+.result-cta {
+  animation: resultCtaPulse 2.5s ease-in-out infinite;
+  position: relative;
+  overflow: hidden;
+}
+
+.result-cta::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.5s;
+}
+
+.result-cta:hover::before {
+  left: 100%;
+}
+
+@keyframes resultCtaPulse {
+  0%,
+  100% {
+    transform: scale(1);
+    box-shadow:
+      0 8px 24px rgba(37, 99, 235, 0.35),
+      0 0 0 0 rgba(37, 99, 235, 0.4);
+  }
+  50% {
+    transform: scale(1.02);
+    box-shadow:
+      0 12px 32px rgba(37, 99, 235, 0.45),
+      0 0 0 4px rgba(37, 99, 235, 0.1);
+  }
 }
