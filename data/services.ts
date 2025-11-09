@@ -1,4 +1,4 @@
-import type { Service } from "@/types/service";
+import type { Service, ServiceCategory } from "@/types/service";
 
 export const services: Service[] = [
   // ポイ活カテゴリ
