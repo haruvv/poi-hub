@@ -1,9 +1,9 @@
 // 診断結果タイプ
 export type DiagnosisType =
-  | "めんどくさがり現実派タイプ"
-  | "コスパ重視で少し動けるタイプ"
-  | "支出インパクト大きめタイプ"
-  | "ライトに始めるタイプ";
+  | "めんどくさがり現実派"
+  | "コスパ重視で少し動ける"
+  | "支出インパクト大きめ"
+  | "ライトに始める";
 
 // 診断結果タイプのID（クエリパラメータ用）
 export type DiagnosisTypeId =
@@ -24,24 +24,24 @@ export interface DiagnosisTypeInfo {
 
 // 診断結果タイプのマッピング
 export const diagnosisTypes: Record<DiagnosisType, DiagnosisTypeInfo> = {
-  めんどくさがり現実派タイプ: {
+  めんどくさがり現実派: {
     id: "lazy",
-    label: "めんどくさがり現実派タイプ",
+    label: "めんどくさがり現実派",
     page: "credit-card",
   },
-  コスパ重視で少し動けるタイプ: {
+  コスパ重視で少し動ける: {
     id: "cost-effective",
-    label: "コスパ重視で少し動けるタイプ",
+    label: "コスパ重視で少し動ける",
     page: "poi-katsu",
   },
-  支出インパクト大きめタイプ: {
+  支出インパクト大きめ: {
     id: "high-impact",
-    label: "支出インパクト大きめタイプ",
+    label: "支出インパクト大きめ",
     page: "credit-card",
   },
-  ライトに始めるタイプ: {
+  ライトに始める: {
     id: "light",
-    label: "ライトに始めるタイプ",
+    label: "ライトに始める",
     page: "poi-katsu",
   },
 };

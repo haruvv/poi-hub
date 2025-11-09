@@ -10,11 +10,9 @@ export const SimpleHero = () => {
 
       <div className="hero-card space-y-4">
         <h1 className="text-[24px] leading-snug font-semibold text-slate-900">
-          あなたが今、
-          <span className="font-semibold">ムダなく増やせるお金</span>
-          を
+          ポイ活初心者でもOK。
           <br />
-          30秒でざっくり出します。
+          あなたにピッタリなお得ルートを30秒でご提案。
         </h1>
 
         <div className="grid grid-cols-3 gap-2 text-[9px]">
@@ -48,7 +46,7 @@ export const SimpleHero = () => {
             </svg>
           </a>
           <p className="text-[10px] text-slate-500 text-center">
-            広告は含みますが、「仕組みが不明」「割に合わない」と判断した案件は掲載していません。
+            ※広告を含みます。
           </p>
         </div>
       </div>

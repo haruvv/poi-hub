@@ -4,19 +4,16 @@ export const DiagnosisHero = () => {
       <h1 className="text-xl font-semibold text-slate-900 leading-snug">
         あなたに本当に合う
         <br />
-        「お得アクション」だけを30秒で。
+        「お得アクション」を30秒で診断
       </h1>
       <p className="text-xs text-slate-600 leading-relaxed">
-        難しい話は抜きでOK。
+        難しいテクニックや怪しい副業は一切ナシ。
         <br />
-        今の生活スタイルに合わせて、
+        いつもの支払い方やよく使うサービスを選ぶだけで、
         <span className="font-semibold text-slate-900">
-          「これだけ押さえておけば十分」
+          あなたに本当に合う「これだけやれば十分」なポイ活
         </span>
-        な候補を2〜3個だけ提案します。
-      </p>
-      <p className="text-[10px] text-slate-500">
-        個人情報の入力なし／怪しい高額案件は除外済み。
+        を、2〜3個だけ厳選してお伝えします。
       </p>
     </section>
   );

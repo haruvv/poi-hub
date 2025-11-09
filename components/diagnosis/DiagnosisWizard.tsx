@@ -150,9 +150,7 @@ export const DiagnosisWizard = () => {
       {/* 結果 */}
       {step === 4 && (
         <div className="space-y-3">
-          <p className="text-xs font-semibold text-blue-600">
-            診断結果（サンプル）
-          </p>
+          <p className="text-base font-semibold text-blue-600">診断結果</p>
           <h2 className="text-sm font-semibold text-slate-900">
             あなたは「{result.label}」タイプです。
           </h2>
@@ -167,9 +165,6 @@ export const DiagnosisWizard = () => {
               </li>
             ))}
           </ul>
-          <p className="mt-2 text-[10px] text-slate-500">
-            ※このあと、このタイプ向けの具体的な候補サービスだけを表示する想定です。
-          </p>
           <div className="flex flex-col gap-2 mt-3">
             <button
               type="button"
@@ -262,7 +257,7 @@ const buildResult = ({
 }) => {
   if (cardUse === "mid" && spareTime === "none" && tolerance === "low") {
     return {
-      label: "めんどくさがり現実派タイプ",
+      label: "めんどくさがり現実派",
       description:
         "普段の支払いとよく使うサービスだけ整えて、自動で貯まる仕組みを作るのが効率的です。",
       actions: [
@@ -275,7 +270,7 @@ const buildResult = ({
 
   if (spareTime === "short" && tolerance !== "low") {
     return {
-      label: "コスパ重視で少し動けるタイプ",
+      label: "コスパ重視で少し動ける",
       description:
         "固定費と決済の最適化に加えて、単発案件を月数件こなすだけで＋αを狙えます。",
       actions: [
@@ -288,21 +283,21 @@ const buildResult = ({
 
   if (cardUse === "high") {
     return {
-      label: "支出インパクト大きめタイプ",
+      label: "支出インパクト大きめ",
       description:
         "毎月の決済額が大きいので、カード選びとポイント設計だけで年間差額が出やすいタイプです。",
       actions: [
         "利用ジャンルに合う高還元カードを2枚までに絞る",
         "公共料金・サブスク・通販決済をそのカードに集約する",
-        "ポイントサイトやキャンペーンは“狙い撃ち”で使う",
+        "ポイントサイトやキャンペーンは「狙い撃ち」で使う",
       ],
     };
   }
 
   return {
-    label: "ライトに始めるタイプ",
+    label: "ライトに始める",
     description:
-      "難しいことは避けつつ、「損だけはしたくない」人向け。最低限の“やっとくと得”だけ押さえればOKです。",
+      "難しいことは避けつつ、「損だけはしたくない」人向け。最低限の「やっとくと得」だけ押さえればOKです。",
     actions: [
       "年会費無料で評判の良い決済手段を1つ決める",
       "よく使うサービスの公式アプリだけ入れておく",
