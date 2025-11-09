@@ -1,10 +1,8 @@
 @import "tailwindcss";
 
-/* ========= Base (ライト固定) ========= */
-
 :root {
-  --background: #f8fafc; /* bg-slate-50 */
-  --foreground: #0f172a; /* text-slate-900 */
+  --background: #f8fafc;
+  --foreground: #0f172a;
 
   --font-sans: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, monospace;
@@ -33,9 +31,6 @@ body {
   font-family: var(--font-sans);
 }
 
-/* ========= Hero / トップページ用アニメ ========= */
-
-/* 1) ヒーロー背面の赤系グラデーション */
 .hero-gradient {
   position: absolute;
   inset: -40px -32px auto;
@@ -71,7 +66,6 @@ body {
   }
 }
 
-/* 2) ヒーローの白カード（診断エリア）をふわっと浮かせる */
 .hero-card {
   background-color: #ffffff;
   border-radius: 24px;
@@ -93,7 +87,6 @@ body {
   }
 }
 
-/* 3) ラベル左の赤丸をピコッと光らせる */
 .badge-dot {
   position: relative;
   display: inline-block;
@@ -124,7 +117,6 @@ body {
   }
 }
 
-/* 4) ヒーローのメインボタンを魅力的に目立たせる */
 .hero-cta {
   animation: ctaPulse 2.5s ease-in-out infinite;
   position: relative;
@@ -167,7 +159,6 @@ body {
   }
 }
 
-/* 5) 診断結果ページのCTAボタンにもアニメーション */
 .result-cta {
   animation: resultCtaPulse 2.5s ease-in-out infinite;
   position: relative;

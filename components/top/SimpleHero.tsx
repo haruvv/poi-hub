@@ -1,18 +1,13 @@
-// components/top/SimpleHero.tsx
-
 export const SimpleHero = () => {
   return (
     <section className="relative flex flex-col gap-6 items-stretch pt-2">
-      {/* 動く背景（赤系グラデ） */}
       <div className="hero-gradient" aria-hidden="true" />
 
-      {/* コンセプトラベル：文字はグレー、ドットは青 */}
       <p className="inline-flex items-center gap-2 rounded-full bg-white/90 px-3 py-1 text-[10px] text-slate-700 border border-slate-200 shadow-xs">
         <span className="inline-block h-1.5 w-1.5 rounded-full bg-blue-500 badge-dot" />
         ムダなくお得を積み上げるためのチェックツール
       </p>
 
-      {/* メインブロック */}
       <div className="hero-card space-y-4">
         <h1 className="text-[24px] leading-snug font-semibold text-slate-900">
           あなたが今、
@@ -22,14 +17,12 @@ export const SimpleHero = () => {
           30秒でざっくり出します。
         </h1>
 
-        {/* 安心ポイント：文字は落ち着いた色 */}
         <div className="grid grid-cols-3 gap-2 text-[9px]">
           <Badge>質問3つだけ</Badge>
           <Badge>個人情報なし</Badge>
           <Badge>怪しい案件カット</Badge>
         </div>
 
-        {/* CTA：魅力的なボタン */}
         <div className="flex flex-col gap-2">
           <a
             href="/diagnosis"

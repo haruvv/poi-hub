@@ -1,10 +1,17 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
+import {
+  getDiagnosisTypeId,
+  diagnosisTypes,
+  type DiagnosisType,
+} from "@/types/diagnosis";
 
 type Step = 1 | 2 | 3 | 4;
 
 export const DiagnosisWizard = () => {
+  const router = useRouter();
   const [step, setStep] = useState<Step>(1);
 
   const [cardUse, setCardUse] = useState<"low" | "mid" | "high" | "">("");
@@ -25,6 +32,14 @@ export const DiagnosisWizard = () => {
   };
 
   const result = buildResult({ cardUse, spareTime, tolerance });
+
+  const handleShowResults = () => {
+    const diagnosisType = result.label as DiagnosisType;
+    const typeId = getDiagnosisTypeId(diagnosisType);
+    const typeInfo = diagnosisTypes[diagnosisType];
+    const url = `/diagnosis/${typeInfo.page}?type=${typeId}`;
+    router.push(url);
+  };
 
   return (
     <section className="mt-4 rounded-2xl bg-white border border-slate-200 p-4 space-y-4 shadow-[0_4px_16px_rgba(15,23,42,0.04)]">
@@ -158,9 +173,10 @@ export const DiagnosisWizard = () => {
           <div className="flex flex-col gap-2 mt-3">
             <button
               type="button"
+              onClick={handleShowResults}
               className="result-cta w-full inline-flex items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-blue-600 to-blue-500 text-white text-sm font-semibold py-2.5 hover:from-blue-500 hover:to-blue-400 active:scale-[0.97] transition-all duration-200 shadow-lg hover:shadow-xl"
             >
-              <span>診断結果に合う候補を表示する（実装予定）</span>
+              <span>診断結果に合う候補を表示する</span>
               <svg
                 className="w-4 h-4"
                 fill="none"
