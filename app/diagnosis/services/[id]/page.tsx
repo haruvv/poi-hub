@@ -97,10 +97,19 @@ export default async function ServiceDetailPage({ params }: PageProps) {
         </div>
 
         <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-[0_10px_30px_rgba(15,23,42,0.08)] space-y-4">
-          <div className="space-y-2">
-            <p className="inline-flex items-center gap-2 rounded-full bg-blue-50 px-3 py-1 text-[10px] font-semibold text-blue-600">
-              おすすめサービス
-            </p>
+          {service.affiliateImages && service.affiliateImages.length > 0 && (
+            <div className="space-y-3">
+              {service.affiliateImages.map((image) => (
+                <div
+                  key={image.html}
+                  className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-50/80 p-3 shadow-inner"
+                  dangerouslySetInnerHTML={{ __html: image.html }}
+                />
+              ))}
+            </div>
+          )}
+
+          <div className="space-y-2 text-center">
             <h1 className="text-xl font-semibold text-slate-900">
               {service.name}
             </h1>

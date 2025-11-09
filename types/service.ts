@@ -13,6 +13,11 @@ export interface AffiliateLink {
   note?: string;
 }
 
+export interface AffiliateImage {
+  html: string;
+  alt?: string;
+}
+
 export interface Service {
   id: string;
   name: string;
@@ -20,6 +25,9 @@ export interface Service {
   category: ServiceCategory;
   affiliateUrl: string;
   affiliateLinks?: AffiliateLink[];
+  affiliateImages?: AffiliateImage[];
+  listingImage?: AffiliateImage;
+  listingIncentive?: string;
   affiliateContent?: string[];
   affiliateHighlightsTitle?: string;
   affiliateHighlights?: string[];

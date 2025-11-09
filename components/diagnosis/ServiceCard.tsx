@@ -41,60 +41,71 @@ export const ServiceCard = ({ service, rank }: ServiceCardProps) => {
       {/* 光るエフェクト */}
       {isTopThree && <div className="rank-glow" />}
 
-      <div className="space-y-2 relative z-10">
-        <div className="flex items-start justify-between gap-2">
-          <div className="flex items-center gap-2">
-            {isTopThree && (
-              <span
-                className={`inline-flex items-center justify-center w-8 h-8 rounded-full font-bold text-sm ${
-                  rank === 1
-                    ? "bg-gradient-to-br from-yellow-400 to-amber-500 text-white rank-badge-1"
-                    : rank === 2
-                      ? "bg-gradient-to-br from-slate-300 to-gray-400 text-white rank-badge-2"
-                      : "bg-gradient-to-br from-amber-600 to-orange-600 text-white rank-badge-3"
-                }`}
-              >
-                {rank}
-              </span>
-            )}
-            <h3
-              className={`text-sm font-semibold ${
-                isTopThree ? "text-slate-900" : "text-slate-900"
-              }`}
-            >
+      <div className="relative z-10 space-y-3">
+        {isTopThree && (
+          <span
+            className={`absolute -top-3 -left-3 inline-flex h-8 w-8 items-center justify-center rounded-full text-xs font-bold text-white shadow-lg ${
+              rank === 1
+                ? "bg-gradient-to-br from-yellow-400 to-amber-500 rank-badge-1"
+                : rank === 2
+                  ? "bg-gradient-to-br from-slate-300 to-gray-400 rank-badge-2"
+                  : "bg-gradient-to-br from-amber-600 to-orange-600 rank-badge-3"
+            }`}
+          >
+            {rank}
+          </span>
+        )}
+
+        <div className="flex items-center gap-3">
+          {service.listingImage ? (
+            <div
+              className="flex-shrink-0 w-20 sm:w-24 overflow-hidden rounded-xl border border-slate-200 bg-white/90 p-2 shadow-inner"
+              dangerouslySetInnerHTML={{ __html: service.listingImage.html }}
+            />
+          ) : (
+            <div className="flex-shrink-0 w-20 sm:w-24 h-20 sm:h-24 rounded-xl border border-slate-200 bg-gradient-to-br from-blue-100 via-white to-blue-50 shadow-inner flex items-center justify-center text-lg font-semibold text-blue-500">
+              {service.name.charAt(0)}
+            </div>
+          )}
+
+          <div className="flex-1">
+            <h3 className="text-[15px] sm:text-base font-semibold text-slate-900 leading-snug">
               {service.name}
             </h3>
+            {service.listingIncentive && (
+              <div className="mt-1 inline-flex items-center gap-2 rounded-xl border border-amber-200 bg-amber-50/90 px-2.5 py-1 text-[10px] font-semibold text-amber-700 shadow-sm">
+                <svg
+                  className="w-3 h-3 text-amber-500"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.053 3.235a1 1 0 00.95.69h3.4c.969 0 1.371 1.24.588 1.81l-2.752 2a1 1 0 00-.364 1.118l1.053 3.235c.3.921-.755 1.688-1.54 1.118l-2.752-2a1 1 0 00-1.175 0l-2.752 2c-.785.57-1.84-.197-1.54-1.118l1.053-3.235a1 1 0 00-.364-1.118l-2.752-2c-.783-.57-.38-1.81.588-1.81h3.4a1 1 0 00.95-.69l1.053-3.235z" />
+                </svg>
+                <span>{service.listingIncentive}</span>
+              </div>
+            )}
           </div>
-          <svg
-            className="w-4 h-4 text-slate-400 flex-shrink-0 mt-0.5"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-            />
-          </svg>
         </div>
-        <p className="text-xs text-slate-600 leading-relaxed">
-          {service.description}
-        </p>
-        {service.tags.length > 0 && (
-          <div className="flex flex-wrap gap-1.5 pt-1">
-            {service.tags.map((tag) => (
-              <span
-                key={tag}
-                className="inline-flex items-center rounded-full bg-blue-50 px-2 py-0.5 text-[10px] font-medium text-blue-700"
-              >
-                {tag}
-              </span>
-            ))}
-          </div>
-        )}
+
+        <div className="space-y-2">
+          <p className="text-[11px] text-slate-600 leading-relaxed line-clamp-3">
+            {service.description}
+          </p>
+
+          {service.tags.length > 0 && (
+            <div className="flex flex-wrap gap-1">
+              {service.tags.map((tag) => (
+                <span
+                  key={tag}
+                  className="inline-flex items-center rounded-full bg-blue-50 px-2 py-0.5 text-[9px] font-medium text-blue-700"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+          )}
+        </div>
 
         <div className="flex items-center justify-between pt-2">
           <span className="text-[11px] font-semibold text-blue-600 tracking-wide">
