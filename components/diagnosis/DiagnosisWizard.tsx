@@ -48,14 +48,19 @@ export const DiagnosisWizard = () => {
   };
 
   return (
-    <section className="mt-4 rounded-2xl bg-white border border-slate-200 p-4 space-y-4 shadow-[0_4px_16px_rgba(15,23,42,0.04)]">
+    <section className="mt-4 relative overflow-hidden rounded-3xl border-2 border-slate-200 bg-gradient-to-br from-white via-slate-50/30 to-slate-50/30 p-6 space-y-5 shadow-xl diagnosis-wizard-card">
+      {/* 光るエフェクト */}
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-300/5 via-transparent to-slate-300/5 diagnosis-wizard-glow" />
+
       {/* ステップ表示 */}
-      <div className="flex items-center justify-between text-[10px] text-slate-500">
-        <span>質問 {step <= 3 ? step : 3} / 3</span>
+      <div className="relative flex items-center justify-between">
+        <div className="inline-flex items-center gap-2 rounded-full bg-slate-700 px-3 py-1 text-[10px] font-bold text-white shadow-md">
+          <span>質問 {step <= 3 ? step : 3} / 3</span>
+        </div>
         <button
           type="button"
           onClick={handleReset}
-          className="underline-offset-2 hover:underline"
+          className="text-[10px] text-slate-600 hover:text-slate-900 font-medium underline-offset-2 hover:underline transition"
         >
           リセット
         </button>
@@ -63,8 +68,8 @@ export const DiagnosisWizard = () => {
 
       {/* Q1 */}
       {step === 1 && (
-        <div className="space-y-3">
-          <p className="text-sm font-medium text-slate-900">
+        <div className="relative space-y-4">
+          <p className="text-[15px] font-bold text-slate-900 leading-relaxed">
             Q1. 毎月のキャッシュレス利用はどれくらい？
           </p>
           <OptionButton
@@ -91,8 +96,8 @@ export const DiagnosisWizard = () => {
 
       {/* Q2 */}
       {step === 2 && (
-        <div className="space-y-3">
-          <p className="text-sm font-medium text-slate-900">
+        <div className="relative space-y-4">
+          <p className="text-[15px] font-bold text-slate-900 leading-relaxed">
             Q2. 毎月「これくらいなら使えるかな」というスキマ時間は？
           </p>
           <OptionButton
@@ -119,8 +124,8 @@ export const DiagnosisWizard = () => {
 
       {/* Q3 */}
       {step === 3 && (
-        <div className="space-y-3">
-          <p className="text-sm font-medium text-slate-900">
+        <div className="relative space-y-4">
+          <p className="text-[15px] font-bold text-slate-900 leading-relaxed">
             Q3. 手間やリスク許容度はどのくらい？
           </p>
           <OptionButton
@@ -142,9 +147,9 @@ export const DiagnosisWizard = () => {
             type="button"
             disabled={!canNext3}
             onClick={() => canNext3 && setStep(4)}
-            className={`w-full mt-1 inline-flex items-center justify-center rounded-2xl text-sm font-semibold py-2.5 transition ${
+            className={`w-full mt-1 inline-flex items-center justify-center rounded-2xl text-sm font-bold py-3 transition-all duration-200 shadow-lg ${
               canNext3
-                ? "bg-blue-600 text-white hover:bg-blue-500"
+                ? "bg-slate-700 text-white hover:bg-slate-600 hover:shadow-xl active:scale-[0.98]"
                 : "bg-slate-100 text-slate-400 cursor-not-allowed"
             }`}
           >
@@ -155,34 +160,48 @@ export const DiagnosisWizard = () => {
 
       {/* 結果 */}
       {step === 4 && (
-        <div className="space-y-3">
-          <p className="text-base font-semibold text-blue-600">診断結果</p>
-          <h2 className="text-sm font-semibold text-slate-900">
-            あなたは「{result.label}」タイプです。
+        <div className="relative space-y-4">
+          <div className="inline-flex items-center gap-2 rounded-full bg-slate-700 px-4 py-1.5 text-[11px] font-bold text-white shadow-md">
+            <span className="inline-block h-2 w-2 rounded-full bg-white/80 animate-pulse" />
+            診断結果
+          </div>
+          <h2 className="text-[18px] font-extrabold text-slate-900 leading-tight">
+            あなたは
+            <br />
+            <span className="text-slate-700">「{result.label}」</span>
+            タイプです
           </h2>
-          <p className="text-xs text-slate-700 leading-relaxed">
+          <p className="text-[13px] text-slate-700 leading-relaxed font-medium">
             {result.description}
           </p>
-          <ul className="mt-2 space-y-1.5 text-xs text-slate-800">
-            {result.actions.map((a) => (
-              <li key={a} className="flex items-start gap-1.5">
-                <span className="mt-1 h-1.5 w-1.5 rounded-full bg-blue-500" />
-                <span>{a}</span>
-              </li>
-            ))}
-          </ul>
+          <div className="rounded-xl bg-slate-50 border border-slate-200 p-4 space-y-2">
+            <p className="text-[11px] font-bold text-slate-700 mb-2">
+              おすすめアクション
+            </p>
+            <ul className="space-y-2 text-[12px] text-slate-800">
+              {result.actions.map((a) => (
+                <li key={a} className="flex items-start gap-2">
+                  <span className="mt-1 h-2 w-2 rounded-full bg-slate-500 flex-shrink-0" />
+                  <span className="leading-relaxed">{a}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
           <div className="flex flex-col gap-2 mt-3">
             <button
               type="button"
               disabled={isNavigating}
               onClick={handleShowResults}
               aria-live="polite"
-              className={`result-cta w-full inline-flex items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-blue-600 to-blue-500 text-white text-sm font-semibold py-2.5 transition-all duration-200 shadow-lg hover:shadow-xl ${
+              className={`result-cta w-full inline-flex items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-red-600 via-red-500 to-pink-500 text-white text-[15px] font-bold py-3.5 transition-all duration-200 shadow-[0_8px_24px_rgba(239,68,68,0.4)] hover:shadow-[0_12px_32px_rgba(239,68,68,0.5)] relative overflow-hidden group ${
                 isNavigating
-                  ? "cursor-wait opacity-90 ring-2 ring-blue-300/60 hover:from-blue-600 hover:to-blue-500"
-                  : "hover:from-blue-500 hover:to-blue-400 active:scale-[0.97]"
+                  ? "cursor-wait opacity-90 ring-2 ring-red-300/60 hover:from-red-600 hover:via-red-500 hover:to-pink-500"
+                  : "hover:from-red-500 hover:via-red-400 hover:to-pink-400 active:scale-[0.98]"
               }`}
             >
+              {!isNavigating && (
+                <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/30 to-white/0 translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700" />
+              )}
               {isNavigating ? (
                 <span className="flex items-center gap-2 text-sm font-semibold tracking-wide">
                   <span
@@ -222,7 +241,7 @@ export const DiagnosisWizard = () => {
             <button
               type="button"
               onClick={handleReset}
-              className="w-full inline-flex items-center justify-center rounded-2xl border border-slate-200 text-[11px] text-slate-600 py-2 hover:bg-slate-50 transition"
+              className="w-full inline-flex items-center justify-center rounded-2xl border-2 border-slate-200 text-[12px] font-semibold text-slate-700 py-2.5 hover:bg-slate-50 hover:border-slate-300 hover:shadow-md transition-all duration-200"
             >
               もう一度診断する
             </button>
@@ -233,7 +252,7 @@ export const DiagnosisWizard = () => {
   );
 };
 
-/* 選択肢ボタン：青系に */
+/* 選択肢ボタン：地味目に */
 const OptionButton = ({
   label,
   selected,
@@ -246,10 +265,10 @@ const OptionButton = ({
   <button
     type="button"
     onClick={onClick}
-    className={`w-full text-left text-xs sm:text-sm px-3 py-2 rounded-2xl border transition ${
+    className={`w-full text-left text-[13px] px-4 py-3 rounded-2xl border-2 transition-all duration-200 shadow-sm ${
       selected
-        ? "bg-blue-50 border-blue-500 text-blue-700 font-semibold"
-        : "bg-white border-slate-200 text-slate-700 hover:bg-slate-50"
+        ? "bg-slate-100 border-slate-400 text-slate-800 font-bold shadow-md hover:shadow-lg"
+        : "bg-white border-slate-200 text-slate-700 hover:bg-slate-50 hover:border-slate-300 hover:shadow-md"
     }`}
   >
     {label}
@@ -267,10 +286,10 @@ const NextButton = ({
     type="button"
     disabled={disabled}
     onClick={onClick}
-    className={`w-full mt-1 inline-flex items-center justify-center rounded-2xl text-sm font-semibold py-2.5 transition ${
+    className={`w-full mt-1 inline-flex items-center justify-center rounded-2xl text-sm font-bold py-3 transition-all duration-200 shadow-lg ${
       disabled
         ? "bg-slate-100 text-slate-400 cursor-not-allowed"
-        : "bg-blue-600 text-white hover:bg-blue-500"
+        : "bg-slate-700 text-white hover:bg-slate-600 hover:shadow-xl active:scale-[0.98]"
     }`}
   >
     次へ進む

@@ -11,7 +11,16 @@ export const metadata: Metadata = {
 
 export default function DiagnosisPage() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen bg-slate-50 relative">
+      {/* 背景エフェクト */}
+      <div className="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-96 bg-slate-300/8 rounded-full blur-3xl animate-pulse" />
+        <div
+          className="absolute top-20 right-1/4 w-64 h-64 bg-slate-400/6 rounded-full blur-3xl animate-pulse"
+          style={{ animationDelay: "1s" }}
+        />
+      </div>
+
       <HeaderBar />
       <div className="mx-auto max-w-md px-4 pt-8 pb-16 space-y-6">
         <DiagnosisHero />

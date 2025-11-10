@@ -846,3 +846,213 @@ body {
   animation: referralGlow 2.6s ease-in-out infinite;
   pointer-events: none;
 }
+
+/* TOPページのヒーローセクション用アニメーション */
+.hero-main-card {
+  animation: heroCardPulse 3s ease-in-out infinite;
+  box-shadow:
+    0 20px 50px rgba(59, 130, 246, 0.2),
+    0 0 0 1px rgba(59, 130, 246, 0.1),
+    0 0 30px rgba(59, 130, 246, 0.1);
+}
+
+@keyframes heroCardPulse {
+  0%,
+  100% {
+    transform: scale(1);
+    box-shadow:
+      0 20px 50px rgba(59, 130, 246, 0.2),
+      0 0 0 1px rgba(59, 130, 246, 0.1),
+      0 0 30px rgba(59, 130, 246, 0.1);
+  }
+  50% {
+    transform: scale(1.005);
+    box-shadow:
+      0 25px 60px rgba(59, 130, 246, 0.25),
+      0 0 0 2px rgba(59, 130, 246, 0.15),
+      0 0 40px rgba(59, 130, 246, 0.15);
+  }
+}
+
+.hero-glow {
+  animation: heroGlowSweep 4s ease-in-out infinite;
+}
+
+@keyframes heroGlowSweep {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%) translateY(-100%);
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(100%) translateY(100%);
+  }
+}
+
+/* ヒーロー用キラキラ */
+.sparkle-gray {
+  width: 6px;
+  height: 6px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.7) 0%,
+    rgba(148, 163, 184, 0.4) 50%,
+    transparent 70%
+  );
+  box-shadow: 0 0 4px rgba(148, 163, 184, 0.3);
+}
+
+.sparkle-red {
+  width: 8px;
+  height: 8px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.9) 0%,
+    rgba(239, 68, 68, 0.6) 50%,
+    transparent 70%
+  );
+  box-shadow: 0 0 6px rgba(239, 68, 68, 0.5);
+}
+
+.sparkle-orange {
+  width: 8px;
+  height: 8px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.9) 0%,
+    rgba(249, 115, 22, 0.6) 50%,
+    transparent 70%
+  );
+  box-shadow: 0 0 6px rgba(249, 115, 22, 0.5);
+}
+
+.sparkle-blue {
+  width: 8px;
+  height: 8px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.9) 0%,
+    rgba(59, 130, 246, 0.6) 50%,
+    transparent 70%
+  );
+  box-shadow: 0 0 6px rgba(59, 130, 246, 0.5);
+}
+
+.sparkle-purple {
+  width: 8px;
+  height: 8px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.9) 0%,
+    rgba(168, 85, 247, 0.6) 50%,
+    transparent 70%
+  );
+  box-shadow: 0 0 6px rgba(168, 85, 247, 0.5);
+}
+
+/* カテゴリカードのアニメーション */
+.category-card {
+  animation: categoryCardFloat 3s ease-in-out infinite;
+}
+
+.category-card:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.category-card:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.category-card:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+@keyframes categoryCardFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
+}
+
+/* 診断ページ用アニメーション */
+.diagnosis-hero-card {
+  animation: diagnosisHeroPulse 3s ease-in-out infinite;
+  box-shadow:
+    0 20px 50px rgba(15, 23, 42, 0.08),
+    0 0 0 1px rgba(15, 23, 42, 0.05),
+    0 0 30px rgba(15, 23, 42, 0.05);
+}
+
+@keyframes diagnosisHeroPulse {
+  0%,
+  100% {
+    transform: scale(1);
+    box-shadow:
+      0 20px 50px rgba(15, 23, 42, 0.08),
+      0 0 0 1px rgba(15, 23, 42, 0.05),
+      0 0 30px rgba(15, 23, 42, 0.05);
+  }
+  50% {
+    transform: scale(1.003);
+    box-shadow:
+      0 25px 60px rgba(15, 23, 42, 0.1),
+      0 0 0 2px rgba(15, 23, 42, 0.06),
+      0 0 40px rgba(15, 23, 42, 0.06);
+  }
+}
+
+.diagnosis-hero-glow {
+  animation: diagnosisHeroGlowSweep 4s ease-in-out infinite;
+}
+
+@keyframes diagnosisHeroGlowSweep {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%) translateY(-100%);
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(100%) translateY(100%);
+  }
+}
+
+.diagnosis-wizard-card {
+  animation: diagnosisWizardFloat 3.5s ease-in-out infinite;
+}
+
+@keyframes diagnosisWizardFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-1px);
+  }
+}
+
+.diagnosis-wizard-glow {
+  animation: diagnosisWizardGlowSweep 5s ease-in-out infinite;
+}
+
+@keyframes diagnosisWizardGlowSweep {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%) translateY(-100%);
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(100%) translateY(100%);
+  }
+}
