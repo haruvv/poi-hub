@@ -87,7 +87,6 @@ export const ServiceCard = ({ service, rank }: ServiceCardProps) => {
             )}
           </div>
         </div>
-
         <div className="space-y-2">
           <p className="text-[11px] text-slate-600 leading-relaxed line-clamp-3">
             {service.description}
@@ -106,10 +105,23 @@ export const ServiceCard = ({ service, rank }: ServiceCardProps) => {
             </div>
           )}
         </div>
-
         <div className="flex items-center justify-between pt-2">
-          <span className="text-[11px] font-semibold text-blue-600 tracking-wide">
-            詳細をみる
+          <span className="inline-flex items-center gap-2 rounded-full bg-red-600/90 px-4 py-1.5 text-[11px] font-semibold text-white shadow-[0_8px_18px_rgba(37,99,235,0.3)] transition group-hover:bg-blue-600">
+            <svg
+              className="w-3.5 h-3.5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M13 7l5 5m0 0l-5 5m5-5H6"
+              />
+            </svg>
+            <span>今すぐ登録！</span>
           </span>
           <svg
             className="w-4 h-4 text-blue-500 transition-transform group-hover:translate-x-1"

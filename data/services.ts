@@ -11,7 +11,7 @@ export const services: Service[] = [
     affiliateUrl: "https://example.com/hapitas",
     affiliateLinks: [
       {
-        label: "ハピタス（ASPリンク）",
+        label: "ハピタス",
         url: "https://example.com/hapitas",
       },
     ],
@@ -32,7 +32,7 @@ export const services: Service[] = [
     affiliateUrl: "https://example.com/moppy",
     affiliateLinks: [
       {
-        label: "モッピー（ASPリンク）",
+        label: "モッピー",
         url: "https://example.com/moppy",
       },
     ],
@@ -53,7 +53,7 @@ export const services: Service[] = [
     affiliateUrl: "https://px.a8.net/svt/ejp?a8mat=45I5TH+73EZAQ+3ZZC+5YZ77",
     affiliateLinks: [
       {
-        label: "ワラウ（ASPリンク）",
+        label: "ワラウ",
         url: "https://px.a8.net/svt/ejp?a8mat=45I5TH+73EZAQ+3ZZC+5YZ77",
       },
     ],
@@ -95,7 +95,7 @@ export const services: Service[] = [
     affiliateUrl: "https://example.com/rakuten-card",
     affiliateLinks: [
       {
-        label: "楽天カード（ASPリンク）",
+        label: "楽天カード",
         url: "https://example.com/rakuten-card",
       },
     ],
@@ -116,7 +116,7 @@ export const services: Service[] = [
     affiliateUrl: "https://example.com/smbc-card",
     affiliateLinks: [
       {
-        label: "三井住友カード（ASPリンク）",
+        label: "三井住友カード",
         url: "https://example.com/smbc-card",
       },
     ],
@@ -137,7 +137,7 @@ export const services: Service[] = [
     affiliateUrl: "https://example.com/saison-card",
     affiliateLinks: [
       {
-        label: "セゾンカード（ASPリンク）",
+        label: "セゾンカード",
         url: "https://example.com/saison-card",
       },
     ],
@@ -159,7 +159,7 @@ export const services: Service[] = [
     affiliateUrl: "https://example.com/rakuten-securities",
     affiliateLinks: [
       {
-        label: "楽天証券（ASPリンク）",
+        label: "楽天証券",
         url: "https://example.com/rakuten-securities",
       },
     ],
@@ -180,7 +180,7 @@ export const services: Service[] = [
     affiliateUrl: "https://example.com/sbi-securities",
     affiliateLinks: [
       {
-        label: "SBI証券（ASPリンク）",
+        label: "SBI証券",
         url: "https://example.com/sbi-securities",
       },
     ],
@@ -202,7 +202,7 @@ export const services: Service[] = [
     affiliateUrl: "https://example.com/cashwalk",
     affiliateLinks: [
       {
-        label: "Cashwalk（ASPリンク）",
+        label: "Cashwalk",
         url: "https://example.com/cashwalk",
       },
     ],
@@ -223,7 +223,7 @@ export const services: Service[] = [
     affiliateUrl: "https://example.com/pui",
     affiliateLinks: [
       {
-        label: "PUI（ASPリンク）",
+        label: "PUI",
         url: "https://example.com/pui",
       },
     ],
@@ -244,7 +244,7 @@ export const services: Service[] = [
     affiliateUrl: "https://example.com/powl",
     affiliateLinks: [
       {
-        label: "Powl（ASPリンク）",
+        label: "Powl",
         url: "https://example.com/powl",
       },
     ],
@@ -265,7 +265,7 @@ export const services: Service[] = [
     affiliateUrl: "https://example.com/torima",
     affiliateLinks: [
       {
-        label: "トリマ（ASPリンク）",
+        label: "トリマ",
         url: "https://example.com/torima",
       },
     ],
