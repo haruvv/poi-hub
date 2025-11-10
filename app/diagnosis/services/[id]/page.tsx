@@ -136,6 +136,24 @@ export default async function ServiceDetailPage({ params }: PageProps) {
                 <div className="flex items-start gap-4">
                   <div>
                     <div className="mt-2 flex flex-wrap items-center gap-2">
+                      <span className="inline-flex items-center gap-1 rounded-full border border-blue-200 bg-blue-50/80 px-3 py-1 text-[11px] font-semibold text-blue-700">
+                        <svg
+                          className="w-3.5 h-3.5"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                          aria-hidden="true"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M4 6h16M4 12h16M4 18h7"
+                          />
+                        </svg>
+                        このアプリ
+                      </span>
                       <h1 className="text-2xl font-semibold text-slate-900 sm:text-3xl">
                         {service.name}
                       </h1>
@@ -144,17 +162,38 @@ export default async function ServiceDetailPage({ params }: PageProps) {
                       {service.description}
                     </p>
                     {service.listingIncentive && (
-                      <p className="mt-2 inline-flex items-center gap-2 rounded-xl border border-amber-200 bg-amber-50/90 px-3 py-1.5 text-[11px] font-semibold text-amber-700 shadow-sm">
-                        <svg
-                          className="w-3.5 h-3.5 text-amber-500"
-                          fill="currentColor"
-                          viewBox="0 0 20 20"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.053 3.235a1 1 0 00.95.69h3.4c.969 0 1.371 1.24.588 1.81l-2.752 2a1 1 0 00-.364 1.118l1.053 3.235c.3.921-.755 1.688-1.54 1.118l-2.752-2a1 1 0 00-1.175 0l-2.752 2c-.785.57-1.84-.197-1.54-1.118l1.053-3.235a1 1 0 00-.364-1.118l-2.752-2c-.783-.57-.38-1.81.588-1.81h3.4a1 1 0 00.95-.69l1.053-3.235z" />
-                        </svg>
-                        {service.listingIncentive}
-                      </p>
+                      <div className="incentive-callout mt-4 rounded-3xl border border-rose-200 bg-gradient-to-r from-rose-50 via-white to-rose-100 p-4 shadow-[0_15px_35px_rgba(244,63,94,0.18)]">
+                        <div className="flex items-start gap-3">
+                          <div className="incentive-icon flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-rose-500 text-white shadow-lg">
+                            <svg
+                              className="w-5 h-5"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                              xmlns="http://www.w3.org/2000/svg"
+                              aria-hidden="true"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M5 13l4 4L19 7"
+                              />
+                            </svg>
+                          </div>
+                          <div className="space-y-1">
+                            <p className="text-xs font-bold uppercase tracking-[0.18em] text-rose-600">
+                              限定特典
+                            </p>
+                            <p className="text-sm font-semibold text-rose-700">
+                              {service.listingIncentive}
+                            </p>
+                            <p className="text-[11px] text-rose-500">
+                              登録ボタンからアクセスして特典を逃さないようにしましょう。
+                            </p>
+                          </div>
+                        </div>
+                      </div>
                     )}
                   </div>
                 </div>
