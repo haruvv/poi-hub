@@ -80,17 +80,19 @@ export const ServiceCard = ({ service, rank }: ServiceCardProps) => {
             <h3 className="text-[15px] sm:text-base font-semibold text-slate-900 leading-snug">
               {service.name}
             </h3>
-            {service.listingIncentive && (
-              <div className="mt-1 inline-flex items-center gap-2 rounded-xl border border-amber-200 bg-amber-50/90 px-2.5 py-1 text-[10px] font-semibold text-amber-700 shadow-sm">
+            {service.affiliateCampaignNote && (
+              <div className="mt-1 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-rose-500/90 to-pink-500/80 px-3 py-1 text-[10px] font-semibold text-white shadow-[0_8px_18px_rgba(236,72,153,0.35)]">
                 <svg
-                  className="w-3 h-3 text-amber-500"
+                  className="w-3 h-3"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.053 3.235a1 1 0 00.95.69h3.4c.969 0 1.371 1.24.588 1.81l-2.752 2a1 1 0 00-.364 1.118l1.053 3.235c.3.921-.755 1.688-1.54 1.118l-2.752-2a1 1 0 00-1.175 0l-2.752 2c-.785.57-1.84-.197-1.54-1.118l1.053-3.235a1 1 0 00-.364-1.118l-2.752-2c-.783-.57-.38-1.81.588-1.81h3.4a1 1 0 00.95-.69l1.053-3.235z" />
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.053 3.235a1 1 0 0 0 .95.69h3.4c.969 0 1.371 1.24.588 1.81l-2.752 2a1 1 0 0 0-.364 1.118l1.053 3.235c.3.921-.755 1.688-1.54 1.118l-2.752-2a1 1 0 0 0-1.175 0l-2.752 2c-.785.57-1.84-.197-1.54-1.118l1.053-3.235a1 1 0 0 0-.364-1.118l-2.752-2c-.783-.57-.38-1.81.588-1.81h3.4a1 1 0 0 0 .95-.69l1.053-3.235Z" />
                 </svg>
-                <span>{service.listingIncentive}</span>
+                <span className="line-clamp-1">
+                  {service.affiliateCampaignNote}
+                </span>
               </div>
             )}
           </div>

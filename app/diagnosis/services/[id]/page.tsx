@@ -135,38 +135,34 @@ export default async function ServiceDetailPage({ params }: PageProps) {
                     <p className="mt-2 text-sm leading-relaxed text-slate-600">
                       {service.description}
                     </p>
-                    {service.listingIncentive && (
-                      <div className="incentive-callout mt-4 rounded-3xl border border-rose-200 bg-gradient-to-r from-rose-50 via-white to-rose-100 p-4 shadow-[0_15px_35px_rgba(244,63,94,0.18)]">
-                        <div className="flex items-start gap-3">
-                          <div className="incentive-icon flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-rose-500 text-white shadow-lg">
-                            <svg
-                              className="w-5 h-5"
-                              fill="none"
-                              stroke="currentColor"
-                              viewBox="0 0 24 24"
-                              xmlns="http://www.w3.org/2000/svg"
-                              aria-hidden="true"
-                            >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth={2}
-                                d="M5 13l4 4L19 7"
-                              />
-                            </svg>
-                          </div>
-                          <div className="space-y-1">
-                            <p className="text-xs font-bold uppercase tracking-[0.18em] text-rose-600">
-                              限定特典
-                            </p>
-                            <p className="text-sm font-semibold text-rose-700">
-                              {service.listingIncentive}
-                            </p>
-                            <p className="text-[11px] text-rose-500">
-                              登録ボタンからアクセスして特典を逃さないようにしましょう。
-                            </p>
-                          </div>
+                    {service.affiliateCampaignNote && (
+                      <div className="campaign-callout mt-4 rounded-3xl px-5 py-4">
+                        <div className="relative z-10 space-y-2">
+                          <span className="campaign-badge">
+                            キャンペーン情報
+                          </span>
+                          <p className="campaign-text">
+                            {service.affiliateCampaignNote}
+                          </p>
                         </div>
+                      </div>
+                    )}
+                    {service.affiliateReferralNote && (
+                      <div className="referral-callout mt-4 overflow-hidden rounded-3xl border border-yellow-300 bg-gradient-to-r from-yellow-400 via-amber-400 to-orange-500 p-5 shadow-[0_25px_55px_rgba(251,191,36,0.45)]">
+                        <div className="relative z-10 flex flex-col gap-2 text-white">
+                          <span className="referral-title inline-flex items-center gap-2">
+                            <span className="h-2 w-2 rounded-full bg-white" />
+                            紹介特典が超アツい！
+                          </span>
+                          <p className="referral-amount font-extrabold">
+                            {service.affiliateReferralNote}
+                          </p>
+                          <p className="referral-note">
+                            ※
+                            詳細条件は紹介ページで必ず確認しましょう。期間限定の場合があります。
+                          </p>
+                        </div>
+                        <div className="referral-glow" />
                       </div>
                     )}
                   </div>
@@ -193,7 +189,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
 
                 <div className="space-y-3">
                   <h2 className="text-xs font-semibold tracking-wide text-slate-500">
-                    押さえておきたいポイント
+                    {service.name}のここがすごい！
                   </h2>
                   <ul className="space-y-2 rounded-2xl border border-blue-100 bg-blue-50/80 p-4 text-[12px] text-blue-900 shadow-sm">
                     {highlightItems.map((item) => (
