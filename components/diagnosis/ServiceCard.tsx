@@ -6,6 +6,8 @@ interface ServiceCardProps {
   rank?: number;
 }
 
+const stripAnchorTags = (html: string) => html.replace(/<\/?a\b[^>]*>/gi, "");
+
 export const ServiceCard = ({ service, rank }: ServiceCardProps) => {
   const isTopThree = rank !== undefined && rank <= 3;
 
@@ -57,10 +59,12 @@ export const ServiceCard = ({ service, rank }: ServiceCardProps) => {
         )}
 
         <div className="flex items-center gap-3">
-          {service.listingImage ? (
+          {service.smallImage ? (
             <div
               className="flex-shrink-0 w-20 sm:w-24 overflow-hidden rounded-xl border border-slate-200 bg-white/90 p-2 shadow-inner"
-              dangerouslySetInnerHTML={{ __html: service.listingImage.html }}
+              dangerouslySetInnerHTML={{
+                __html: stripAnchorTags(service.smallImage.html),
+              }}
             />
           ) : (
             <div className="flex-shrink-0 w-20 sm:w-24 h-20 sm:h-24 rounded-xl border border-slate-200 bg-gradient-to-br from-blue-100 via-white to-blue-50 shadow-inner flex items-center justify-center text-lg font-semibold text-blue-500">

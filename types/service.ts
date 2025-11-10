@@ -23,10 +23,9 @@ export interface Service {
   name: string;
   description: string;
   category: ServiceCategory;
-  affiliateUrl: string;
-  affiliateLinks?: AffiliateLink[];
-  affiliateImages?: AffiliateImage[];
-  listingImage?: AffiliateImage;
+  affiliateLinks: AffiliateLink[];
+  bigImage?: AffiliateImage[];
+  smallImage?: AffiliateImage;
   listingIncentive?: string;
   affiliateContent?: string[];
   affiliateHighlightsTitle?: string;

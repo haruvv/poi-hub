@@ -61,12 +61,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
   const affiliateLinks =
     service.affiliateLinks && service.affiliateLinks.length > 0
       ? service.affiliateLinks
-      : [
-          {
-            label: "公式／詳細ページ",
-            url: service.affiliateUrl,
-          },
-        ];
+      : [];
 
   const primaryLink = affiliateLinks[0];
   const highlightItems =
@@ -77,8 +72,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
         : ["まずは無料で登録して、掲載案件をチェックしてみましょう。"];
 
   const hasSecondaryLinks = affiliateLinks.length > 1;
-  const hasBannerImages =
-    service.affiliateImages && service.affiliateImages.length > 0;
+  const hasBannerImages = service.bigImage && service.bigImage.length > 0;
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-blue-50 via-white to-white">
@@ -123,7 +117,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
             <div className="relative space-y-8">
               {hasBannerImages && (
                 <div className="grid gap-4 sm:grid-cols-2 justify-items-center">
-                  {service.affiliateImages!.map((image) => (
+                  {service.bigImage!.map((image) => (
                     <div
                       key={image.html}
                       className="w-full max-w-sm overflow-hidden rounded-2xl border border-slate-200 bg-white/90 p-3 shadow-inner"
@@ -135,29 +129,9 @@ export default async function ServiceDetailPage({ params }: PageProps) {
               <header className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
                 <div className="flex items-start gap-4">
                   <div>
-                    <div className="mt-2 flex flex-wrap items-center gap-2">
-                      <span className="inline-flex items-center gap-1 rounded-full border border-blue-200 bg-blue-50/80 px-3 py-1 text-[11px] font-semibold text-blue-700">
-                        <svg
-                          className="w-3.5 h-3.5"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                          xmlns="http://www.w3.org/2000/svg"
-                          aria-hidden="true"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M4 6h16M4 12h16M4 18h7"
-                          />
-                        </svg>
-                        このアプリ
-                      </span>
-                      <h1 className="text-2xl font-semibold text-slate-900 sm:text-3xl">
-                        {service.name}
-                      </h1>
-                    </div>
+                    <h1 className="mt-2 text-2xl font-semibold text-slate-900 sm:text-3xl">
+                      {service.name}
+                    </h1>
                     <p className="mt-2 text-sm leading-relaxed text-slate-600">
                       {service.description}
                     </p>
@@ -247,29 +221,31 @@ export default async function ServiceDetailPage({ params }: PageProps) {
               </div>
 
               <div className="space-y-3">
-                <a
-                  href={primaryLink.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="detail-cta inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-rose-600 to-rose-500 py-3 text-sm font-semibold text-white shadow-[0_15px_35px_rgba(244,63,94,0.45)] transition-all duration-200 hover:from-rose-500 hover:to-rose-400 hover:shadow-[0_18px_40px_rgba(244,63,94,0.55)] active:scale-[0.97]"
-                >
-                  今すぐ登録！
-                  <svg
-                    className="w-4 h-4"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                    aria-hidden="true"
+                {primaryLink && (
+                  <a
+                    href={primaryLink.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="detail-cta inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-rose-600 to-rose-500 py-3 text-sm font-semibold text-white shadow-[0_15px_35px_rgba(244,63,94,0.45)] transition-all duration-200 hover:from-rose-500 hover:to-rose-400 hover:shadow-[0_18px_40px_rgba(244,63,94,0.55)] active:scale-[0.97]"
                   >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M13 7l5 5m0 0l-5 5m5-5H6"
-                    />
-                  </svg>
-                </a>
+                    今すぐ登録！
+                    <svg
+                      className="w-4 h-4"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M13 7l5 5m0 0l-5 5m5-5H6"
+                      />
+                    </svg>
+                  </a>
+                )}
 
                 {hasSecondaryLinks && (
                   <div className="space-y-2 rounded-xl border border-blue-100 bg-blue-50/60 p-3">
