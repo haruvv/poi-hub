@@ -73,6 +73,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
 
   const hasSecondaryLinks = affiliateLinks.length > 1;
   const hasBannerImages = service.bigImage && service.bigImage.length > 0;
+  const referralDetails = service.affiliateReferralDetails;
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-blue-50 via-white to-white">
@@ -147,32 +148,112 @@ export default async function ServiceDetailPage({ params }: PageProps) {
                         </div>
                       </div>
                     )}
-                    {service.affiliateReferralNote && (
-                      <div className="referral-callout mt-4 overflow-hidden rounded-3xl border border-yellow-300 bg-gradient-to-r from-yellow-400 via-amber-400 to-orange-500 p-5 shadow-[0_25px_55px_rgba(251,191,36,0.45)]">
-                        <div className="relative z-10 flex flex-col gap-2 text-white">
-                          <span className="referral-title inline-flex items-center gap-2">
-                            <span className="h-2 w-2 rounded-full bg-white" />
-                            紹介特典が超アツい！
-                          </span>
-                          <p className="referral-amount font-extrabold">
-                            {service.affiliateReferralNote}
-                          </p>
-                          <p className="referral-note">
-                            ※
-                            詳細条件は紹介ページで必ず確認しましょう。期間限定の場合があります。
-                          </p>
+                    {(service.affiliateReferralNote || referralDetails) && (
+                      <div className="referral-stack mt-4 overflow-hidden rounded-3xl border border-yellow-200 bg-gradient-to-br from-yellow-50 via-white to-amber-50 shadow-[0_24px_60px_rgba(251,191,36,0.25)]">
+                        <div className="referral-callout relative px-5 py-5">
+                          <div className="relative z-10 flex flex-col gap-2 text-amber-900">
+                            <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.24em] text-amber-600">
+                              <span className="h-2 w-2 rounded-full bg-amber-500" />
+                              紹介特典
+                            </span>
+                            {service.affiliateReferralNote && (
+                              <h3 className="text-lg font-extrabold text-amber-900">
+                                {service.affiliateReferralNote}
+                              </h3>
+                            )}
+                            <p className="text-[11px] text-amber-700">
+                              ※
+                              特典や条件はタイミングによって変動する場合があります。必ず紹介ページで最新情報を確認してください。
+                            </p>
+                          </div>
+                          <div className="referral-glow" />
                         </div>
-                        <div className="referral-glow" />
+
+                        {referralDetails && (
+                          <div className="space-y-3 border-t border-amber-100 bg-white/92 px-5 py-4 text-amber-800">
+                            <div className="flex items-center justify-between gap-3">
+                              <p className="text-sm font-extrabold text-slate-900">
+                                紹介経由でさらにお得に！
+                              </p>
+                              {referralDetails.url && (
+                                <a
+                                  href={referralDetails.url}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="inline-flex items-center gap-1 rounded-full border border-slate-900 bg-slate-900 px-3 py-1 text-[11px] font-semibold text-white shadow-[0_6px_16px_rgba(15,23,42,0.35)] hover:bg-black"
+                                >
+                                  紹介URLを開く
+                                  <svg
+                                    className="h-3 w-3"
+                                    fill="currentColor"
+                                    viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <path d="M14 3h7v7h-2.5V6.207L10.354 14.35l-1.414-1.415L17.086 4.79H14V3Z" />
+                                  </svg>
+                                </a>
+                              )}
+                            </div>
+
+                            {referralDetails.code && (
+                              <div className="rounded-xl border border-amber-200 bg-white px-3 py-2 text-[12px] font-semibold text-amber-700">
+                                紹介コード：
+                                <code className="ml-1 font-mono text-sm">
+                                  {referralDetails.code}
+                                </code>
+                              </div>
+                            )}
+
+                            {referralDetails.perks &&
+                              referralDetails.perks.length > 0 && (
+                                <div>
+                                  <p className="text-[11px] font-semibold text-amber-700">
+                                    もらえる特典
+                                  </p>
+                                  <ul className="mt-1 space-y-1 text-[11px]">
+                                    {referralDetails.perks.map((perk) => (
+                                      <li key={perk} className="flex gap-2">
+                                        <span className="mt-1 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-amber-500" />
+                                        <span>{perk}</span>
+                                      </li>
+                                    ))}
+                                  </ul>
+                                </div>
+                              )}
+
+                            {referralDetails.conditions &&
+                              referralDetails.conditions.length > 0 && (
+                                <div>
+                                  <p className="text-[11px] font-semibold text-amber-700">
+                                    達成条件（必ずチェック）
+                                  </p>
+                                  <ul className="mt-1 space-y-1 text-[11px]">
+                                    {referralDetails.conditions.map(
+                                      (condition) => (
+                                        <li
+                                          key={condition}
+                                          className="flex gap-2"
+                                        >
+                                          <span className="mt-1 h-1.5 w-1.5 flex-shrink-0 rounded-full border border-amber-500" />
+                                          <span>{condition}</span>
+                                        </li>
+                                      )
+                                    )}
+                                  </ul>
+                                </div>
+                              )}
+                          </div>
+                        )}
                       </div>
                     )}
                   </div>
-                </div>
 
-                <div className="rounded-2xl border border-slate-200 bg-white/80 px-4 py-3 text-[11px] text-slate-500 shadow-sm">
-                  <p>
-                    ※
-                    掲載リンクはすべて新しいタブで開きます。条件が変わる場合があるため、遷移先の案内を必ずご確認ください。
-                  </p>
+                  <div className="rounded-2xl border border-slate-200 bg-white/80 px-4 py-3 text-[11px] text-slate-500 shadow-sm">
+                    <p>
+                      ※
+                      掲載リンクはすべて新しいタブで開きます。条件が変わる場合があるため、遷移先の案内を必ずご確認ください。
+                    </p>
+                  </div>
                 </div>
               </header>
 

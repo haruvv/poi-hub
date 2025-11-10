@@ -30,6 +30,12 @@ export interface Service {
   affiliateHighlights?: string[];
   affiliateCampaignNote?: string;
   affiliateReferralNote?: string;
+  affiliateReferralDetails?: {
+    url?: string;
+    code?: string;
+    perks?: string[];
+    conditions?: string[];
+  };
   tags: string[]; // 例: ["年会費無料", "高還元", "初心者向け"]
   imageUrl?: string; // 将来的にロゴ画像など
 }

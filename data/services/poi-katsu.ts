@@ -42,8 +42,21 @@ export const poiKatsuServices: Service[] = [
       "シンプルで使いやすい画面で初心者でも迷わない",
     ],
     affiliateCampaignNote: "今すぐ現金やギフトコード500円分をGET！",
-    affiliateReferralNote:
-      "紹介リンク経由なら登録＋初回案件で最大1,500円相当のボーナスが即ゲット！",
+    // affiliateReferralNote:
+    //   "紹介リンク経由なら登録＋初回案件で最大1,500円相当のボーナスが即ゲット！",
+    // affiliateReferralDetails: {
+    //   url: "https://px.a8.net/svt/ejp?a8mat=45I5TI+37I44Y+4F8I+62MDD",
+    //   code: "不要（紹介リンクから自動適用）",
+    //   perks: [
+    //     "登録＋対象案件の初回利用で最大50,000円相当のポイント",
+    //     "期間限定で追加ボーナスが乗ることも！",
+    //   ],
+    //   conditions: [
+    //     "紹介リンクから会員登録する",
+    //     "登録後30日以内に対象キャンペーン案件を1件完了",
+    //     "キャンペーン内容は時期により変動するため、詳細は紹介ページで確認",
+    //   ],
+    // },
     tags: ["高還元", "毎日ガチャ", "ガチ勢におすすめ"],
   },
   {
@@ -83,10 +96,25 @@ export const poiKatsuServices: Service[] = [
       "ポイント有効期限が半永久的でムダがない！",
     ],
     affiliateCampaignNote: "最大300円分がもらえるキャンペーン実施中！",
+    // affiliateReferralNote:
+    //   "紹介リンク経由なら登録＋初回利用で最大500円分のワラウポイントがもらえる！",
+    // affiliateReferralDetails: {
+    //   url: "https://px.a8.net/svt/ejp?a8mat=45I5TH+73EZAQ+3ZZC+5YZ77",
+    //   code: "不要（紹介リンクで自動付与）",
+    //   perks: [
+    //     "登録＋案件利用で最大500円分のワラウポイント",
+    //     "紹介者・お友達双方にボーナスが付与",
+    //   ],
+    //   conditions: [
+    //     "紹介リンクから新規登録",
+    //     "登録後30日以内にポイント対象サービスを利用",
+    //     "キャンペーン内容・対象案件は時期により変動。詳細は紹介ページで確認",
+    //   ],
+    // },
     tags: ["老舗サイト", "交換先豊富", "ゲームで貯まる"],
   },
   {
-    id: "poi-4",
+    id: "poi-3",
     name: "ハピタス",
     description:
       "大手ショップ案件が超充実の“ド定番”ポイ活サイト！！お買い物前に経由するだけでWで貯まって、交換先も多くて使いやすい！！",
@@ -129,10 +157,23 @@ export const poiKatsuServices: Service[] = [
       "新規登録で最大500円分のボーナスポイントがもらえる！",
     affiliateReferralNote:
       "お友達紹介経由なら登録＋利用で最大2,000円相当のハピタスポイントがドーンともらえる！",
+    affiliateReferralDetails: {
+      url: "https://hapitas.jp/register?i=25318892&route=pcText",
+      code: "不要（紹介URLから登録でOK）",
+      perks: [
+        "登録＋対象サービス利用で最大2,000円分のハピタスポイント",
+        "時期により追加ボーナスや抽選キャンペーンもあり！",
+      ],
+      conditions: [
+        "紹介リンクから新規登録",
+        "キャンペーン期間中に掲載広告を利用して合計 5,000 pt以上貯めると1500pt GET",
+        "対象期間内に対象条件をクリアし、スタンプを集めると500pt GET",
+      ],
+    },
     tags: ["定番", "Wでポイント", "大手"],
   },
   {
-    id: "poi-3",
+    id: "poi-4",
     name: "モッピー",
     description:
       "高還元案件とキャンペーンが豊富なお小遣い稼ぎ特化サイト！！ショッピングもゲームもレシ活も、とにかく“稼げるコンテンツ”盛りだくさん！！",
@@ -140,18 +181,18 @@ export const poiKatsuServices: Service[] = [
     affiliateLinks: [
       {
         label: "モッピー",
-        url: "https://example.com/moppy",
+        url: "https://pc.moppy.jp/entry/invite.php?invite=sNmEe1d9&type=service",
       },
     ],
     bigImage: [
       {
-        html: `<img src="https://via.placeholder.com/300x250?text=Sample+Banner" alt="モッピー サンプルバナー" />`,
+        html: `<a href="https://pc.moppy.jp/entry/invite.php?invite=sNmEe1d9&type=service"><img decoding="async" loading="lazy" src="https://img.moppy.jp/pub/global/common/friend/banner/16/300x250.png" alt="他の人よりたくさんポイントをもらう方法を知ってますか？ ゴールド会員なら!最大15%増量" width="300" height="250"></a>`,
         alt: "モッピー 大バナー",
       },
     ],
     smallImage: [
       {
-        html: `<img src="https://via.placeholder.com/125x125?text=Sample" alt="モッピー サンプル小バナー" />`,
+        html: `<a href="https://pc.moppy.jp/entry/invite.php?invite=sNmEe1d9&type=service"><img decoding="async" loading="lazy" src="https://img.moppy.jp/pub/pc/friend/144x144-2.jpg" alt="賢く貯めるならモッピー。1P=1円で交換先も多数！" width="144" height="144"></a>`,
         alt: "モッピー 小バナー",
       },
     ],
@@ -170,6 +211,77 @@ export const poiKatsuServices: Service[] = [
     affiliateCampaignNote: "紹介で最大3,000円分のポイントがもらえる！",
     affiliateReferralNote:
       "モッピー紹介なら登録＋条件クリアで最大3,000円分のポイントがドカンともらえる！",
+    affiliateReferralDetails: {
+      url: "https://pc.moppy.jp/entry/invite.php?invite=sNmEe1d9",
+      code: "不要（紹介URLから登録でOK）",
+      perks: [
+        "登録＋ミッションクリアで最大2,000円分のポイント！",
+        "お友達＆紹介者の双方にボーナスが付くダブル特典！",
+      ],
+      conditions: [
+        "紹介リンクから会員登録",
+        "登録後のミッションクリアで2,000pt GET！",
+        "さらにモッピー紹介で2000pt GET！！",
+      ],
+    },
     tags: ["高還元", "コンテンツ山盛り", "会員数トップクラス"],
+  },
+  {
+    id: "poi-5",
+    name: "ちょびリッチ",
+    description:
+      "ちょびリッチは、20年以上続く老舗で“ガッツリもコツコツもいける”万能ポイ活サイト！！高還元案件＆毎日コンテンツでポイントが貯めやすいのが魅力！！",
+    category: "poi-katsu",
+    affiliateLinks: [
+      {
+        label: "ちょびリッチ",
+        url: "https://px.a8.net/svt/ejp?a8mat=45I5TJ+ENI2R6+389A+674EP",
+      },
+    ],
+    bigImage: [
+      {
+        html: `<a href="https://px.a8.net/svt/ejp?a8mat=45I5TJ+ENI2R6+389A+674EP" rel="nofollow">
+              <img border="0" width="300" height="250" alt="" src="https://www20.a8.net/svt/bgt?aid=251110135886&wid=001&eno=01&mid=s00000015067001041000&mc=1"></a>
+              <img border="0" width="1" height="1" src="https://www12.a8.net/0.gif?a8mat=45I5TJ+ENI2R6+389A+674EP" alt="">`,
+        alt: "ちょびリッチ 大バナー",
+      },
+    ],
+    smallImage: [
+      {
+        html: `<a href="https://px.a8.net/svt/ejp?a8mat=45I5TJ+ENI2R6+389A+6F9M9" rel="nofollow">
+              <img border="0" width="125" height="125" alt="" src="https://www26.a8.net/svt/bgt?aid=251110135886&wid=001&eno=01&mid=s00000015067001079000&mc=1"></a>
+              <img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=45I5TJ+ENI2R6+389A+6F9M9" alt="">`,
+        alt: "ちょびリッチ 小バナー",
+      },
+    ],
+    affiliateContent: [
+      "「ちょびリッチ」は、20年以上の運営実績と累計数百万人規模のユーザーに支持される老舗ポイントサイト！",
+      "楽天市場やYahoo!ショッピングなどのネットショッピングはもちろん、クレカ発行、口座開設、アプリ案件、アンケート、ゲーム、ガチャなどで幅広くポイントが貯まります。",
+      "貯めたポイントは「2ポイント＝1円」換算で、現金・ギフト券・電子マネー・共通ポイントなど多彩な交換先に交換可能。高還元案件と毎日参加型コンテンツで、初心者から上級者まで使いやすいサービスです。",
+    ],
+    affiliateHighlights: [
+      "運営実績20年以上の安心感ある老舗ポイントサイト",
+      "高還元案件や「ちょびリッチの日」などお得なキャンペーンが豊富",
+      "毎日ガチャやログインボーナスなど“参加するだけ”でポイントゲットのチャンス",
+      "2pt＝1円で分かりやすく、現金・ギフト券・電子マネーなど交換先も充実",
+      "お買い物保証制度などサポート面も用意されていて初めてのポイ活にも使いやすい",
+    ],
+    affiliateCampaignNote: "条件クリアで400円分のポイントがもらえる！",
+    affiliateReferralNote:
+      "ちょびリッチ紹介なら登録＋条件クリアで最大4,300円分のポイントがガッツリもらえる！",
+    affiliateReferralDetails: {
+      url: "https://www.chobirich.com/cm/ad/?p=8225208671&i=5098331",
+      code: "不要（紹介URLから登録でOK）",
+      perks: [
+        "登録＋初回ポイント獲得で最大4,300円分のちょびポイント",
+        "お友達＆紹介者の双方にボーナスが付くダブル特典",
+      ],
+      conditions: [
+        "紹介リンクから会員登録",
+        "登録だけで300 ptもらえる！",
+        "さらにポイント獲得ごとにボーナスGET！",
+      ],
+    },
+    tags: ["高還元", "老舗", "毎日チャンス"],
   },
 ];
