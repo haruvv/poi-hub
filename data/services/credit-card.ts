@@ -13,8 +13,18 @@ export const creditCardServices: Service[] = [
         url: "https://example.com/rakuten-card",
       },
     ],
-    bigImage: [],
-    smallImage: undefined,
+    bigImage: [
+      {
+        html: `<img src="https://via.placeholder.com/300x250?text=Sample+Banner" alt="楽天カード サンプルバナー" />`,
+        alt: "楽天カード サンプルバナー",
+      },
+    ],
+    smallImage: [
+      {
+        html: `<img src="https://via.placeholder.com/125x125?text=Sample" alt="楽天カード サンプル小バナー" />`,
+        alt: "楽天カード サンプル小バナー",
+      },
+    ],
     listingIncentive: "",
     affiliateContent: [],
     affiliateHighlights: [],
@@ -33,8 +43,18 @@ export const creditCardServices: Service[] = [
         url: "https://example.com/smbc-card",
       },
     ],
-    bigImage: [],
-    smallImage: undefined,
+    bigImage: [
+      {
+        html: `<img src="https://via.placeholder.com/300x250?text=Sample+Banner" alt="三井住友カード サンプルバナー" />`,
+        alt: "三井住友カード サンプルバナー",
+      },
+    ],
+    smallImage: [
+      {
+        html: `<img src="https://via.placeholder.com/125x125?text=Sample" alt="三井住友カード サンプル小バナー" />`,
+        alt: "三井住友カード サンプル小バナー",
+      },
+    ],
     listingIncentive: "",
     affiliateContent: [],
     affiliateHighlights: [],
@@ -53,8 +73,18 @@ export const creditCardServices: Service[] = [
         url: "https://example.com/saison-card",
       },
     ],
-    bigImage: [],
-    smallImage: undefined,
+    bigImage: [
+      {
+        html: `<img src="https://via.placeholder.com/300x250?text=Sample+Banner" alt="セゾンカード サンプルバナー" />`,
+        alt: "セゾンカード サンプルバナー",
+      },
+    ],
+    smallImage: [
+      {
+        html: `<img src="https://via.placeholder.com/125x125?text=Sample" alt="セゾンカード サンプル小バナー" />`,
+        alt: "セゾンカード サンプル小バナー",
+      },
+    ],
     listingIncentive: "",
     affiliateContent: [],
     affiliateHighlights: [],

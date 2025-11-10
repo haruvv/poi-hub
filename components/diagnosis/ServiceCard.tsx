@@ -10,6 +10,10 @@ const stripAnchorTags = (html: string) => html.replace(/<\/?a\b[^>]*>/gi, "");
 
 export const ServiceCard = ({ service, rank }: ServiceCardProps) => {
   const isTopThree = rank !== undefined && rank <= 3;
+  const smallImageHtml =
+    service.smallImage && service.smallImage.length > 0
+      ? stripAnchorTags(service.smallImage[0].html)
+      : null;
 
   return (
     <Link
@@ -59,11 +63,11 @@ export const ServiceCard = ({ service, rank }: ServiceCardProps) => {
         )}
 
         <div className="flex items-center gap-3">
-          {service.smallImage ? (
+          {smallImageHtml ? (
             <div
               className="flex-shrink-0 w-20 sm:w-24 overflow-hidden rounded-xl border border-slate-200 bg-white/90 p-2 shadow-inner"
               dangerouslySetInnerHTML={{
-                __html: stripAnchorTags(service.smallImage.html),
+                __html: smallImageHtml,
               }}
             />
           ) : (

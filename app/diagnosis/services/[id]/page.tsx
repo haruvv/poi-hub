@@ -185,7 +185,6 @@ export default async function ServiceDetailPage({ params }: PageProps) {
                   <h2 className="text-xs font-semibold tracking-wide text-slate-500">
                     サービス概要
                   </h2>
-                  <p>{service.description}</p>
                   {service.affiliateContent &&
                     service.affiliateContent.map((paragraph) => (
                       <p key={paragraph}>{paragraph}</p>

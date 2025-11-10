@@ -13,8 +13,18 @@ export const investmentServices: Service[] = [
         url: "https://example.com/rakuten-securities",
       },
     ],
-    bigImage: [],
-    smallImage: undefined,
+    bigImage: [
+      {
+        html: `<img src="https://via.placeholder.com/300x250?text=Sample+Banner" alt="楽天証券 サンプルバナー" />`,
+        alt: "楽天証券 サンプルバナー",
+      },
+    ],
+    smallImage: [
+      {
+        html: `<img src="https://via.placeholder.com/125x125?text=Sample" alt="楽天証券 サンプル小バナー" />`,
+        alt: "楽天証券 サンプル小バナー",
+      },
+    ],
     listingIncentive: "",
     affiliateContent: [],
     affiliateHighlights: [],
@@ -33,8 +43,18 @@ export const investmentServices: Service[] = [
         url: "https://example.com/sbi-securities",
       },
     ],
-    bigImage: [],
-    smallImage: undefined,
+    bigImage: [
+      {
+        html: `<img src="https://via.placeholder.com/300x250?text=Sample+Banner" alt="SBI証券 サンプルバナー" />`,
+        alt: "SBI証券 サンプルバナー",
+      },
+    ],
+    smallImage: [
+      {
+        html: `<img src="https://via.placeholder.com/125x125?text=Sample" alt="SBI証券 サンプル小バナー" />`,
+        alt: "SBI証券 サンプル小バナー",
+      },
+    ],
     listingIncentive: "",
     affiliateContent: [],
     affiliateHighlights: [],

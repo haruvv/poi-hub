@@ -13,8 +13,18 @@ export const pointExchangeServices: Service[] = [
         url: "https://example.com/cashwalk",
       },
     ],
-    bigImage: [],
-    smallImage: undefined,
+    bigImage: [
+      {
+        html: `<img src="https://via.placeholder.com/300x250?text=Sample+Banner" alt="Cashwalk サンプルバナー" />`,
+        alt: "Cashwalk サンプルバナー",
+      },
+    ],
+    smallImage: [
+      {
+        html: `<img src="https://via.placeholder.com/125x125?text=Sample" alt="Cashwalk サンプル小バナー" />`,
+        alt: "Cashwalk サンプル小バナー",
+      },
+    ],
     listingIncentive: "",
     affiliateContent: [],
     affiliateHighlights: [],
@@ -33,8 +43,18 @@ export const pointExchangeServices: Service[] = [
         url: "https://example.com/pui",
       },
     ],
-    bigImage: [],
-    smallImage: undefined,
+    bigImage: [
+      {
+        html: `<img src="https://via.placeholder.com/300x250?text=Sample+Banner" alt="PUI サンプルバナー" />`,
+        alt: "PUI サンプルバナー",
+      },
+    ],
+    smallImage: [
+      {
+        html: `<img src="https://via.placeholder.com/125x125?text=Sample" alt="PUI サンプル小バナー" />`,
+        alt: "PUI サンプル小バナー",
+      },
+    ],
     listingIncentive: "",
     affiliateContent: [],
     affiliateHighlights: [],
@@ -53,8 +73,18 @@ export const pointExchangeServices: Service[] = [
         url: "https://example.com/powl",
       },
     ],
-    bigImage: [],
-    smallImage: undefined,
+    bigImage: [
+      {
+        html: `<img src="https://via.placeholder.com/300x250?text=Sample+Banner" alt="Powl サンプルバナー" />`,
+        alt: "Powl サンプルバナー",
+      },
+    ],
+    smallImage: [
+      {
+        html: `<img src="https://via.placeholder.com/125x125?text=Sample" alt="Powl サンプル小バナー" />`,
+        alt: "Powl サンプル小バナー",
+      },
+    ],
     listingIncentive: "",
     affiliateContent: [],
     affiliateHighlights: [],
@@ -73,8 +103,18 @@ export const pointExchangeServices: Service[] = [
         url: "https://example.com/torima",
       },
     ],
-    bigImage: [],
-    smallImage: undefined,
+    bigImage: [
+      {
+        html: `<img src="https://via.placeholder.com/300x250?text=Sample+Banner" alt="トリマ サンプルバナー" />`,
+        alt: "トリマ サンプルバナー",
+      },
+    ],
+    smallImage: [
+      {
+        html: `<img src="https://via.placeholder.com/125x125?text=Sample" alt="トリマ サンプル小バナー" />`,
+        alt: "トリマ サンプル小バナー",
+      },
+    ],
     listingIncentive: "",
     affiliateContent: [],
     affiliateHighlights: [],

@@ -25,7 +25,7 @@ export interface Service {
   category: ServiceCategory;
   affiliateLinks: AffiliateLink[];
   bigImage?: AffiliateImage[];
-  smallImage?: AffiliateImage;
+  smallImage?: AffiliateImage[];
   listingIncentive?: string;
   affiliateContent?: string[];
   affiliateHighlightsTitle?: string;
