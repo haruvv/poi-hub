@@ -1,4 +1,5 @@
 import type { Service } from "@/types/service";
+import { FALLBACK_IMAGE_HTML } from "./shared";
 
 export const poiKatsuServices: Service[] = [
   {
@@ -115,6 +116,54 @@ export const poiKatsuServices: Service[] = [
   },
   {
     id: "poi-3",
+    name: "Powl",
+    description:
+      "スキマ時間にアンケートやミニゲームでポイントが貯まるお小遣いアプリ！！少額から交換OKで、“暇つぶし＝おトク”に変えられるのが魅力！！",
+    category: "poi-katsu",
+    affiliateLinks: [
+      {
+        label: "Powl",
+        url: "https://web.powl.jp/?invite_code=PEC8U4TM5E6",
+      },
+    ],
+    bigImage: [
+      {
+        html: FALLBACK_IMAGE_HTML,
+        alt: "Powl サンプルバナー",
+      },
+    ],
+    smallImage: [
+      {
+        html: FALLBACK_IMAGE_HTML,
+        alt: "Powl サンプル小バナー",
+      },
+    ],
+    affiliateContent: [
+      "「Powl（ポール）」は、アンケート回答やミニゲーム、広告利用などでポイントが貯まるポイ活アプリ。",
+      "短時間で終わるコンテンツが多く、通勤時間や待ち時間を“お小遣いタイム”に変えやすいのが特徴です。",
+      "貯めたポイントは、ギフト券や他社ポイント・現金などに交換可能で、少額から交換できるため初心者でもモチベ維持しやすい設計です。",
+    ],
+    affiliateHighlights: [
+      "アンケート＆ミニゲーム中心でスキマ時間に取り組みやすい",
+      "少額からポイント交換できて成果を実感しやすい",
+      "Amazonギフト券や各種ポイントへの交換ルートが豊富",
+      "アプリ操作がシンプルで初めてでも迷いにくい",
+      "キャンペーンやボーナス企画で効率よく貯められる",
+    ],
+    affiliateCampaignNote: "入会後、ポイント貯めて1,000pt GET！",
+    affiliateReferralDetails: {
+      url: "https://web.powl.jp/?invite_code=PEC8U4TM5E6",
+      code: "不要（紹介URLから登録でOK）",
+      perks: ["登録＋ポイント貯めて1,000pt GET！"],
+      conditions: [
+        "紹介リンクから新規登録",
+        "キャンペーン期間中にポイントゲットして合計 5,000 pt以上貯めると1000pt GET",
+      ],
+    },
+    tags: ["アンケートで貯まる", "ミニゲーム", "少額交換"],
+  },
+  {
+    id: "poi-4",
     name: "ハピタス",
     description:
       "大手ショップ案件が超充実の“ド定番”ポイ活サイト！！お買い物前に経由するだけでWで貯まって、交換先も多くて使いやすい！！",
@@ -173,7 +222,7 @@ export const poiKatsuServices: Service[] = [
     tags: ["定番", "Wでポイント", "大手"],
   },
   {
-    id: "poi-4",
+    id: "poi-5",
     name: "モッピー",
     description:
       "高還元案件とキャンペーンが豊富なお小遣い稼ぎ特化サイト！！ショッピングもゲームもレシ活も、とにかく“稼げるコンテンツ”盛りだくさん！！",

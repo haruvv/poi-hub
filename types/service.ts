@@ -1,9 +1,5 @@
 // サービスカテゴリ
-export type ServiceCategory =
-  | "poi-katsu"
-  | "credit-card"
-  | "investment"
-  | "point-exchange";
+export type ServiceCategory = "poi-katsu" | "credit-card" | "investment";
 
 // サービス情報
 export interface AffiliateLink {

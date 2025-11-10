@@ -1,4 +1,5 @@
 import type { Service } from "@/types/service";
+import { FALLBACK_IMAGE_HTML } from "./shared";
 
 export const investmentServices: Service[] = [
   {
@@ -15,13 +16,13 @@ export const investmentServices: Service[] = [
     ],
     bigImage: [
       {
-        html: `<img src="https://via.placeholder.com/300x250?text=Sample+Banner" alt="楽天証券 サンプルバナー" />`,
+        html: FALLBACK_IMAGE_HTML,
         alt: "楽天証券 サンプルバナー",
       },
     ],
     smallImage: [
       {
-        html: `<img src="https://via.placeholder.com/125x125?text=Sample" alt="楽天証券 サンプル小バナー" />`,
+        html: FALLBACK_IMAGE_HTML,
         alt: "楽天証券 サンプル小バナー",
       },
     ],
@@ -44,13 +45,13 @@ export const investmentServices: Service[] = [
     ],
     bigImage: [
       {
-        html: `<img src="https://via.placeholder.com/300x250?text=Sample+Banner" alt="SBI証券 サンプルバナー" />`,
+        html: FALLBACK_IMAGE_HTML,
         alt: "SBI証券 サンプルバナー",
       },
     ],
     smallImage: [
       {
-        html: `<img src="https://via.placeholder.com/125x125?text=Sample" alt="SBI証券 サンプル小バナー" />`,
+        html: FALLBACK_IMAGE_HTML,
         alt: "SBI証券 サンプル小バナー",
       },
     ],
