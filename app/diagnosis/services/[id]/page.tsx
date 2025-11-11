@@ -17,6 +17,18 @@ const categoryMeta = {
     label: "投資サービス一覧へ戻る",
     href: "/diagnosis/investment",
   },
+  shopping: {
+    label: "お得に買い物一覧へ戻る",
+    href: "/diagnosis/shopping",
+  },
+  gaming: {
+    label: "お得にゲーム一覧へ戻る",
+    href: "/diagnosis/gaming",
+  },
+  meal: {
+    label: "お得にご飯一覧へ戻る",
+    href: "/diagnosis/meal",
+  },
 } as const;
 
 type PageProps = {
