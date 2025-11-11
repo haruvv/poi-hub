@@ -53,12 +53,12 @@ export const creditCardServices: Service[] = [
     id: "card-2",
     name: "三井住友カード",
     description:
-      "Visa/Mastercard/JCB の 3 ブランドから選べる王道カード。安心のセキュリティと使い勝手が魅力。",
+      "安心感と使いやすさ重視ならこれ！コンビニや飲食店でお得にポイントが貯めやすい王道クレジットカード！",
     category: "credit-card",
     affiliateLinks: [
       {
         label: "三井住友カード",
-        url: "https://example.com/smbc-card",
+        url: "https://www.smbc-card.com/camp/numberless_gold-numberless/index2.jsp?dk=cpc-goo-brd-pr-214660",
       },
     ],
     bigImage: [
@@ -73,38 +73,65 @@ export const creditCardServices: Service[] = [
         alt: "三井住友カード サンプル小バナー",
       },
     ],
-    affiliateContent: [],
-    affiliateHighlights: [],
-    affiliateCampaignNote: "",
-    tags: ["年会費無料", "ブランド選択可", "還元率良好"],
+    affiliateContent: [
+      "安心感・知名度・使いやすさがそろった定番クレジットカード！初めての1枚にも、サブカードにも選びやすいバランスの良さが魅力です！",
+      "ナンバーレスタイプならカード番号や有効期限が表面に印字されておらず、紛失や盗み見への不安をグッと減らせるのもポイント！ネット利用もアプリ管理でスムーズです！",
+      "対象のコンビニ・飲食店などでポイント還元アップが狙えるキャンペーンや特典も多く、日常の支払いをまとめるだけで自然とお得になりやすい設計になっています！",
+      "国際ブランドや券種の選択肢も豊富で、「信頼できるカードを長く使いたい」という人にしっかり応えてくれる1枚です！",
+    ],
+    affiliateHighlights: [
+      "大手カードブランドならではの信頼感とセキュリティの高さ！",
+      "ナンバーレスデザイン対応で情報を守りやすく安心して使える！",
+      "コンビニ・飲食店など日常利用でポイントを貯めやすい！",
+      "キャッシュレス初心者からベテランまで使いやすいシンプル設計！",
+    ],
+    affiliateCampaignNote: "新規入会&条件達成で最大23,600円相当プレゼント！",
+    tags: ["安心感重視", "ナンバーレス", "ポイント優待", "日常使い向け"],
   },
   {
-    id: "card-3",
-    name: "セゾンカード",
+    id: "card-4",
+    name: "JCB カードW",
     description:
-      "年会費無料でポイントの有効期限なし。セゾン系サービスと組み合わせて、賢くポイントを使い回せます。",
+      "39歳までの申込限定で年会費永年無料！いつでもポイント2倍の高還元カード！",
     category: "credit-card",
     affiliateLinks: [
       {
-        label: "セゾンカード",
-        url: "https://example.com/saison-card",
+        label: "JCB カードW",
+        url: "https://www.jcb.co.jp/promotion/ordercard/w/?50195353150100&tk_id=cojp_oswsp_lst_2016o_os3080&utm_medium=lst__oss&utm_source=google__oss&utm_term=00075993__oss__B_google&utm_campaign=00075993__oss__B&gad_source=1&gad_campaignid=22603979417&gbraid=0AAAAADmu3AjzEhiW3jt6JanSmr-_CNpRa&gclid=CjwKCAiA2svIBhB-EiwARWDPjv9gcZ93ETvIyGv4btpOjSonAHeUvmPT81t5mhZETiY515isACwV5BoCtKsQAvD_BwE",
       },
     ],
     bigImage: [
       {
         html: FALLBACK_IMAGE_HTML,
-        alt: "セゾンカード サンプルバナー",
+        alt: "JCB カードW サンプルバナー",
       },
     ],
     smallImage: [
       {
         html: FALLBACK_IMAGE_HTML,
-        alt: "セゾンカード サンプル小バナー",
+        alt: "JCB カードW サンプル小バナー",
       },
     ],
-    affiliateContent: [],
-    affiliateHighlights: [],
-    affiliateCampaignNote: "",
-    tags: ["年会費無料", "高還元", "ポイント無期限"],
+    affiliateContent: [
+      "39歳までに申し込めば年会費はずっと無料で、通常のJCBカードに比べて常にポイント2倍相当の高還元が狙えるお得な1枚！",
+      "Amazonやセブン-イレブン、スターバックスなどJCB優待店での利用なら、さらにポイントアップが狙えるので、ネットショッピングやコンビニ利用が多い人との相性抜群！",
+      "オンライン申込限定カードなので、スマホやPCからスムーズに手続きできて、管理もアプリ中心で完結しやすいスマートな設計！",
+      "年会費無料で高還元を取りにいきたい人や、日常の支払いをまとめて効率よくポイントを貯めたい人に、メイン候補としておすすめしやすいカードです！",
+    ],
+    affiliateHighlights: [
+      "39歳までの申込で年会費永年無料！",
+      "いつでもポイント2倍相当の高還元設計！",
+      "Amazonやコンビニなど優待店でさらにお得！",
+      "オンライン申込限定でスマートに使える！",
+      "日常決済を集約してポイント重視で選びたい人向け！",
+    ],
+    affiliateCampaignNote: "今なら最大45,000円キャッシュバック！",
+    tags: [
+      "年会費無料",
+      "高還元",
+      "ポイント重視",
+      "オンライン申込限定",
+      "若年層向け",
+    ],
   },
 ];
