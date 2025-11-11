@@ -3,7 +3,7 @@ import { HeaderBar } from "@/components/layout/HeaderBar";
 import { DiagnosisPageClient } from "./DiagnosisPageClient";
 
 export const metadata: Metadata = {
-  title: "お得ナビ Hub｜30秒お得診断",
+  title: "ポイ活なび｜30秒お得診断",
   description:
     "質問3つに答えるだけで、今の自分がやるべきポイ活・クレカ・節約アクションだけを絞って表示します。",
 };

@@ -6,7 +6,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Footer } from "@/components/layout/Footer";
 
 export const metadata = {
-  title: "お得ナビ Hub",
+  title: "ポイ活なび",
   description: "ムダなくお得を積み上げるための、シンプルな30秒お得診断サイト。",
   other: {
     "google-adsense-account": "ca-pub-2028703181823597",

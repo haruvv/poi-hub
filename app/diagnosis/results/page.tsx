@@ -15,7 +15,7 @@ import { ComparisonTable } from "@/components/diagnosis/results/ComparisonTable"
 import { TrustZone } from "@/components/diagnosis/results/TrustZone";
 
 export const metadata: Metadata = {
-  title: "お得ナビ Hub｜診断結果",
+  title: "ポイ活なび｜診断結果",
   description: "あなたの診断結果をご確認ください",
 };
 

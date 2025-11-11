@@ -3,8 +3,8 @@ import { HeaderBar } from "@/components/layout/HeaderBar";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "プライバシーポリシー｜お得ナビ Hub",
-  description: "お得ナビ Hubのプライバシーポリシー",
+  title: "プライバシーポリシー｜ポイ活なび",
+  description: "ポイ活なびのプライバシーポリシー",
 };
 
 export default function PrivacyPage() {
@@ -45,8 +45,7 @@ export default function PrivacyPage() {
                 個人情報の取り扱いについて
               </h2>
               <p className="leading-relaxed">
-                お得ナビ
-                Hub（以下「当サイト」）は、ユーザーの個人情報を適切に保護するため、以下の方針に基づいて個人情報を取り扱います。
+                ポイ活なび（以下「当サイト」）は、ユーザーの個人情報を適切に保護するため、以下の方針に基づいて個人情報を取り扱います。
               </p>
             </section>
 

@@ -39,12 +39,12 @@ export async function generateMetadata({
 
   if (!service) {
     return {
-      title: "サービスが見つかりませんでした | お得ナビ Hub",
+      title: "サービスが見つかりませんでした | ポイ活なび",
     };
   }
 
   return {
-    title: `${service.name} | お得ナビ Hub`,
+    title: `${service.name} | ポイ活なび`,
     description: service.description,
   };
 }

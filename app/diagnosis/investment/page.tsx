@@ -5,7 +5,7 @@ import { getServicesByCategory } from "@/data/services";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "お得ナビ Hub｜投資サービスおすすめ",
+  title: "ポイ活なび｜投資サービスおすすめ",
   description: "診断結果に基づいた投資サービスおすすめ一覧",
 };
 

@@ -3,8 +3,8 @@ import { HeaderBar } from "@/components/layout/HeaderBar";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "利用規約｜お得ナビ Hub",
-  description: "お得ナビ Hubの利用規約",
+  title: "利用規約｜ポイ活なび",
+  description: "ポイ活なびの利用規約",
 };
 
 export default function TermsPage() {
@@ -43,8 +43,7 @@ export default function TermsPage() {
                 第1条（適用）
               </h2>
               <p className="leading-relaxed">
-                本規約は、お得ナビ
-                Hub（以下「当サイト」）が提供するサービスの利用条件を定めるものです。ユーザーは、当サイトを利用することにより、本規約に同意したものとみなされます。
+                本規約は、ポイ活なび（以下「当サイト」）が提供するサービスの利用条件を定めるものです。ユーザーは、当サイトを利用することにより、本規約に同意したものとみなされます。
               </p>
             </section>
 

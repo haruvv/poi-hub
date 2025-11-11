@@ -6,7 +6,7 @@ import { DiagnosisPromo } from "@/components/top/DiagnosisPromo";
 import { TrustSection } from "@/components/top/TrustSection";
 
 export const metadata: Metadata = {
-  title: "お得ナビ Hub｜あなたに合ったお得な始め方が見つかる",
+  title: "ポイ活なび｜あなたに合ったお得な始め方が見つかる",
   description:
     "ポイ活・クレジットカード・投資サービスの中から、あなたのライフスタイルに合う選択肢を探せるお得情報サイト。",
 };

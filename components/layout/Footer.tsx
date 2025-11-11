@@ -9,7 +9,7 @@ export const Footer = () => {
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {/* サイト情報 */}
           <div className="space-y-4">
-            <h3 className="text-lg font-bold text-white">お得ナビ Hub</h3>
+            <h3 className="text-lg font-bold text-white">ポイ活なび</h3>
             <p className="text-sm text-slate-400 leading-relaxed">
               あなたに合った「お得な始め方」を見つけるための診断サイト
             </p>
@@ -101,7 +101,7 @@ export const Footer = () => {
 
         {/* コピーライト */}
         <div className="mt-8 pt-8 border-t border-slate-800 text-center text-sm text-slate-500">
-          <p>&copy; {currentYear} お得ナビ Hub. All rights reserved.</p>
+          <p>&copy; {currentYear} ポイ活なび. All rights reserved.</p>
         </div>
       </div>
     </footer>

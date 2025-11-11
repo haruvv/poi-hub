@@ -3,8 +3,8 @@ import { HeaderBar } from "@/components/layout/HeaderBar";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "お問い合わせ｜お得ナビ Hub",
-  description: "お得ナビ Hubへのお問い合わせ",
+  title: "お問い合わせ｜ポイ活なび",
+  description: "ポイ活なびへのお問い合わせ",
 };
 
 export default function ContactPage() {
@@ -42,7 +42,7 @@ export default function ContactPage() {
           <div className="space-y-6 text-slate-700">
             <section>
               <p className="text-lg leading-relaxed">
-                お得ナビ Hubをご利用いただき、ありがとうございます。
+                ポイ活なびをご利用いただき、ありがとうございます。
               </p>
               <p className="leading-relaxed mt-4">
                 サイトに関するご質問、ご意見、ご要望などがございましたら、以下のメールアドレスまでお気軽にお問い合わせください。
