@@ -54,10 +54,7 @@ export default function ContactPage() {
                 お問い合わせ先メールアドレス
               </h2>
               <p className="text-lg font-bold text-slate-900">
-                contact@example.com
-              </p>
-              <p className="text-sm text-slate-600 mt-2">
-                ※実際のメールアドレスに置き換えてください
+                poiunavi.contact@gmail.com
               </p>
             </section>
 
