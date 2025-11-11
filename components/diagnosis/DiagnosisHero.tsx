@@ -6,29 +6,29 @@ interface DiagnosisHeroProps {
 
 export const DiagnosisHero = ({ onStart }: DiagnosisHeroProps) => {
   return (
-    <section className="relative overflow-hidden rounded-3xl border border-slate-200/60 bg-white/90 backdrop-blur-sm p-8 sm:p-10 shadow-[0_8px_30px_rgba(0,0,0,0.08)]">
-      {/* 背景グラデーション */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-50/50 via-transparent to-blue-50/20" />
+    <section className="relative overflow-hidden rounded-3xl border-2 border-slate-200 bg-gradient-to-br from-white via-slate-50/30 to-slate-50/30 p-6 shadow-xl diagnosis-hero-card">
+      {/* 光るエフェクト */}
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-300/5 via-transparent to-slate-300/5 diagnosis-hero-glow" />
 
-      <div className="relative z-10 space-y-6">
+      <div className="relative z-10 space-y-5">
         {/* タイトル */}
-        <div className="text-center space-y-4">
-          <h1 className="text-[32px] sm:text-[36px] leading-tight font-bold text-slate-900 tracking-tight">
-            あなたに一番トクな
+        <div className="space-y-3">
+          <h1 className="text-[26px] leading-tight font-extrabold text-slate-900">
+            30秒でわかる、
             <br />
-            始め方診断
+            あなたに一番トクな始め方診断
           </h1>
-          <p className="text-[16px] sm:text-[17px] text-slate-600 leading-relaxed max-w-xl mx-auto">
-            ポイ活・クレジットカード・投資の中から、あなたのライフスタイルに最適な選択肢を提案します。
+          <p className="text-[14px] text-slate-600 leading-relaxed">
+            ポイ活・クレカ・投資…いきなり全部はしんどいあなたへ。
           </p>
         </div>
 
-        {/* 安心情報 */}
-        <div className="flex flex-wrap items-center justify-center gap-4">
-          <div className="flex items-center gap-2 text-[14px] text-slate-700">
-            <div className="flex-shrink-0 w-6 h-6 rounded-lg bg-blue-100 flex items-center justify-center">
+        {/* 箇条書き */}
+        <div className="space-y-2.5">
+          <div className="flex items-center gap-2.5 text-[13px] text-slate-700">
+            <div className="flex-shrink-0 w-5 h-5 rounded-full bg-slate-700 flex items-center justify-center">
               <svg
-                className="w-3.5 h-3.5 text-blue-600"
+                className="w-3 h-3 text-white"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -36,17 +36,17 @@ export const DiagnosisHero = ({ onStart }: DiagnosisHeroProps) => {
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  strokeWidth={2.5}
+                  strokeWidth={3}
                   d="M5 13l4 4L19 7"
                 />
               </svg>
             </div>
-            <span className="font-semibold">3問・30秒程度</span>
+            <span className="font-medium">所要時間：5問</span>
           </div>
-          <div className="flex items-center gap-2 text-[14px] text-slate-700">
-            <div className="flex-shrink-0 w-6 h-6 rounded-lg bg-blue-100 flex items-center justify-center">
+          <div className="flex items-center gap-2.5 text-[13px] text-slate-700">
+            <div className="flex-shrink-0 w-5 h-5 rounded-full bg-slate-700 flex items-center justify-center">
               <svg
-                className="w-3.5 h-3.5 text-blue-600"
+                className="w-3 h-3 text-white"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -54,17 +54,17 @@ export const DiagnosisHero = ({ onStart }: DiagnosisHeroProps) => {
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  strokeWidth={2.5}
+                  strokeWidth={3}
                   d="M5 13l4 4L19 7"
                 />
               </svg>
             </div>
-            <span className="font-semibold">登録不要</span>
+            <span className="font-medium">初心者OK</span>
           </div>
-          <div className="flex items-center gap-2 text-[14px] text-slate-700">
-            <div className="flex-shrink-0 w-6 h-6 rounded-lg bg-blue-100 flex items-center justify-center">
+          <div className="flex items-center gap-2.5 text-[13px] text-slate-700">
+            <div className="flex-shrink-0 w-5 h-5 rounded-full bg-slate-700 flex items-center justify-center">
               <svg
-                className="w-3.5 h-3.5 text-blue-600"
+                className="w-3 h-3 text-white"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -72,39 +72,25 @@ export const DiagnosisHero = ({ onStart }: DiagnosisHeroProps) => {
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  strokeWidth={2.5}
+                  strokeWidth={3}
                   d="M5 13l4 4L19 7"
                 />
               </svg>
             </div>
-            <span className="font-semibold">初心者向け</span>
+            <span className="font-medium">
+              診断後にあなた向けサービスだけ表示
+            </span>
           </div>
         </div>
 
         {/* CTAボタン */}
-        <div className="pt-2">
-          <button
-            type="button"
-            onClick={onStart}
-            className="group relative w-full inline-flex items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 text-white text-[17px] font-bold py-4 px-8 shadow-[0_8px_24px_rgba(59,130,246,0.35)] hover:shadow-[0_12px_32px_rgba(59,130,246,0.45)] transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] overflow-hidden"
-          >
-            <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/30 to-white/0 translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700" />
-            <span className="relative">診断をはじめる</span>
-            <svg
-              className="w-5 h-5 relative transition-transform group-hover:translate-x-1"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2.5}
-                d="M13 7l5 5m0 0l-5 5m5-5H6"
-              />
-            </svg>
-          </button>
-        </div>
+        <button
+          type="button"
+          onClick={onStart}
+          className="w-full mt-4 inline-flex items-center justify-center rounded-2xl text-base font-bold py-4 bg-slate-700 text-white hover:bg-slate-600 hover:shadow-xl active:scale-[0.98] transition-all duration-200 shadow-lg"
+        >
+          診断をはじめる
+        </button>
       </div>
     </section>
   );
