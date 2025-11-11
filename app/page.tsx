@@ -4,7 +4,6 @@ import { HeroSection } from "@/components/top/HeroSection";
 import { ValueProposition } from "@/components/top/ValueProposition";
 import { DiagnosisFlow } from "@/components/top/DiagnosisFlow";
 import { CategorySection } from "@/components/top/CategorySection";
-import { FeaturedContent } from "@/components/top/FeaturedContent";
 import { TrustSection } from "@/components/top/TrustSection";
 import { BottomCTA } from "@/components/top/BottomCTA";
 
@@ -31,10 +30,7 @@ export default function Home() {
         {/* (4) カテゴリから探すセクション */}
         <CategorySection />
 
-        {/* (5) おすすめコンテンツ・特集のプレビュー */}
-        <FeaturedContent />
-
-        {/* (6) 安心・信頼セクション */}
+        {/* (5) 安心・信頼セクション */}
         <TrustSection />
 
         {/* (7) ページ下部の再CTA */}
