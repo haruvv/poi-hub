@@ -431,7 +431,6 @@ export default async function ServiceDetailPage({
                     リンクの取り扱いについて
                   </summary>
                   <div className="mt-2 space-y-1">
-                    <p>・ASPで発行したURLをそのまま掲載しています。</p>
                     <p>・リンクは新しいタブで開きます。</p>
                     <p>
                       ・条件が変わる場合があるため、遷移先の案内を必ず確認してください。
