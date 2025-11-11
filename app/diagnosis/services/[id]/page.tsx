@@ -123,134 +123,136 @@ export default async function ServiceDetailPage({ params }: PageProps) {
                   ))}
                 </div>
               )}
-              <header className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
-                <div className="flex items-start gap-4">
-                  <div>
-                    <h1 className="mt-2 text-2xl font-semibold text-slate-900 sm:text-3xl">
-                      {service.name}
-                    </h1>
-                    <p className="mt-2 text-sm leading-relaxed text-slate-600">
-                      {service.description}
-                    </p>
-                    {service.affiliateCampaignNote && (
-                      <div className="campaign-callout mt-4 rounded-3xl px-5 py-4">
-                        <div className="relative z-10 space-y-2">
-                          <span className="campaign-badge">
-                            キャンペーン情報
-                          </span>
-                          <p className="campaign-text">
-                            {service.affiliateCampaignNote}
-                          </p>
-                        </div>
+              <header className="space-y-4">
+                <div>
+                  <h1 className="text-2xl font-semibold text-slate-900 sm:text-3xl">
+                    {service.name}
+                  </h1>
+                  <p className="mt-2 text-sm leading-relaxed text-slate-600">
+                    {service.description}
+                  </p>
+                </div>
+
+                {service.affiliateCampaignNote && (
+                  <div className="campaign-callout rounded-3xl px-5 py-4">
+                    <div className="relative z-10 space-y-2">
+                      <span className="campaign-badge">キャンペーン情報</span>
+                      <p className="campaign-text">
+                        {service.affiliateCampaignNote}
+                      </p>
+                    </div>
+                  </div>
+                )}
+
+                {(service.affiliateReferralNote || referralDetails) && (
+                  <div className="referral-stack overflow-hidden rounded-3xl border-2 border-red-300/60 bg-gradient-to-br from-red-50 via-orange-50 to-yellow-50 shadow-[0_30px_80px_rgba(239,68,68,0.4)]">
+                    {/* キラキラエフェクト */}
+                    <div className="sparkle sparkle-1 sparkle-red" />
+                    <div className="sparkle sparkle-2 sparkle-orange" />
+                    <div className="sparkle sparkle-3 sparkle-red" />
+                    <div className="sparkle sparkle-4 sparkle-orange" />
+
+                    <div className="referral-callout relative px-6 py-6">
+                      <div className="relative z-10 flex flex-col gap-3">
+                        <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.3em] text-red-600">
+                          <span className="h-2.5 w-2.5 rounded-full bg-red-500 animate-pulse" />
+                          紹介特典
+                        </span>
+                        {service.affiliateReferralNote && (
+                          <h3 className="text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-red-600 via-orange-600 to-red-600 leading-tight">
+                            {service.affiliateReferralNote}
+                          </h3>
+                        )}
+                        <p className="text-[10px] text-red-600/80">
+                          ※
+                          特典や条件はタイミングによって変動する場合があります。必ず紹介ページで最新情報を確認してください。
+                        </p>
                       </div>
-                    )}
-                    {(service.affiliateReferralNote || referralDetails) && (
-                      <div className="referral-stack mt-4 overflow-hidden rounded-3xl border border-yellow-200 bg-gradient-to-br from-yellow-50 via-white to-amber-50 shadow-[0_24px_60px_rgba(251,191,36,0.25)]">
-                        <div className="referral-callout relative px-5 py-5">
-                          <div className="relative z-10 flex flex-col gap-2 text-amber-900">
-                            <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.24em] text-amber-600">
-                              <span className="h-2 w-2 rounded-full bg-amber-500" />
-                              紹介特典
-                            </span>
-                            {service.affiliateReferralNote && (
-                              <h3 className="text-lg font-extrabold text-amber-900">
-                                {service.affiliateReferralNote}
-                              </h3>
-                            )}
-                            <p className="text-[11px] text-amber-700">
-                              ※
-                              特典や条件はタイミングによって変動する場合があります。必ず紹介ページで最新情報を確認してください。
-                            </p>
-                          </div>
-                          <div className="referral-glow" />
+                      <div className="referral-glow" />
+                    </div>
+
+                    {referralDetails && (
+                      <div className="space-y-4 border-t-2 border-red-200/60 bg-gradient-to-br from-white via-red-50/50 to-orange-50/50 px-6 py-5 text-red-900">
+                        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                          <p className="text-base font-black text-red-700">
+                            紹介経由でさらにお得に！
+                          </p>
+                          {referralDetails.url && (
+                            <a
+                              href={referralDetails.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="referral-cta-button inline-flex items-center gap-2 rounded-full border-2 border-red-600 bg-gradient-to-r from-red-600 to-orange-600 px-5 py-2.5 text-sm font-bold text-white shadow-[0_8px_24px_rgba(239,68,68,0.5)] hover:from-red-500 hover:to-orange-500 hover:shadow-[0_12px_32px_rgba(239,68,68,0.6)] active:scale-95 transition-all duration-200 whitespace-nowrap"
+                            >
+                              紹介URLを開く
+                              <svg
+                                className="h-4 w-4"
+                                fill="currentColor"
+                                viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path d="M14 3h7v7h-2.5V6.207L10.354 14.35l-1.414-1.415L17.086 4.79H14V3Z" />
+                              </svg>
+                            </a>
+                          )}
                         </div>
 
-                        {referralDetails && (
-                          <div className="space-y-3 border-t border-amber-100 bg-white/92 px-5 py-4 text-amber-800">
-                            <div className="flex items-center justify-between gap-3">
-                              <p className="text-sm font-extrabold text-slate-900">
-                                紹介経由でさらにお得に！
-                              </p>
-                              {referralDetails.url && (
-                                <a
-                                  href={referralDetails.url}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  className="inline-flex items-center gap-1 rounded-full border border-slate-900 bg-slate-900 px-3 py-1 text-[11px] font-semibold text-white shadow-[0_6px_16px_rgba(15,23,42,0.35)] hover:bg-black"
-                                >
-                                  紹介URLを開く
-                                  <svg
-                                    className="h-3 w-3"
-                                    fill="currentColor"
-                                    viewBox="0 0 24 24"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                  >
-                                    <path d="M14 3h7v7h-2.5V6.207L10.354 14.35l-1.414-1.415L17.086 4.79H14V3Z" />
-                                  </svg>
-                                </a>
-                              )}
-                            </div>
-
-                            {referralDetails.code && (
-                              <div className="rounded-xl border border-amber-200 bg-white px-3 py-2 text-[12px] font-semibold text-amber-700">
-                                紹介コード：
-                                <code className="ml-1 font-mono text-sm">
-                                  {referralDetails.code}
-                                </code>
-                              </div>
-                            )}
-
-                            {referralDetails.perks &&
-                              referralDetails.perks.length > 0 && (
-                                <div>
-                                  <p className="text-[11px] font-semibold text-amber-700">
-                                    もらえる特典
-                                  </p>
-                                  <ul className="mt-1 space-y-1 text-[11px]">
-                                    {referralDetails.perks.map((perk) => (
-                                      <li key={perk} className="flex gap-2">
-                                        <span className="mt-1 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-amber-500" />
-                                        <span>{perk}</span>
-                                      </li>
-                                    ))}
-                                  </ul>
-                                </div>
-                              )}
-
-                            {referralDetails.conditions &&
-                              referralDetails.conditions.length > 0 && (
-                                <div>
-                                  <p className="text-[11px] font-semibold text-amber-700">
-                                    達成条件（必ずチェック）
-                                  </p>
-                                  <ul className="mt-1 space-y-1 text-[11px]">
-                                    {referralDetails.conditions.map(
-                                      (condition) => (
-                                        <li
-                                          key={condition}
-                                          className="flex gap-2"
-                                        >
-                                          <span className="mt-1 h-1.5 w-1.5 flex-shrink-0 rounded-full border border-amber-500" />
-                                          <span>{condition}</span>
-                                        </li>
-                                      )
-                                    )}
-                                  </ul>
-                                </div>
-                              )}
+                        {referralDetails.code && (
+                          <div className="rounded-xl border-2 border-red-300 bg-gradient-to-r from-white to-red-50 px-4 py-3 text-[13px] font-bold text-red-700 shadow-md">
+                            紹介コード：
+                            <code className="ml-2 font-mono text-base text-red-800">
+                              {referralDetails.code}
+                            </code>
                           </div>
                         )}
+
+                        {referralDetails.perks &&
+                          referralDetails.perks.length > 0 && (
+                            <div>
+                              <p className="text-[12px] font-bold text-red-700 mb-2">
+                                🎁 もらえる特典
+                              </p>
+                              <ul className="space-y-2 text-[12px]">
+                                {referralDetails.perks.map((perk) => (
+                                  <li
+                                    key={perk}
+                                    className="flex gap-2 items-start"
+                                  >
+                                    <span className="mt-1.5 h-2 w-2 flex-shrink-0 rounded-full bg-red-500" />
+                                    <span className="font-semibold text-red-900">
+                                      {perk}
+                                    </span>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          )}
+
+                        {referralDetails.conditions &&
+                          referralDetails.conditions.length > 0 && (
+                            <div>
+                              <p className="text-[12px] font-bold text-red-700 mb-2">
+                                ⚠️ 達成条件（必ずチェック）
+                              </p>
+                              <ul className="space-y-2 text-[12px]">
+                                {referralDetails.conditions.map((condition) => (
+                                  <li
+                                    key={condition}
+                                    className="flex gap-2 items-start"
+                                  >
+                                    <span className="mt-1.5 h-2 w-2 flex-shrink-0 rounded-full border-2 border-red-500" />
+                                    <span className="font-medium text-red-800">
+                                      {condition}
+                                    </span>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          )}
                       </div>
                     )}
                   </div>
-
-                  <div className="rounded-2xl border border-slate-200 bg-white/80 px-4 py-3 text-[11px] text-slate-500 shadow-sm">
-                    <p>
-                      ※
-                      掲載リンクはすべて新しいタブで開きます。条件が変わる場合があるため、遷移先の案内を必ずご確認ください。
-                    </p>
-                  </div>
-                </div>
+                )}
               </header>
 
               <div className="grid gap-6 sm:grid-cols-2">

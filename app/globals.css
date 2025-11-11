@@ -697,7 +697,7 @@ body {
 .referral-callout {
   position: relative;
   overflow: hidden;
-  animation: referralPulse 2.1s ease-in-out infinite;
+  animation: referralPulse 1.8s ease-in-out infinite;
 }
 
 .referral-callout .referral-title {
@@ -725,11 +725,11 @@ body {
   0%,
   100% {
     transform: translateY(0) scale(1);
-    box-shadow: 0 25px 65px rgba(217, 119, 6, 0.42);
+    box-shadow: 0 30px 80px rgba(239, 68, 68, 0.4);
   }
-  45% {
-    transform: translateY(-4px) scale(1.04);
-    box-shadow: 0 35px 90px rgba(217, 119, 6, 0.58);
+  50% {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 40px 100px rgba(239, 68, 68, 0.6);
   }
 }
 
@@ -836,15 +836,126 @@ body {
 
 .referral-glow {
   position: absolute;
-  inset: -20%;
+  inset: -30%;
   background: radial-gradient(
     circle,
-    rgba(255, 255, 255, 0.55) 0%,
+    rgba(255, 255, 255, 0.7) 0%,
+    rgba(255, 200, 100, 0.4) 40%,
     rgba(255, 255, 255, 0) 70%
   );
   mix-blend-mode: screen;
-  animation: referralGlow 2.6s ease-in-out infinite;
+  animation: referralGlow 2.2s ease-in-out infinite;
   pointer-events: none;
+}
+
+.referral-cta-button {
+  position: relative;
+  overflow: hidden;
+}
+
+.referral-cta-button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+}
+
+.referral-cta-button:hover::before {
+  transform: translateX(100%);
+}
+
+/* ヘッダーメニューのアニメーション */
+@keyframes menuOverlayFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes menuOverlayFadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes menuSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes menuSlideUp {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes menuItemFadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes menuItemFadeOut {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-8px);
+  }
+}
+
+.animate-menu-overlay-fade-in {
+  animation: menuOverlayFadeIn 0.2s ease-out;
+}
+
+.animate-menu-overlay-fade-out {
+  animation: menuOverlayFadeOut 0.2s ease-out;
+}
+
+.animate-menu-slide-down {
+  animation: menuSlideDown 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.animate-menu-slide-up {
+  animation: menuSlideUp 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.animate-menu-item-fade-in {
+  animation: menuItemFadeIn 0.3s ease-out both;
+}
+
+.animate-menu-item-fade-out {
+  animation: menuItemFadeOut 0.2s ease-out both;
 }
 
 /* TOPページのヒーローセクション用アニメーション */
@@ -1050,6 +1161,195 @@ body {
   }
   50% {
     opacity: 0.4;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(100%) translateY(100%);
+  }
+}
+
+/* 診断結果ローディング用アニメーション */
+.diagnosis-loading-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: loadingFadeIn 0.3s ease-out;
+}
+
+@keyframes loadingFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.diagnosis-loading-content {
+  text-align: center;
+  color: white;
+  animation: loadingContentFadeIn 0.4s ease-out 0.1s both;
+}
+
+@keyframes loadingContentFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.diagnosis-loading-spinner {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 24px;
+  border: 4px solid rgba(255, 255, 255, 0.2);
+  border-top-color: rgba(59, 130, 246, 0.9);
+  border-radius: 50%;
+  animation: loadingSpin 1s linear infinite;
+}
+
+@keyframes loadingSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.diagnosis-loading-text {
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 8px;
+  letter-spacing: 0.05em;
+  animation: loadingTextPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes loadingTextPulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+.diagnosis-loading-subtext {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 8px;
+}
+
+.diagnosis-loading-dots {
+  display: inline-block;
+  width: 1ch;
+  text-align: left;
+}
+
+.diagnosis-loading-dots::after {
+  content: "...";
+  animation: loadingDots 1.4s steps(4, end) infinite;
+}
+
+@keyframes loadingDots {
+  0% {
+    content: "";
+  }
+  25% {
+    content: ".";
+  }
+  50% {
+    content: "..";
+  }
+  75%,
+  100% {
+    content: "...";
+  }
+}
+
+/* 診断ステップのフェードアニメーション */
+.diagnosis-step-content {
+  animation-duration: 0.35s;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  animation-fill-mode: both;
+}
+
+.diagnosis-step-fade-in {
+  animation-name: diagnosisStepFadeIn;
+}
+
+.diagnosis-step-fade-out {
+  animation-name: diagnosisStepFadeOut;
+}
+
+@keyframes diagnosisStepFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes diagnosisStepFadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+}
+
+/* 診断結果ページのヒーローカード */
+.result-hero-card {
+  animation: resultHeroPulse 3s ease-in-out infinite;
+  box-shadow:
+    0 20px 50px rgba(59, 130, 246, 0.25),
+    0 0 0 1px rgba(59, 130, 246, 0.15),
+    0 0 30px rgba(59, 130, 246, 0.1);
+}
+
+@keyframes resultHeroPulse {
+  0%,
+  100% {
+    transform: scale(1);
+    box-shadow:
+      0 20px 50px rgba(59, 130, 246, 0.25),
+      0 0 0 1px rgba(59, 130, 246, 0.15),
+      0 0 30px rgba(59, 130, 246, 0.1);
+  }
+  50% {
+    transform: scale(1.005);
+    box-shadow:
+      0 25px 60px rgba(59, 130, 246, 0.3),
+      0 0 0 2px rgba(59, 130, 246, 0.2),
+      0 0 40px rgba(59, 130, 246, 0.15);
+  }
+}
+
+.result-hero-glow {
+  animation: resultHeroGlowSweep 4s ease-in-out infinite;
+}
+
+@keyframes resultHeroGlowSweep {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%) translateY(-100%);
+  }
+  50% {
+    opacity: 0.7;
   }
   100% {
     opacity: 0;

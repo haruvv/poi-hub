@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { HeaderBar } from "@/components/layout/HeaderBar";
 import { ServiceCard } from "@/components/diagnosis/ServiceCard";
 import { getServicesByCategory } from "@/data/services";
-import { getDiagnosisTypeFromId } from "@/types/diagnosis";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -15,29 +14,12 @@ interface PageProps {
 }
 
 export default async function InvestmentPage({ searchParams }: PageProps) {
-  const params = await searchParams;
-  const diagnosisType = getDiagnosisTypeFromId(params.type);
   const services = getServicesByCategory("investment");
 
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen bg-slate-50">
       <HeaderBar />
       <div className="mx-auto max-w-md px-4 pt-8 pb-16 space-y-6">
-        {/* 診断結果表示 */}
-        {diagnosisType && (
-          <div className="rounded-2xl bg-white border border-slate-200 p-4 shadow-sm">
-            <p className="text-xs font-semibold text-blue-600 mb-1">
-              あなたの診断結果
-            </p>
-            <h1 className="text-base font-semibold text-slate-900">
-              {diagnosisType}
-            </h1>
-            <p className="text-xs text-slate-600 mt-2">
-              このタイプにおすすめの投資サービスをご紹介します。
-            </p>
-          </div>
-        )}
-
         {/* サービス一覧 */}
         <div className="space-y-4">
           <div className="flex items-center justify-between">
