@@ -2,10 +2,17 @@ import type { Service, ServiceCategory } from "@/types/service";
 import { poiKatsuServices } from "./poi-katsu";
 import { creditCardServices } from "./credit-card";
 import { investmentServices } from "./investment";
+import { shoppingServices } from "./shopping";
+import { gamingServices } from "./gaming";
+import { mealServices } from "./meal";
+
 export const services: Service[] = [
   ...poiKatsuServices,
   ...creditCardServices,
   ...investmentServices,
+  ...shoppingServices,
+  ...gamingServices,
+  ...mealServices,
 ];
 
 export function getServicesByCategory(category: ServiceCategory): Service[] {

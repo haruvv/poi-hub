@@ -68,6 +68,78 @@ export const ServiceCategories = () => {
       href: "/diagnosis/investment",
       color: "emerald",
     },
+    {
+      title: "お得に買い物",
+      description:
+        "楽天市場やAmazonなど、ポイント還元や割引が充実したショッピングサイトを紹介しています。",
+      icon: (
+        <svg
+          className="w-8 h-8 text-orange-600"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
+          />
+        </svg>
+      ),
+      href: "/diagnosis/shopping",
+      color: "orange",
+    },
+    {
+      title: "お得にゲーム",
+      description:
+        "Steamのセールやゲームサブスクなど、お得にゲームを楽しめるサービスを紹介しています。",
+      icon: (
+        <svg
+          className="w-8 h-8 text-indigo-600"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"
+          />
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+          />
+        </svg>
+      ),
+      href: "/diagnosis/gaming",
+      color: "indigo",
+    },
+    {
+      title: "お得にご飯",
+      description:
+        "食べログやホットペッパーなど、お得にグルメを楽しめるサービスを紹介しています。",
+      icon: (
+        <svg
+          className="w-8 h-8 text-rose-600"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+          />
+        </svg>
+      ),
+      href: "/diagnosis/meal",
+      color: "rose",
+    },
   ];
 
   const colorConfig = {
@@ -88,6 +160,24 @@ export const ServiceCategories = () => {
       border: "border-emerald-200/60",
       hoverBg: "hover:from-emerald-100/80 hover:to-teal-100/60",
       button: "from-emerald-600 to-teal-500",
+    },
+    orange: {
+      bg: "from-orange-50/80 to-amber-50/40",
+      border: "border-orange-200/60",
+      hoverBg: "hover:from-orange-100/80 hover:to-amber-100/60",
+      button: "from-orange-600 to-amber-500",
+    },
+    indigo: {
+      bg: "from-indigo-50/80 to-blue-50/40",
+      border: "border-indigo-200/60",
+      hoverBg: "hover:from-indigo-100/80 hover:to-blue-100/60",
+      button: "from-indigo-600 to-blue-500",
+    },
+    rose: {
+      bg: "from-rose-50/80 to-pink-50/40",
+      border: "border-rose-200/60",
+      hoverBg: "hover:from-rose-100/80 hover:to-pink-100/60",
+      button: "from-rose-600 to-pink-500",
     },
   };
 

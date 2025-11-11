@@ -56,6 +56,30 @@ export const Footer = () => {
                   投資・資産づくり
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/diagnosis/shopping"
+                  className="hover:text-white transition-colors"
+                >
+                  お得に買い物
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/diagnosis/gaming"
+                  className="hover:text-white transition-colors"
+                >
+                  お得にゲーム
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/diagnosis/meal"
+                  className="hover:text-white transition-colors"
+                >
+                  お得にご飯
+                </Link>
+              </li>
             </ul>
           </div>
 
