@@ -2,6 +2,7 @@ import "./globals.css";
 import type { ReactNode } from "react";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Footer } from "@/components/layout/Footer";
 
 export const metadata = {
   title: "お得ナビ Hub",
@@ -11,8 +12,9 @@ export const metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="ja">
-      <body className="min-h-screen">
-        {children}
+      <body className="min-h-screen flex flex-col">
+        <div className="flex-1">{children}</div>
+        <Footer />
         <Analytics />
         <SpeedInsights />
       </body>

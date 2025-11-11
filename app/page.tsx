@@ -1,16 +1,14 @@
 import type { Metadata } from "next";
 import { HeaderBar } from "@/components/layout/HeaderBar";
-import { HeroSection } from "@/components/top/HeroSection";
-import { ValueProposition } from "@/components/top/ValueProposition";
-import { DiagnosisFlow } from "@/components/top/DiagnosisFlow";
-import { CategorySection } from "@/components/top/CategorySection";
+import { MainHero } from "@/components/top/MainHero";
+import { ServiceCategories } from "@/components/top/ServiceCategories";
+import { DiagnosisPromo } from "@/components/top/DiagnosisPromo";
 import { TrustSection } from "@/components/top/TrustSection";
-import { BottomCTA } from "@/components/top/BottomCTA";
 
 export const metadata: Metadata = {
-  title: "お得ナビ Hub｜あなたがムダなく増やせるお金を30秒でチェック",
+  title: "お得ナビ Hub｜あなたに合ったお得な始め方が見つかる",
   description:
-    "質問3つに答えるだけで、「今の自分がムダなく増やせるお得アクション」だけを絞って表示する診断ツール。",
+    "ポイ活・クレジットカード・投資サービスの中から、あなたのライフスタイルに合う選択肢を探せるお得情報サイト。",
 };
 
 export default function Home() {
@@ -18,23 +16,17 @@ export default function Home() {
     <main className="min-h-screen bg-slate-50 text-slate-900">
       <HeaderBar />
       <div className="mx-auto max-w-4xl px-4 pt-8 pb-20 space-y-12 sm:space-y-16">
-        {/* (1) ヒーローセクション */}
-        <HeroSection />
+        {/* (1) メインヒーロー */}
+        <MainHero />
 
-        {/* (2) この診断で得られる価値 */}
-        <ValueProposition />
+        {/* (2) サービスカテゴリ */}
+        <ServiceCategories />
 
-        {/* (3) 診断の流れ（3ステップ） */}
-        <DiagnosisFlow />
+        {/* (3) 診断プロモーション */}
+        <DiagnosisPromo />
 
-        {/* (4) カテゴリから探すセクション */}
-        <CategorySection />
-
-        {/* (5) 安心・信頼セクション */}
+        {/* (4) 安心・信頼セクション */}
         <TrustSection />
-
-        {/* (7) ページ下部の再CTA */}
-        <BottomCTA />
       </div>
     </main>
   );
