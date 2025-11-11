@@ -245,7 +245,7 @@ function buildDetailedResult({
     typeColor: "blue",
     answers: [
       {
-        question: "今の &ldquo;お金との付き合い方&rdquo; はどれが近い？",
+        question: "今の「お金との付き合い方」はどれが近い？",
         answer: "コツコツ貯金は好き",
         insight: "貯蓄重視",
       },
