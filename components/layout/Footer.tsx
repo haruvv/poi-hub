@@ -89,6 +89,14 @@ export const Footer = () => {
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
+                  href="/about"
+                  className="hover:text-white transition-colors"
+                >
+                  運営者情報
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/privacy"
                   className="hover:text-white transition-colors"
                 >

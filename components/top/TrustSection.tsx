@@ -43,6 +43,12 @@ export const TrustSection = () => {
         <div className="pt-6 border-t border-slate-200/60">
           <div className="flex flex-wrap items-center justify-center gap-6 text-[14px]">
             <Link
+              href="/about"
+              className="text-slate-600 hover:text-slate-900 hover:underline transition-colors"
+            >
+              運営者情報
+            </Link>
+            <Link
               href="/terms"
               className="text-slate-600 hover:text-slate-900 hover:underline transition-colors"
             >

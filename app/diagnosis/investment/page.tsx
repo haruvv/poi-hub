@@ -20,6 +20,21 @@ export default async function InvestmentPage({ searchParams }: PageProps) {
     <main className="min-h-screen bg-slate-50">
       <HeaderBar />
       <div className="mx-auto max-w-md px-4 pt-8 pb-16 space-y-6">
+        {/* 導入セクション */}
+        <section className="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm">
+          <h2 className="text-xl font-bold text-slate-900 mb-3 tracking-tight">
+            少額から始める「はじめての投資・資産形成」
+          </h2>
+          <div className="space-y-2 text-[14px] text-slate-700 leading-relaxed">
+            <p>
+              ここでは、つみたてNISA対応や少額から始めやすい投資サービスを中心に紹介しています。
+            </p>
+            <p>
+              元本保証ではないため、メリットだけでなく注意点もあわせて解説。焦らず、自分のペースで判断するための情報だけを集めました。
+            </p>
+          </div>
+        </section>
+
         {/* サービス一覧 */}
         <div className="space-y-4">
           <div className="flex items-center justify-between">

@@ -20,6 +20,21 @@ export default async function PoiKatsuPage({ searchParams }: PageProps) {
     <main className="min-h-screen bg-slate-50">
       <HeaderBar />
       <div className="mx-auto max-w-md px-4 pt-8 pb-16 space-y-6">
+        {/* 導入セクション */}
+        <section className="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm">
+          <h2 className="text-xl font-bold text-slate-900 mb-3 tracking-tight">
+            ポイ活で「ムリなく・コツコツ」始めたい人へ
+          </h2>
+          <div className="space-y-2 text-[14px] text-slate-700 leading-relaxed">
+            <p>
+              ここでは、毎日のネットショッピングやアプリ利用でポイントが貯めやすい定番サービスを厳選して紹介しています。
+            </p>
+            <p>
+              「怪しい案件」は避け、実績のあるサービスを中心に掲載。ひなちゃんと一緒に、今日から気軽にポイ活デビューしよう。
+            </p>
+          </div>
+        </section>
+
         {/* サービス一覧 */}
         <div className="space-y-4">
           <div className="flex items-center justify-between">

@@ -20,6 +20,21 @@ export default async function CreditCardPage({ searchParams }: PageProps) {
     <main className="min-h-screen bg-slate-50">
       <HeaderBar />
       <div className="mx-auto max-w-md px-4 pt-8 pb-16 space-y-6">
+        {/* 導入セクション */}
+        <section className="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm">
+          <h2 className="text-xl font-bold text-slate-900 mb-3 tracking-tight">
+            自分に合った「一枚目・乗り換え候補」を選びたい人へ
+          </h2>
+          <div className="space-y-2 text-[14px] text-slate-700 leading-relaxed">
+            <p>
+              年会費・還元率・安心感を重視して選びやすいクレジットカードだけをピックアップしています。
+            </p>
+            <p>
+              ポイント重視派・シンプル派などタイプ別のおすすめも紹介。申し込み前に公式サイトで最新の特典を必ずチェックしてください。
+            </p>
+          </div>
+        </section>
+
         {/* サービス一覧 */}
         <div className="space-y-4">
           <div className="flex items-center justify-between">
