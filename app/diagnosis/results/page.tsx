@@ -24,6 +24,8 @@ interface PageProps {
     cardUse?: string;
     spareTime?: string;
     tolerance?: string;
+    cashlessAmount?: string;
+    fixedCostAwareness?: string;
   }>;
 }
 
@@ -49,11 +51,26 @@ function buildDetailedResult({
   cardUse,
   spareTime,
   tolerance,
+  fixedCostAwareness = "",
 }: {
   cardUse: string;
   spareTime: string;
   tolerance: string;
+  fixedCostAwareness?: string;
 }): DetailedResult {
+  // 固定費への意識に基づいて回答を生成するヘルパー関数
+  const getFixedCostAnswer = () => {
+    if (fixedCostAwareness === "high") return "できるだけ下げたい";
+    if (fixedCostAwareness === "mid") return "たまにチェックする程度";
+    return "特に気にしていない";
+  };
+
+  const getFixedCostInsight = () => {
+    if (fixedCostAwareness === "high") return "固定費削減重視";
+    if (fixedCostAwareness === "mid") return "固定費への意識あり";
+    return "固定費への意識低め";
+  };
+
   // めんどくさがり現実派
   if (cardUse === "mid" && spareTime === "none" && tolerance === "low") {
     return {
@@ -77,14 +94,24 @@ function buildDetailedResult({
       typeColor: "blue",
       answers: [
         {
+          question: "今の「お金との付き合い方」はどれが近い？",
+          answer: "ネットショッピングが多い",
+          insight: "リスク低め志向",
+        },
+        {
           question: "毎月のキャッシュレス利用はどれくらい？",
           answer: "1〜10万円くらい",
-          insight: "リスク低め志向",
+          insight: "中程度の利用",
         },
         {
           question: "毎月「これくらいなら使えるかな」というスキマ時間は？",
           answer: "ほぼない（できれば何もしたくない）",
           insight: "シンプル重視",
+        },
+        {
+          question: "固定費（光熱費、通信費、サブスクなど）への意識は？",
+          answer: getFixedCostAnswer(),
+          insight: getFixedCostInsight(),
         },
         {
           question: "手間やリスク許容度はどのくらい？",
@@ -118,14 +145,24 @@ function buildDetailedResult({
       typeColor: "green",
       answers: [
         {
+          question: "今の「お金との付き合い方」はどれが近い？",
+          answer: "普段からキャッシュレス多め または ネットショッピングが多い",
+          insight: "キャッシュレス利用あり",
+        },
+        {
           question: "毎月のキャッシュレス利用はどれくらい？",
           answer: "1〜10万円くらい または 10万円以上",
-          insight: "キャッシュレス利用あり",
+          insight: "中〜高額利用",
         },
         {
           question: "毎月「これくらいなら使えるかな」というスキマ時間は？",
           answer: "週に30分〜1時間くらい",
           insight: "少し動ける",
+        },
+        {
+          question: "固定費（光熱費、通信費、サブスクなど）への意識は？",
+          answer: getFixedCostAnswer(),
+          insight: getFixedCostInsight(),
         },
         {
           question: "手間やリスク許容度はどのくらい？",
@@ -158,6 +195,11 @@ function buildDetailedResult({
       typeColor: "purple",
       answers: [
         {
+          question: "今の「お金との付き合い方」はどれが近い？",
+          answer: "普段からキャッシュレス多め",
+          insight: "キャッシュレス重視",
+        },
+        {
           question: "毎月のキャッシュレス利用はどれくらい？",
           answer: "10万円以上使うことが多い",
           insight: "支出インパクト大",
@@ -166,6 +208,11 @@ function buildDetailedResult({
           question: "毎月「これくらいなら使えるかな」というスキマ時間は？",
           answer: "ほぼない または 週に30分〜1時間くらい",
           insight: "シンプル重視",
+        },
+        {
+          question: "固定費（光熱費、通信費、サブスクなど）への意識は？",
+          answer: getFixedCostAnswer(),
+          insight: getFixedCostInsight(),
         },
         {
           question: "手間やリスク許容度はどのくらい？",
@@ -198,6 +245,11 @@ function buildDetailedResult({
     typeColor: "blue",
     answers: [
       {
+        question: "今の &ldquo;お金との付き合い方&rdquo; はどれが近い？",
+        answer: "コツコツ貯金は好き",
+        insight: "貯蓄重視",
+      },
+      {
         question: "毎月のキャッシュレス利用はどれくらい？",
         answer: "1万円未満（ほとんど使わない）",
         insight: "ライト利用",
@@ -206,6 +258,11 @@ function buildDetailedResult({
         question: "毎月「これくらいなら使えるかな」というスキマ時間は？",
         answer: "ほぼない または 週に30分〜1時間くらい",
         insight: "シンプル重視",
+      },
+      {
+        question: "固定費（光熱費、通信費、サブスクなど）への意識は？",
+        answer: getFixedCostAnswer(),
+        insight: getFixedCostInsight(),
       },
       {
         question: "手間やリスク許容度はどのくらい？",
@@ -220,10 +277,19 @@ export default async function DiagnosisResultsPage({
   searchParams,
 }: PageProps) {
   const params = await searchParams;
-  const { cardUse = "", spareTime = "", tolerance = "" } = params;
+  const {
+    cardUse = "",
+    spareTime = "",
+    tolerance = "",
+    cashlessAmount = "",
+    fixedCostAwareness = "",
+  } = params;
+
+  // 新しい質問パラメータを既存のパラメータにマッピング（互換性のため）
+  const mappedCardUse = cashlessAmount || cardUse || "low";
 
   // パラメータが不足している場合は診断ページにリダイレクト
-  if (!cardUse || !spareTime || !tolerance) {
+  if (!mappedCardUse || !spareTime || !tolerance) {
     return (
       <main className="min-h-screen bg-slate-50">
         <HeaderBar />
@@ -244,12 +310,26 @@ export default async function DiagnosisResultsPage({
     );
   }
 
-  const result = buildDetailedResult({ cardUse, spareTime, tolerance });
+  const result = buildDetailedResult({
+    cardUse: mappedCardUse,
+    spareTime,
+    tolerance,
+    fixedCostAwareness,
+  });
   const services = getServicesByCategory(result.category);
   const diagnosisType = result.label as DiagnosisType;
   const typeId = getDiagnosisTypeId(diagnosisType);
   const typeInfo = diagnosisTypes[diagnosisType];
   const categoryUrl = `/diagnosis/${typeInfo.page}?type=${typeId}`;
+
+  // 診断結果ページのパラメータをURLクエリ文字列として保持
+  const resultsParams = new URLSearchParams({
+    cardUse: mappedCardUse,
+    spareTime,
+    tolerance,
+    cashlessAmount: cashlessAmount || "",
+    fixedCostAwareness: fixedCostAwareness || "",
+  }).toString();
 
   // セカンドチョイスの準備
   const otherCategories = ["poi-katsu", "credit-card", "investment"].filter(
@@ -274,7 +354,7 @@ export default async function DiagnosisResultsPage({
             : "ポイ活をメインにしたい人へ",
       services: catServices.slice(0, 2).map((s) => ({
         name: s.name,
-        href: `/diagnosis/services/${s.id}`,
+        href: `/diagnosis/services/${s.id}?from=results&${resultsParams}`,
       })),
     };
   });
@@ -336,6 +416,7 @@ export default async function DiagnosisResultsPage({
                 ? "クレジットカード"
                 : "投資サービス"
           }
+          resultsParams={resultsParams}
         />
 
         {/* ④ ロジック可視化 */}

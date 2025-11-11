@@ -21,6 +21,14 @@ const categoryMeta = {
 
 type PageProps = {
   params: Promise<{ id: string }>;
+  searchParams: Promise<{
+    from?: string;
+    cardUse?: string;
+    spareTime?: string;
+    tolerance?: string;
+    cashlessAmount?: string;
+    fixedCostAwareness?: string;
+  }>;
 };
 
 export async function generateMetadata({
@@ -41,13 +49,29 @@ export async function generateMetadata({
   };
 }
 
-export default async function ServiceDetailPage({ params }: PageProps) {
+export default async function ServiceDetailPage({
+  params,
+  searchParams,
+}: PageProps) {
   const { id } = await params;
+  const searchParamsData = await searchParams;
   const service = getServiceById(id);
 
   if (!service) {
     notFound();
   }
+
+  // 診断結果ページから来た場合の戻るリンクを構築
+  const isFromResults = searchParamsData.from === "results";
+  const resultsBackUrl = isFromResults
+    ? `/diagnosis/results?${new URLSearchParams({
+        cardUse: searchParamsData.cardUse || "",
+        spareTime: searchParamsData.spareTime || "",
+        tolerance: searchParamsData.tolerance || "",
+        cashlessAmount: searchParamsData.cashlessAmount || "",
+        fixedCostAwareness: searchParamsData.fixedCostAwareness || "",
+      }).toString()}`
+    : null;
 
   const categoryInfo = categoryMeta[service.category] ?? {
     label: "診断一覧へ戻る",
@@ -80,27 +104,51 @@ export default async function ServiceDetailPage({ params }: PageProps) {
 
         <div className="relative flex flex-col gap-6">
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-            <Link
-              href={categoryInfo.href}
-              className="inline-flex items-center gap-1 text-[11px] font-semibold text-blue-600 hover:text-blue-500 transition"
-            >
-              <svg
-                className="w-4 h-4"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true"
+            {isFromResults && resultsBackUrl ? (
+              <Link
+                href={resultsBackUrl}
+                className="inline-flex items-center gap-1 text-[11px] font-semibold text-blue-600 hover:text-blue-500 transition"
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M15 19l-7-7 7-7"
-                />
-              </svg>
-              {categoryInfo.label}
-            </Link>
+                <svg
+                  className="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M15 19l-7-7 7-7"
+                  />
+                </svg>
+                診断結果へ戻る
+              </Link>
+            ) : (
+              <Link
+                href={categoryInfo.href}
+                className="inline-flex items-center gap-1 text-[11px] font-semibold text-blue-600 hover:text-blue-500 transition"
+              >
+                <svg
+                  className="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M15 19l-7-7 7-7"
+                  />
+                </svg>
+                {categoryInfo.label}
+              </Link>
+            )}
             <Link
               href="/diagnosis"
               className="inline-flex items-center gap-1 text-[11px] font-semibold text-slate-500 hover:text-slate-700 transition"

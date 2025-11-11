@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { HeaderBar } from "@/components/layout/HeaderBar";
-import { DiagnosisWizard } from "@/components/diagnosis/DiagnosisWizard";
+import { DiagnosisPageClient } from "./DiagnosisPageClient";
 
 export const metadata: Metadata = {
   title: "お得ナビ Hub｜30秒お得診断",
@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function DiagnosisPage() {
   return (
-    <main className="min-h-screen bg-slate-50 relative">
+    <main className="min-h-screen bg-slate-50 relative pb-20">
       {/* 背景エフェクト */}
       <div className="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-96 bg-slate-300/8 rounded-full blur-3xl animate-pulse" />
@@ -21,9 +21,7 @@ export default function DiagnosisPage() {
       </div>
 
       <HeaderBar />
-      <div className="mx-auto max-w-md px-4 pt-8 pb-16">
-        <DiagnosisWizard />
-      </div>
+      <DiagnosisPageClient />
     </main>
   );
 }

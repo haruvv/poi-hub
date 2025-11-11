@@ -1,37 +1,96 @@
-export const DiagnosisHero = () => {
+"use client";
+
+interface DiagnosisHeroProps {
+  onStart: () => void;
+}
+
+export const DiagnosisHero = ({ onStart }: DiagnosisHeroProps) => {
   return (
-    <section className="relative overflow-hidden rounded-3xl border-2 border-slate-200 bg-gradient-to-br from-slate-50 via-white to-slate-50 p-6 shadow-2xl diagnosis-hero-card">
+    <section className="relative overflow-hidden rounded-3xl border-2 border-slate-200 bg-gradient-to-br from-white via-slate-50/30 to-slate-50/30 p-6 shadow-xl diagnosis-hero-card">
       {/* 光るエフェクト */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-300/5 via-transparent to-slate-300/5 diagnosis-hero-glow" />
 
-      {/* キラキラエフェクト */}
-      <div className="sparkle sparkle-1 sparkle-gray" />
-      <div className="sparkle sparkle-2 sparkle-gray" />
-      <div className="sparkle sparkle-3 sparkle-gray" />
-
-      <div className="relative z-10 space-y-4">
-        <div className="inline-flex items-center gap-2 rounded-full bg-slate-700 px-4 py-1.5 text-[11px] font-bold text-white shadow-md">
-          <span className="inline-block h-2 w-2 rounded-full bg-white/80 animate-pulse" />
-          30秒で診断
-        </div>
-
+      <div className="relative z-10 space-y-5">
+        {/* タイトル */}
         <div className="space-y-3">
-          <h1 className="text-[24px] leading-tight font-extrabold text-slate-900">
-            あなたに本当に合う
+          <h1 className="text-[26px] leading-tight font-extrabold text-slate-900">
+            30秒でわかる、
             <br />
-            <span className="text-slate-700">「お得アクション」</span>
-            を診断
+            あなたに一番トクな始め方診断
           </h1>
-          <p className="text-[13px] text-slate-600 leading-relaxed font-medium">
-            難しいテクニックや怪しい副業は一切ナシ。
-            <br />
-            いつもの支払い方やよく使うサービスを選ぶだけで、
-            <span className="font-bold text-slate-900">
-              あなたに本当に合う「これだけやれば十分」なポイ活
-            </span>
-            を、2〜3個だけ厳選してお伝えします。
+          <p className="text-[14px] text-slate-600 leading-relaxed">
+            ポイ活・クレカ・投資…いきなり全部はしんどいあなたへ。
           </p>
         </div>
+
+        {/* 箇条書き */}
+        <div className="space-y-2.5">
+          <div className="flex items-center gap-2.5 text-[13px] text-slate-700">
+            <div className="flex-shrink-0 w-5 h-5 rounded-full bg-slate-700 flex items-center justify-center">
+              <svg
+                className="w-3 h-3 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={3}
+                  d="M5 13l4 4L19 7"
+                />
+              </svg>
+            </div>
+            <span className="font-medium">所要時間：5問</span>
+          </div>
+          <div className="flex items-center gap-2.5 text-[13px] text-slate-700">
+            <div className="flex-shrink-0 w-5 h-5 rounded-full bg-slate-700 flex items-center justify-center">
+              <svg
+                className="w-3 h-3 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={3}
+                  d="M5 13l4 4L19 7"
+                />
+              </svg>
+            </div>
+            <span className="font-medium">初心者OK</span>
+          </div>
+          <div className="flex items-center gap-2.5 text-[13px] text-slate-700">
+            <div className="flex-shrink-0 w-5 h-5 rounded-full bg-slate-700 flex items-center justify-center">
+              <svg
+                className="w-3 h-3 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={3}
+                  d="M5 13l4 4L19 7"
+                />
+              </svg>
+            </div>
+            <span className="font-medium">
+              診断後にあなた向けサービスだけ表示
+            </span>
+          </div>
+        </div>
+
+        {/* CTAボタン */}
+        <button
+          type="button"
+          onClick={onStart}
+          className="w-full mt-4 inline-flex items-center justify-center rounded-2xl text-base font-bold py-4 bg-slate-700 text-white hover:bg-slate-600 hover:shadow-xl active:scale-[0.98] transition-all duration-200 shadow-lg"
+        >
+          診断をはじめる
+        </button>
       </div>
     </section>
   );
