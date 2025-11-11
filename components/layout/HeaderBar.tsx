@@ -25,8 +25,8 @@ export const HeaderBar = () => {
     { href: "/diagnosis/poi-katsu", label: "ポイ活サイト" },
     { href: "/diagnosis/credit-card", label: "クレジットカード" },
     { href: "/diagnosis/investment", label: "投資・資産づくり" },
-    { href: "/diagnosis/shopping", label: "お得に買い物" },
-    { href: "/diagnosis/gaming", label: "お得にゲーム" },
+    // { href: "/diagnosis/shopping", label: "お得に買い物" },
+    // { href: "/diagnosis/gaming", label: "お得にゲーム" },
     { href: "/diagnosis/meal", label: "お得にご飯" },
   ];
 

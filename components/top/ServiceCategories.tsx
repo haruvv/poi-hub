@@ -68,56 +68,56 @@ export const ServiceCategories = () => {
       href: "/diagnosis/investment",
       color: "emerald",
     },
-    {
-      title: "お得に買い物",
-      description:
-        "楽天市場やAmazonなど、ポイント還元や割引が充実したショッピングサイトを紹介しています。",
-      icon: (
-        <svg
-          className="w-8 h-8 text-orange-600"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
-          />
-        </svg>
-      ),
-      href: "/diagnosis/shopping",
-      color: "orange",
-    },
-    {
-      title: "お得にゲーム",
-      description:
-        "Steamのセールやゲームサブスクなど、お得にゲームを楽しめるサービスを紹介しています。",
-      icon: (
-        <svg
-          className="w-8 h-8 text-indigo-600"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"
-          />
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-          />
-        </svg>
-      ),
-      href: "/diagnosis/gaming",
-      color: "indigo",
-    },
+    // {
+    //   title: "お得に買い物",
+    //   description:
+    //     "楽天市場やAmazonなど、ポイント還元や割引が充実したショッピングサイトを紹介しています。",
+    //   icon: (
+    //     <svg
+    //       className="w-8 h-8 text-orange-600"
+    //       fill="none"
+    //       stroke="currentColor"
+    //       viewBox="0 0 24 24"
+    //     >
+    //       <path
+    //         strokeLinecap="round"
+    //         strokeLinejoin="round"
+    //         strokeWidth={2}
+    //         d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
+    //       />
+    //     </svg>
+    //   ),
+    //   href: "/diagnosis/shopping",
+    //   color: "orange",
+    // },
+    // {
+    //   title: "お得にゲーム",
+    //   description:
+    //     "Steamのセールやゲームサブスクなど、お得にゲームを楽しめるサービスを紹介しています。",
+    //   icon: (
+    //     <svg
+    //       className="w-8 h-8 text-indigo-600"
+    //       fill="none"
+    //       stroke="currentColor"
+    //       viewBox="0 0 24 24"
+    //     >
+    //       <path
+    //         strokeLinecap="round"
+    //         strokeLinejoin="round"
+    //         strokeWidth={2}
+    //         d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"
+    //       />
+    //       <path
+    //         strokeLinecap="round"
+    //         strokeLinejoin="round"
+    //         strokeWidth={2}
+    //         d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+    //       />
+    //     </svg>
+    //   ),
+    //   href: "/diagnosis/gaming",
+    //   color: "indigo",
+    // },
     {
       title: "お得にご飯",
       description:
