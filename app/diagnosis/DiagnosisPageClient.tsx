@@ -4,6 +4,8 @@ import { useState } from "react";
 import { DiagnosisHero } from "@/components/diagnosis/DiagnosisHero";
 import { DiagnosisWizard } from "@/components/diagnosis/DiagnosisWizard";
 import { DiagnosisFooter } from "@/components/diagnosis/DiagnosisFooter";
+import { DiagnosisStartFlow } from "@/components/diagnosis/DiagnosisStartFlow";
+import { DiagnosisTypeExamples } from "@/components/diagnosis/DiagnosisTypeExamples";
 
 export const DiagnosisPageClient = () => {
   const [isStarted, setIsStarted] = useState(false);
@@ -21,9 +23,21 @@ export const DiagnosisPageClient = () => {
 
   return (
     <>
-      <div className="mx-auto max-w-md px-4 pt-8 pb-16">
+      <div className="mx-auto max-w-2xl px-4 pt-8 pb-16">
         {!isStarted ? (
-          <DiagnosisHero onStart={handleStart} />
+          <div className="space-y-10">
+            {/* ファーストビュー：ヒーローセクション */}
+            <DiagnosisHero onStart={handleStart} />
+
+            {/* その下の簡潔な要素 */}
+            <div className="space-y-8">
+              {/* 3ステップで診断の流れ */}
+              <DiagnosisStartFlow />
+
+              {/* 想定タイプの例 */}
+              <DiagnosisTypeExamples />
+            </div>
+          </div>
         ) : (
           <DiagnosisWizard onBack={handleBack} onStepChange={setCurrentStep} />
         )}
