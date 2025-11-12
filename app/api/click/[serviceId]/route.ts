@@ -47,6 +47,16 @@ export async function GET(
   const deviceInfo =
     `${deviceType} / ${result.os.name || "Unknown"} ${result.os.version || ""} / ${result.browser.name || "Unknown"}`.trim();
 
+  // Vercelから位置情報を取得
+  const country = request.headers.get("x-vercel-ip-country") || "Unknown";
+  const city = request.headers.get("x-vercel-ip-city") || "Unknown";
+  const region = request.headers.get("x-vercel-ip-country-region") || "";
+
+  // 位置情報を結合（例: "JP / Tokyo / 13"）
+  const location = region
+    ? `${country} / ${city} / ${region}`
+    : `${country} / ${city}`;
+
   // クリック情報をログに記録（Vercelのログに残る）
   const clickInfo = {
     timestamp: new Date().toISOString(),
@@ -55,6 +65,7 @@ export async function GET(
     category: service.category,
     affiliateUrl: primaryLink.url,
     deviceInfo: deviceInfo,
+    location: location,
     userAgent: userAgent,
     referer: request.headers.get("referer") || "direct",
     ip:
