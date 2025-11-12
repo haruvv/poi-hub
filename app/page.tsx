@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     title: "ポイ活なび｜あなたに合ったお得な始め方が見つかる",
     description:
       "ポイ活・クレジットカード・投資サービスの中から、あなたのライフスタイルに合う選択肢を探せるお得情報サイト。",
-    url: "https://poikatu.com",
+    url: "https://poikatsu-navi.com",
     siteName: "ポイ活なび",
     images: [
       {

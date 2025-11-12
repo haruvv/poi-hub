@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     title: "ポイ活なび｜30秒お得診断",
     description:
       "質問3つに答えるだけで、今の自分がやるべきポイ活・クレカ・節約アクションだけを絞って表示します。",
-    url: "https://poikatu.com/diagnosis",
+    url: "https://poikatsu-navi.com/diagnosis",
     siteName: "ポイ活なび",
     images: [
       {
