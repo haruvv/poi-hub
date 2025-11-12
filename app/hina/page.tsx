@@ -114,8 +114,7 @@ export default function HinaPage() {
 
           <div className="grid sm:grid-cols-2 gap-6">
             <div className="bg-white rounded-xl p-5 shadow-sm">
-              <h3 className="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
-                <span className="text-2xl">🎯</span>
+              <h3 className="text-lg font-bold text-slate-900 mb-3">
                 最近ハマってること
               </h3>
               <p className="text-slate-700 leading-relaxed">
@@ -128,8 +127,7 @@ export default function HinaPage() {
             </div>
 
             <div className="bg-white rounded-xl p-5 shadow-sm">
-              <h3 className="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
-                <span className="text-2xl">💳</span>
+              <h3 className="text-lg font-bold text-slate-900 mb-3">
                 よく使ってるサービス
               </h3>
               <p className="text-slate-700 leading-relaxed">
@@ -142,8 +140,7 @@ export default function HinaPage() {
             </div>
 
             <div className="bg-white rounded-xl p-5 shadow-sm">
-              <h3 className="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
-                <span className="text-2xl">💰</span>
+              <h3 className="text-lg font-bold text-slate-900 mb-3">
                 月にどれくらい貯まる？
               </h3>
               <p className="text-slate-700 leading-relaxed">
@@ -156,8 +153,7 @@ export default function HinaPage() {
             </div>
 
             <div className="bg-white rounded-xl p-5 shadow-sm">
-              <h3 className="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
-                <span className="text-2xl">✨</span>
+              <h3 className="text-lg font-bold text-slate-900 mb-3">
                 座右の銘
               </h3>
               <p className="text-slate-700 leading-relaxed">
@@ -169,9 +165,8 @@ export default function HinaPage() {
 
         {/* Q&A */}
         <section className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm">
-          <h2 className="text-2xl font-bold text-slate-900 mb-6 tracking-tight flex items-center gap-2">
+          <h2 className="text-2xl font-bold text-slate-900 mb-6 tracking-tight">
             ひなに聞いてみた
-            <span className="text-xl">💬</span>
           </h2>
 
           <div className="space-y-6">
