@@ -357,7 +357,7 @@ export default async function ServiceDetailPage({
               <div className="space-y-3">
                 {primaryLink && (
                   <a
-                    href={primaryLink.url}
+                    href={`/api/click/${service.id}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="detail-cta inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-rose-600 to-rose-500 py-3 text-sm font-semibold text-white shadow-[0_15px_35px_rgba(244,63,94,0.45)] transition-all duration-200 hover:from-rose-500 hover:to-rose-400 hover:shadow-[0_18px_40px_rgba(244,63,94,0.55)] active:scale-[0.97]"
