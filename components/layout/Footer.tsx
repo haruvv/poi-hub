@@ -80,6 +80,14 @@ export const Footer = () => {
                   お得にご飯
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/diagnosis/oripa"
+                  className="hover:text-white transition-colors"
+                >
+                  オリパ特集
+                </Link>
+              </li>
             </ul>
           </div>
 

@@ -5,6 +5,7 @@ import { investmentServices } from "./investment";
 import { shoppingServices } from "./shopping";
 import { gamingServices } from "./gaming";
 import { mealServices } from "./meal";
+import { oripaServices } from "./oripa";
 
 export const services: Service[] = [
   ...poiKatsuServices,
@@ -13,6 +14,7 @@ export const services: Service[] = [
   ...shoppingServices,
   ...gamingServices,
   ...mealServices,
+  ...oripaServices,
 ];
 
 export function getServicesByCategory(category: ServiceCategory): Service[] {

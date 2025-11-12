@@ -1,5 +1,5 @@
 import type { Service } from "@/types/service";
-import { FALLBACK_IMAGE_HTML } from "./shared";
+import { FALLBACK_IMAGE_HTML, createImageHTML } from "./shared";
 
 export const creditCardServices: Service[] = [
   {

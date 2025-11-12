@@ -5,7 +5,8 @@ export type ServiceCategory =
   | "investment"
   | "shopping"
   | "gaming"
-  | "meal";
+  | "meal"
+  | "oripa";
 
 // サービス情報
 export interface AffiliateLink {

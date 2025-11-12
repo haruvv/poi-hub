@@ -48,7 +48,7 @@ export const DiagnosisWizard = ({
     setTimeout(() => {
       setStep(prevStepNum);
       onStepChange?.(prevStepNum);
-      setIsTransitioning(false);
+    setIsTransitioning(false);
     }, 200);
   };
 
@@ -58,7 +58,7 @@ export const DiagnosisWizard = ({
     setTimeout(() => {
       setStep(nextStep);
       onStepChange?.(nextStep);
-      setIsTransitioning(false);
+        setIsTransitioning(false);
     }, 200);
   };
 
@@ -137,8 +137,8 @@ export const DiagnosisWizard = ({
           <div className="absolute inset-0 bg-gradient-to-br from-slate-50/50 via-transparent to-blue-50/20 pointer-events-none" />
 
           <div className="relative z-10 flex-1 flex flex-col">
-            {/* Q1 */}
-            {step === 1 && (
+        {/* Q1 */}
+        {step === 1 && (
               <QuestionContent
                 question="今の「お金との付き合い方」はどれが近いですか？"
                 description="普段のお金の使い方や考え方について教えてください"
@@ -147,22 +147,22 @@ export const DiagnosisWizard = ({
                   label="普段からキャッシュレス多め"
                   selected={cardUse === "high"}
                   onClick={() => setCardUse("high")}
-                />
+            />
                 <OptionCard
                   label="ネットショッピングが多い"
-                  selected={cardUse === "mid"}
-                  onClick={() => setCardUse("mid")}
-                />
+              selected={cardUse === "mid"}
+              onClick={() => setCardUse("mid")}
+            />
                 <OptionCard
                   label="コツコツ貯金は好き"
                   selected={cardUse === "low"}
                   onClick={() => setCardUse("low")}
-                />
+            />
               </QuestionContent>
-            )}
+        )}
 
-            {/* Q2 */}
-            {step === 2 && (
+        {/* Q2 */}
+        {step === 2 && (
               <QuestionContent
                 question="毎月のキャッシュレス利用はどれくらいですか？"
                 description="クレジットカードや電子マネーでの支払い金額の目安"
@@ -192,20 +192,20 @@ export const DiagnosisWizard = ({
                 description="ポイント管理やサービス利用に使える時間の目安"
               >
                 <OptionCard
-                  label="ほぼない（できれば何もしたくない）"
-                  selected={spareTime === "none"}
-                  onClick={() => setSpareTime("none")}
-                />
+              label="ほぼない（できれば何もしたくない）"
+              selected={spareTime === "none"}
+              onClick={() => setSpareTime("none")}
+            />
                 <OptionCard
-                  label="週に30分〜1時間くらい"
-                  selected={spareTime === "short"}
-                  onClick={() => setSpareTime("short")}
-                />
+              label="週に30分〜1時間くらい"
+              selected={spareTime === "short"}
+              onClick={() => setSpareTime("short")}
+            />
                 <OptionCard
-                  label="毎週そこそこ時間取れる"
-                  selected={spareTime === "long"}
-                  onClick={() => setSpareTime("long")}
-                />
+              label="毎週そこそこ時間取れる"
+              selected={spareTime === "long"}
+              onClick={() => setSpareTime("long")}
+            />
               </QuestionContent>
             )}
 
@@ -219,7 +219,7 @@ export const DiagnosisWizard = ({
                   label="できるだけ下げたい"
                   selected={fixedCostAwareness === "high"}
                   onClick={() => setFixedCostAwareness("high")}
-                />
+            />
                 <OptionCard
                   label="たまにチェックする程度"
                   selected={fixedCostAwareness === "mid"}
@@ -240,20 +240,20 @@ export const DiagnosisWizard = ({
                 description="お得な方法を選ぶ際の、あなたの考え方"
               >
                 <OptionCard
-                  label="できるだけシンプル・年会費無料がいい"
-                  selected={tolerance === "low"}
-                  onClick={() => setTolerance("low")}
-                />
+              label="できるだけシンプル・年会費無料がいい"
+              selected={tolerance === "low"}
+              onClick={() => setTolerance("low")}
+            />
                 <OptionCard
-                  label="ちょっと複雑でも、ちゃんと得するならアリ"
-                  selected={tolerance === "mid"}
-                  onClick={() => setTolerance("mid")}
-                />
+              label="ちょっと複雑でも、ちゃんと得するならアリ"
+              selected={tolerance === "mid"}
+              onClick={() => setTolerance("mid")}
+            />
                 <OptionCard
-                  label="投資系や高還元案件も、内容次第で検討したい"
-                  selected={tolerance === "high"}
-                  onClick={() => setTolerance("high")}
-                />
+              label="投資系や高還元案件も、内容次第で検討したい"
+              selected={tolerance === "high"}
+              onClick={() => setTolerance("high")}
+            />
               </QuestionContent>
             )}
 
@@ -286,8 +286,8 @@ export const DiagnosisWizard = ({
 
               {/* 次へ / 結果を見るボタン */}
               {step < 5 ? (
-                <button
-                  type="button"
+            <button
+              type="button"
                   disabled={
                     (step === 1 && !canNext1) ||
                     (step === 2 && !canNext2) ||
@@ -324,13 +324,13 @@ export const DiagnosisWizard = ({
                   disabled={!canNext5 || isCalculating}
                   onClick={handleShowDiagnosisResult}
                   className="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 text-white text-[15px] font-bold shadow-lg hover:shadow-xl hover:from-blue-500 hover:to-cyan-400 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed disabled:from-slate-300 disabled:to-slate-300"
-                >
-                  {isCalculating ? (
+            >
+              {isCalculating ? (
                     <>
                       <span className="inline-block h-4 w-4 rounded-full border-2 border-white/70 border-t-transparent animate-spin" />
-                      診断中...
+                  診断中...
                     </>
-                  ) : (
+              ) : (
                     <>
                       結果を見る
                       <svg
@@ -347,8 +347,8 @@ export const DiagnosisWizard = ({
                         />
                       </svg>
                     </>
-                  )}
-                </button>
+              )}
+            </button>
               )}
             </div>
           </div>
@@ -430,8 +430,8 @@ const OptionCard = ({
     <span
       className={`text-[15px] leading-relaxed flex-1 ${
         selected ? "text-slate-900 font-semibold" : "text-slate-700"
-      }`}
-    >
+    }`}
+  >
       {label}
     </span>
   </button>

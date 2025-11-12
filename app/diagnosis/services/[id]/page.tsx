@@ -29,6 +29,10 @@ const categoryMeta = {
     label: "お得にご飯一覧へ戻る",
     href: "/diagnosis/meal",
   },
+  oripa: {
+    label: "オリパ一覧へ戻る",
+    href: "/diagnosis/oripa",
+  },
 } as const;
 
 type PageProps = {
