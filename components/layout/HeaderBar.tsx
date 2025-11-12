@@ -32,7 +32,7 @@ export const HeaderBar = () => {
 
   return (
     <header className="sticky top-0 z-30 bg-white/95 backdrop-blur border-b border-slate-200">
-      <div className="mx-auto max-w-md px-4 py-3 flex items-center justify-between">
+      <div className="mx-auto max-w-md md:max-w-2xl lg:max-w-4xl px-4 py-3 flex items-center justify-between">
         <Link
           href="/"
           className="flex items-baseline gap-1.5 hover:opacity-80 transition-opacity"
@@ -95,7 +95,7 @@ export const HeaderBar = () => {
               isMenuOpen ? "animate-menu-slide-down" : "animate-menu-slide-up"
             }`}
           >
-            <div className="mx-auto max-w-md">
+            <div className="mx-auto max-w-md md:max-w-2xl lg:max-w-4xl">
               <ul className="py-2">
                 {menuItems.map((item, index) => (
                   <li

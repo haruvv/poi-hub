@@ -19,13 +19,13 @@ export default async function MealPage({ searchParams }: PageProps) {
   return (
     <main className="min-h-screen bg-slate-50">
       <HeaderBar />
-      <div className="mx-auto max-w-md px-4 pt-8 pb-16 space-y-6">
+      <div className="mx-auto max-w-md md:max-w-2xl lg:max-w-4xl px-4 pt-8 pb-16 space-y-6">
         {/* 導入セクション */}
-        <section className="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm">
-          <h2 className="text-xl font-bold text-slate-900 mb-3 tracking-tight">
+        <section className="bg-white rounded-2xl border border-slate-200 p-6 md:p-8 shadow-sm">
+          <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3 tracking-tight">
             外食やデリバリーでも「お得」を積み重ねたい人へ
           </h2>
-          <div className="space-y-2 text-[14px] text-slate-700 leading-relaxed">
+          <div className="space-y-2 text-[14px] md:text-[15px] text-slate-700 leading-relaxed">
             <p>
               テイクアウト・デリバリー・飲食店予約など、日常のご飯代をお得にできるサービスをまとめています。
             </p>
@@ -38,10 +38,10 @@ export default async function MealPage({ searchParams }: PageProps) {
         {/* サービス一覧 */}
         <div className="space-y-4">
           <div className="flex items-center justify-between">
-            <h2 className="text-lg font-semibold text-slate-900">お得にご飯</h2>
-            <span className="text-xs text-slate-500">{services.length}件</span>
+            <h2 className="text-lg md:text-xl font-semibold text-slate-900">お得にご飯</h2>
+            <span className="text-xs md:text-sm text-slate-500">{services.length}件</span>
           </div>
-          <div className="space-y-3">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 md:gap-4">
             {services.map((service, index) => (
               <ServiceCard
                 key={service.id}

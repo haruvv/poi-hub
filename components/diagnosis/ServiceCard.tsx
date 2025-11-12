@@ -65,23 +65,23 @@ export const ServiceCard = ({ service, rank }: ServiceCardProps) => {
         <div className="flex items-center gap-3">
           {smallImageHtml ? (
             <div
-              className="flex-shrink-0 w-20 sm:w-24 overflow-hidden rounded-xl border border-slate-200 bg-white/90 p-2 shadow-inner"
+              className="flex-shrink-0 w-20 sm:w-24 lg:w-28 overflow-hidden rounded-xl border border-slate-200 bg-white/90 p-2 shadow-inner"
               dangerouslySetInnerHTML={{
                 __html: smallImageHtml,
               }}
             />
           ) : (
-            <div className="flex-shrink-0 w-20 sm:w-24 h-20 sm:h-24 rounded-xl border border-slate-200 bg-gradient-to-br from-blue-100 via-white to-blue-50 shadow-inner flex items-center justify-center text-lg font-semibold text-blue-500">
+            <div className="flex-shrink-0 w-20 sm:w-24 lg:w-28 h-20 sm:h-24 lg:h-28 rounded-xl border border-slate-200 bg-gradient-to-br from-blue-100 via-white to-blue-50 shadow-inner flex items-center justify-center text-lg font-semibold text-blue-500">
               {service.name.charAt(0)}
             </div>
           )}
 
-          <div className="flex-1">
-            <h3 className="text-[15px] sm:text-base font-semibold text-slate-900 leading-snug">
+          <div className="flex-1 min-w-0">
+            <h3 className="text-[15px] sm:text-base lg:text-[17px] font-semibold text-slate-900 leading-snug">
               {service.name}
             </h3>
             {service.affiliateCampaignNote && (
-              <div className="mt-1 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-rose-500/90 to-pink-500/80 px-3 py-1 text-[10px] font-semibold text-white shadow-[0_8px_18px_rgba(236,72,153,0.35)]">
+              <div className="mt-1.5 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-rose-500/90 to-pink-500/80 px-3 py-1 text-[10px] lg:text-[11px] font-semibold text-white shadow-[0_8px_18px_rgba(236,72,153,0.35)]">
                 <svg
                   className="w-3 h-3"
                   fill="currentColor"
@@ -98,16 +98,16 @@ export const ServiceCard = ({ service, rank }: ServiceCardProps) => {
           </div>
         </div>
         <div className="space-y-2">
-          <p className="text-[11px] text-slate-600 leading-relaxed line-clamp-3">
+          <p className="text-[11px] lg:text-[12px] text-slate-600 leading-relaxed line-clamp-3">
             {service.description}
           </p>
 
           {service.tags.length > 0 && (
-            <div className="flex flex-wrap gap-1">
+            <div className="flex flex-wrap gap-1 lg:gap-1.5">
               {service.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="inline-flex items-center rounded-full bg-blue-50 px-2 py-0.5 text-[9px] font-medium text-blue-700"
+                  className="inline-flex items-center rounded-full bg-blue-50 px-2 py-0.5 text-[9px] lg:text-[10px] font-medium text-blue-700"
                 >
                   {tag}
                 </span>
@@ -116,9 +116,9 @@ export const ServiceCard = ({ service, rank }: ServiceCardProps) => {
           )}
         </div>
         <div className="flex items-center justify-between pt-2">
-          <span className="inline-flex items-center gap-2 rounded-full bg-red-600/90 px-4 py-1.5 text-[11px] font-semibold text-white shadow-[0_8px_18px_rgba(37,99,235,0.3)] transition group-hover:bg-blue-600">
+          <span className="inline-flex items-center gap-2 rounded-full bg-red-600/90 px-4 py-1.5 text-[11px] lg:text-[12px] font-semibold text-white shadow-[0_8px_18px_rgba(37,99,235,0.3)] transition group-hover:bg-blue-600">
             <svg
-              className="w-3.5 h-3.5"
+              className="w-3.5 h-3.5 lg:w-4 lg:h-4"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
