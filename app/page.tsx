@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { HeaderBar } from "@/components/layout/HeaderBar";
 import { MainHero } from "@/components/top/MainHero";
 import { ServiceCategories } from "@/components/top/ServiceCategories";
+import { FeaturedSection } from "@/components/top/FeaturedSection";
 import { DiagnosisPromo } from "@/components/top/DiagnosisPromo";
 import { TrustSection } from "@/components/top/TrustSection";
 
@@ -22,10 +23,13 @@ export default function Home() {
         {/* (2) サービスカテゴリ */}
         <ServiceCategories />
 
-        {/* (3) 診断プロモーション */}
+        {/* (3) 特集コンテンツ */}
+        <FeaturedSection />
+
+        {/* (4) 診断プロモーション */}
         <DiagnosisPromo />
 
-        {/* (4) 安心・信頼セクション */}
+        {/* (5) 安心・信頼セクション */}
         <TrustSection />
       </div>
     </main>

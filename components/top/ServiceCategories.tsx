@@ -140,28 +140,6 @@ export const ServiceCategories = () => {
       href: "/diagnosis/meal",
       color: "rose",
     },
-    {
-      title: "オリパ特集",
-      description:
-        "安心して楽しめるオリパサイトを厳選紹介。ポケカ・遊戯王・ワンピースなど人気カードのガチャが楽しめます。",
-      icon: (
-        <svg
-          className="w-8 h-8 text-amber-600"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
-          />
-        </svg>
-      ),
-      href: "/diagnosis/oripa",
-      color: "amber",
-    },
   ];
 
   const colorConfig = {
@@ -200,12 +178,6 @@ export const ServiceCategories = () => {
       border: "border-rose-200/60",
       hoverBg: "hover:from-rose-100/80 hover:to-pink-100/60",
       button: "from-rose-600 to-pink-500",
-    },
-    amber: {
-      bg: "from-amber-50/80 to-yellow-50/40",
-      border: "border-amber-200/60",
-      hoverBg: "hover:from-amber-100/80 hover:to-yellow-100/60",
-      button: "from-amber-600 to-yellow-500",
     },
   };
 
