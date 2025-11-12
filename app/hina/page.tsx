@@ -106,6 +106,128 @@ export default function HinaPage() {
           </div>
         </section>
 
+        {/* プロフィール詳細 */}
+        <section className="bg-gradient-to-br from-cyan-50 to-blue-50 rounded-2xl border border-blue-200 p-6 sm:p-8 shadow-sm">
+          <h2 className="text-2xl font-bold text-slate-900 mb-6 tracking-tight">
+            もっとひなを知ろう
+          </h2>
+
+          <div className="grid sm:grid-cols-2 gap-6">
+            <div className="bg-white rounded-xl p-5 shadow-sm">
+              <h3 className="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+                <span className="text-2xl">🎯</span>
+                最近ハマってること
+              </h3>
+              <p className="text-slate-700 leading-relaxed">
+                コンビニスイーツ巡り
+                <br />
+                <span className="text-sm text-slate-600">
+                  ローソンのバスチー最高！ポイントで買えると罪悪感ゼロ
+                </span>
+              </p>
+            </div>
+
+            <div className="bg-white rounded-xl p-5 shadow-sm">
+              <h3 className="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+                <span className="text-2xl">💳</span>
+                よく使ってるサービス
+              </h3>
+              <p className="text-slate-700 leading-relaxed">
+                モッピー、ハピタス
+                <br />
+                <span className="text-sm text-slate-600">
+                  シンプルで分かりやすいのが好き
+                </span>
+              </p>
+            </div>
+
+            <div className="bg-white rounded-xl p-5 shadow-sm">
+              <h3 className="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+                <span className="text-2xl">💰</span>
+                月にどれくらい貯まる？
+              </h3>
+              <p className="text-slate-700 leading-relaxed">
+                だいたい2000円くらい
+                <br />
+                <span className="text-sm text-slate-600">
+                  スタバ2回分！大金持ちにはならないけどちょっと嬉しい
+                </span>
+              </p>
+            </div>
+
+            <div className="bg-white rounded-xl p-5 shadow-sm">
+              <h3 className="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+                <span className="text-2xl">✨</span>
+                座右の銘
+              </h3>
+              <p className="text-slate-700 leading-relaxed">
+                「塵も積もれば山となる」
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Q&A */}
+        <section className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm">
+          <h2 className="text-2xl font-bold text-slate-900 mb-6 tracking-tight flex items-center gap-2">
+            ひなに聞いてみた
+            <span className="text-xl">💬</span>
+          </h2>
+
+          <div className="space-y-6">
+            <div className="border-l-4 border-blue-500 pl-5">
+              <h3 className="font-bold text-slate-900 mb-2">
+                Q. ひなって何者？
+              </h3>
+              <p className="text-slate-700 leading-relaxed">
+                A. ポイ活好きすぎて気づいたら広報やってた人
+              </p>
+            </div>
+
+            <div className="border-l-4 border-blue-500 pl-5">
+              <h3 className="font-bold text-slate-900 mb-2">
+                Q. ポイ活始めたきっかけは？
+              </h3>
+              <p className="text-slate-700 leading-relaxed">
+                A. スイーツ買うお金欲しかったから笑
+              </p>
+            </div>
+
+            <div className="border-l-4 border-blue-500 pl-5">
+              <h3 className="font-bold text-slate-900 mb-2">
+                Q. 一番嬉しかったことは？
+              </h3>
+              <p className="text-slate-700 leading-relaxed">
+                A. ポイントだけでSwitch買えた時！
+                <br />
+                1年コツコツ貯めたら意外といけた
+              </p>
+            </div>
+
+            <div className="border-l-4 border-blue-500 pl-5">
+              <h3 className="font-bold text-slate-900 mb-2">
+                Q. オススメのポイントの使い道は？
+              </h3>
+              <p className="text-slate-700 leading-relaxed">
+                A. コンビニスイーツ！あと本とかゲーム
+                <br />
+                「ポイントだから」って罪悪感なく買えるのが最高
+              </p>
+            </div>
+
+            <div className="border-l-4 border-blue-500 pl-5">
+              <h3 className="font-bold text-slate-900 mb-2">
+                Q. 続けるコツは？
+              </h3>
+              <p className="text-slate-700 leading-relaxed">
+                A. 無理しないこと！
+                <br />
+                「絶対毎日やる！」とか決めると疲れるから、思い出した時にやるくらいでOK
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* SNS・活動情報 */}
         <section className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm">
           <h2 className="text-2xl font-bold text-slate-900 mb-6 tracking-tight">
