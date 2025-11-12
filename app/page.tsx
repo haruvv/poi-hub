@@ -10,6 +10,30 @@ export const metadata: Metadata = {
   title: "ポイ活なび｜あなたに合ったお得な始め方が見つかる",
   description:
     "ポイ活・クレジットカード・投資サービスの中から、あなたのライフスタイルに合う選択肢を探せるお得情報サイト。",
+  openGraph: {
+    title: "ポイ活なび｜あなたに合ったお得な始め方が見つかる",
+    description:
+      "ポイ活・クレジットカード・投資サービスの中から、あなたのライフスタイルに合う選択肢を探せるお得情報サイト。",
+    url: "https://poikatu.com",
+    siteName: "ポイ活なび",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1920,
+        height: 1080,
+        alt: "ポイ活なび - あなたに合ったお得な始め方が見つかる",
+      },
+    ],
+    locale: "ja_JP",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "ポイ活なび｜あなたに合ったお得な始め方が見つかる",
+    description:
+      "ポイ活・クレジットカード・投資サービスの中から、あなたのライフスタイルに合う選択肢を探せるお得情報サイト。",
+    images: ["/og-image.png"],
+  },
 };
 
 export default function Home() {

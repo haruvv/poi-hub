@@ -6,6 +6,30 @@ export const metadata: Metadata = {
   title: "ポイ活なび｜30秒お得診断",
   description:
     "質問3つに答えるだけで、今の自分がやるべきポイ活・クレカ・節約アクションだけを絞って表示します。",
+  openGraph: {
+    title: "ポイ活なび｜30秒お得診断",
+    description:
+      "質問3つに答えるだけで、今の自分がやるべきポイ活・クレカ・節約アクションだけを絞って表示します。",
+    url: "https://poikatu.com/diagnosis",
+    siteName: "ポイ活なび",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1920,
+        height: 1080,
+        alt: "ポイ活なび - 30秒お得診断",
+      },
+    ],
+    locale: "ja_JP",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "ポイ活なび｜30秒お得診断",
+    description:
+      "質問3つに答えるだけで、今の自分がやるべきポイ活・クレカ・節約アクションだけを絞って表示します。",
+    images: ["/og-image.png"],
+  },
 };
 
 export default function DiagnosisPage() {
