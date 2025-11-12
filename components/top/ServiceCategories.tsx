@@ -1,6 +1,10 @@
+"use client";
+
 import Link from "next/link";
+import { useState } from "react";
 
 export const ServiceCategories = () => {
+  const [isExpanded, setIsExpanded] = useState(false);
   const categories = [
     {
       title: "ポイ活でコツコツ貯める",
@@ -181,6 +185,11 @@ export const ServiceCategories = () => {
     },
   };
 
+  // 主要カテゴリ（最初の3つ）とその他を分ける
+  const mainCategories = categories.slice(0, 3);
+  const otherCategories = categories.slice(3);
+  const displayedCategories = isExpanded ? categories : mainCategories;
+
   return (
     <section className="space-y-6">
       <div className="text-center">
@@ -193,7 +202,7 @@ export const ServiceCategories = () => {
       </div>
 
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {categories.map((category, index) => {
+        {displayedCategories.map((category, index) => {
           const colors =
             colorConfig[category.color as keyof typeof colorConfig];
 
@@ -238,6 +247,37 @@ export const ServiceCategories = () => {
           );
         })}
       </div>
+
+      {/* 展開ボタン */}
+      {otherCategories.length > 0 && (
+        <div className="text-center pt-2">
+          <button
+            onClick={() => setIsExpanded(!isExpanded)}
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border-2 border-slate-300 bg-white text-slate-700 font-semibold text-[15px] hover:bg-slate-50 hover:border-slate-400 transition-all duration-300 shadow-sm hover:shadow-md"
+          >
+            <span>
+              {isExpanded
+                ? "カテゴリを閉じる"
+                : `他のカテゴリを見る（${otherCategories.length}件）`}
+            </span>
+            <svg
+              className={`w-5 h-5 transition-transform duration-300 ${
+                isExpanded ? "rotate-180" : ""
+              }`}
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2.5}
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+          </button>
+        </div>
+      )}
     </section>
   );
 };

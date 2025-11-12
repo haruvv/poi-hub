@@ -20,14 +20,14 @@ export default function Home() {
         {/* (1) メインヒーロー */}
         <MainHero />
 
-        {/* (2) サービスカテゴリ */}
-        <ServiceCategories />
+        {/* (2) 診断プロモーション */}
+        <DiagnosisPromo />
 
         {/* (3) 特集コンテンツ */}
         <FeaturedSection />
 
-        {/* (4) 診断プロモーション */}
-        <DiagnosisPromo />
+        {/* (4) サービスカテゴリ */}
+        <ServiceCategories />
 
         {/* (5) 安心・信頼セクション */}
         <TrustSection />
