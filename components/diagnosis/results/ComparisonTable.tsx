@@ -79,7 +79,7 @@ export const ComparisonTable = ({
 
       <div className="relative overflow-hidden rounded-3xl border border-slate-200/60 bg-white/80 backdrop-blur-sm p-8 shadow-[0_8px_30px_rgba(0,0,0,0.08)]">
         {/* 背景グラデーション */}
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-50/50 via-transparent to-indigo-50/20" />
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-50/50 via-transparent to-cyan-50/20" />
 
         <div className="relative z-10">
           <h2 className="text-2xl font-bold text-slate-900 mb-6 tracking-tight">

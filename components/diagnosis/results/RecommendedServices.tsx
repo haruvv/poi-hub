@@ -93,7 +93,7 @@ export const RecommendedServices = ({
                       }}
                     />
                   ) : (
-                    <div className="flex-shrink-0 w-24 sm:w-28 h-24 sm:h-28 rounded-2xl border border-slate-200/80 bg-gradient-to-br from-blue-100 via-indigo-50 to-purple-50 shadow-[0_2px_12px_rgba(0,0,0,0.08)] flex items-center justify-center text-2xl font-bold text-blue-600">
+                    <div className="flex-shrink-0 w-24 sm:w-28 h-24 sm:h-28 rounded-2xl border border-slate-200/80 bg-gradient-to-br from-blue-100 via-cyan-50 to-blue-50 shadow-[0_2px_12px_rgba(0,0,0,0.08)] flex items-center justify-center text-2xl font-bold text-blue-600">
                       {service.name.charAt(0)}
                     </div>
                   )}

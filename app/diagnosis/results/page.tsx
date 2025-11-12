@@ -39,7 +39,7 @@ interface DetailedResult {
   category: "poi-katsu" | "credit-card" | "investment";
   ctaText: string;
   riskLevel: number;
-  typeColor: "blue" | "orange" | "green" | "purple";
+  typeColor: "blue" | "orange" | "green" | "teal";
   answers: {
     question: string;
     answer: string;
@@ -192,7 +192,7 @@ function buildDetailedResult({
       category: "credit-card",
       ctaText: "あなたに合うクレジットカード候補を見る",
       riskLevel: 30,
-      typeColor: "purple",
+      typeColor: "teal",
       answers: [
         {
           question: "今の「お金との付き合い方」はどれが近い？",

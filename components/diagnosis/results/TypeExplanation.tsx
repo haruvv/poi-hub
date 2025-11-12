@@ -40,8 +40,8 @@ export const TypeExplanation = ({
             </li>
           ))}
         </ul>
-        <div className="relative rounded-2xl bg-gradient-to-br from-blue-50/80 via-indigo-50/50 to-purple-50/30 border border-blue-100/60 p-6 backdrop-blur-sm">
-          <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 rounded-t-2xl" />
+        <div className="relative rounded-2xl bg-gradient-to-br from-blue-50/80 via-cyan-50/50 to-blue-50/30 border border-blue-100/60 p-6 backdrop-blur-sm">
+          <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 via-blue-600 to-cyan-500 rounded-t-2xl" />
           <p className="text-[15px] text-slate-800 leading-relaxed font-semibold">
             {summary}
           </p>

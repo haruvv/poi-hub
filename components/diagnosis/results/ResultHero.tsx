@@ -6,7 +6,7 @@ interface ResultHeroProps {
   ctaText: string;
   ctaHref: string;
   riskLevel: number; // 0-100 (安全志向〜攻め志向)
-  typeColor: "blue" | "orange" | "green" | "purple";
+  typeColor: "blue" | "orange" | "green" | "teal";
 }
 
 export const ResultHero = ({
@@ -45,14 +45,14 @@ export const ResultHero = ({
       sparkle: "sparkle-blue",
       badge: "bg-emerald-500/10 text-emerald-700 border-emerald-200/60",
     },
-    purple: {
-      gradient: "from-purple-600 via-purple-500 to-pink-500",
-      gradientLight: "from-purple-500/20 via-pink-500/10 to-purple-600/20",
-      bg: "from-purple-50/80 via-white/60 to-pink-50/40",
-      border: "border-purple-200/60",
-      glow: "from-purple-400/20 via-transparent to-pink-400/20",
-      sparkle: "sparkle-purple",
-      badge: "bg-purple-500/10 text-purple-700 border-purple-200/60",
+    teal: {
+      gradient: "from-teal-600 via-teal-500 to-cyan-500",
+      gradientLight: "from-teal-500/20 via-cyan-500/10 to-teal-600/20",
+      bg: "from-teal-50/80 via-white/60 to-cyan-50/40",
+      border: "border-teal-200/60",
+      glow: "from-teal-400/20 via-transparent to-cyan-400/20",
+      sparkle: "sparkle-blue",
+      badge: "bg-teal-500/10 text-teal-700 border-teal-200/60",
     },
   };
 
