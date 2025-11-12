@@ -13,8 +13,14 @@ export default function HinaPage() {
       {/* 背景の装飾 */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 left-10 w-32 h-32 bg-blue-200/30 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute top-40 right-20 w-40 h-40 bg-pink-200/30 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute bottom-20 left-1/4 w-36 h-36 bg-cyan-200/30 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div
+          className="absolute top-40 right-20 w-40 h-40 bg-pink-200/30 rounded-full blur-3xl animate-pulse"
+          style={{ animationDelay: "1s" }}
+        ></div>
+        <div
+          className="absolute bottom-20 left-1/4 w-36 h-36 bg-cyan-200/30 rounded-full blur-3xl animate-pulse"
+          style={{ animationDelay: "2s" }}
+        ></div>
       </div>
 
       <HeaderBar />
@@ -22,7 +28,7 @@ export default function HinaPage() {
         {/* ヘッダー */}
         <div className="text-center space-y-4">
           <div className="inline-block">
-            <h1 className="text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-cyan-500 to-pink-500 tracking-tight mb-2">
+            <h1 className="text-4xl md:text-5xl font-black text-slate-900 tracking-tight mb-2">
               ひなちゃんのページ
             </h1>
             <div className="h-1 bg-gradient-to-r from-blue-400 via-cyan-400 to-pink-400 rounded-full"></div>
@@ -112,7 +118,7 @@ export default function HinaPage() {
                   <div className="absolute -top-4 left-10 w-0 h-0 border-l-[16px] border-l-transparent border-r-[16px] border-r-transparent border-b-[16px] border-b-pink-200"></div>
                   <div className="absolute -top-3 left-10 w-0 h-0 border-l-[16px] border-l-transparent border-r-[16px] border-r-transparent border-b-[16px] border-b-pink-50"></div>
 
-                  <p className="text-base font-black text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-cyan-600 mb-3">
+                  <p className="text-base font-black text-pink-600 mb-3">
                     ひなちゃんから一言
                   </p>
                   <p className="text-lg leading-relaxed text-slate-800 font-medium">
@@ -126,7 +132,7 @@ export default function HinaPage() {
 
         {/* プロフィール詳細 */}
         <section className="bg-gradient-to-br from-cyan-100/50 via-blue-50/50 to-pink-100/50 rounded-[2rem] border-4 border-white p-6 sm:p-8 shadow-xl backdrop-blur-sm">
-          <h2 className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-pink-600 mb-8 text-center">
+          <h2 className="text-3xl font-black text-slate-900 mb-8 text-center">
             もっとひなを知ろう
           </h2>
 
@@ -183,7 +189,7 @@ export default function HinaPage() {
 
         {/* Q&A */}
         <section className="bg-white/80 backdrop-blur-sm rounded-[2rem] border-4 border-white p-6 sm:p-8 shadow-xl">
-          <h2 className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-blue-600 mb-8 text-center">
+          <h2 className="text-3xl font-black text-slate-900 mb-8 text-center">
             ひなに聞いてみた
           </h2>
 
