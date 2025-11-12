@@ -17,9 +17,7 @@ export default function HinaPage() {
           <h1 className="text-4xl font-bold text-slate-900 tracking-tight">
             ひなちゃんのページ
           </h1>
-          <p className="text-slate-600 text-lg">
-            ポイ活なび公式キャラクター
-          </p>
+          <p className="text-slate-600 text-lg">ポイ活なび公式キャラクター</p>
         </div>
 
         {/* メインコンテンツ */}
@@ -100,7 +98,7 @@ export default function HinaPage() {
                     ひなちゃんから一言
                   </p>
                   <p className="text-lg leading-relaxed text-slate-800 font-medium">
-                    初めまして！広報のひなです！みんなのお得ライフを全力でサポートするから、一緒に楽しくお得活動しましょう〜！
+                    初めまして！広報のひなです！みんなのお得ライフを全力でサポートしたいです！一緒に楽しくお得活動しましょう〜！
                   </p>
                 </div>
               </div>
@@ -126,7 +124,9 @@ export default function HinaPage() {
                 </svg>
               </div>
               <div className="flex-1">
-                <h3 className="font-bold text-slate-900 mb-1">X（旧Twitter）</h3>
+                <h3 className="font-bold text-slate-900 mb-1">
+                  X（旧Twitter）
+                </h3>
                 <p className="text-sm text-slate-600 mb-2">
                   お得情報やキャンペーンの最新情報を発信中！
                 </p>
@@ -168,4 +168,3 @@ export default function HinaPage() {
     </main>
   );
 }
-
