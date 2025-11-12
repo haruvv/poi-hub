@@ -88,6 +88,14 @@ export const Footer = () => {
                   オリパ特集
                 </Link>
               </li>
+              <li className="pt-2 mt-2 border-t border-slate-700">
+                <Link
+                  href="/hina"
+                  className="text-blue-400 hover:text-blue-300 transition-colors font-semibold"
+                >
+                  ひなちゃんのページ
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -95,14 +103,6 @@ export const Footer = () => {
           <div className="space-y-4">
             <h4 className="text-sm font-semibold text-white">法的情報</h4>
             <ul className="space-y-2 text-sm">
-              <li>
-                <Link
-                  href="/hina"
-                  className="hover:text-white transition-colors"
-                >
-                  ひなちゃんのページ
-                </Link>
-              </li>
               <li>
                 <Link
                   href="/about"
