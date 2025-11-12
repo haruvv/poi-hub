@@ -118,36 +118,36 @@ export default function HinaPage() {
                 最近ハマってること
               </h3>
               <p className="text-slate-700 leading-relaxed">
-                コンビニスイーツ巡り
+                ポケモンカード
                 <br />
                 <span className="text-sm text-slate-600">
-                  ローソンのバスチー最高！ポイントで買えると罪悪感ゼロ
+                  オリパ開封もよくしてる！
                 </span>
               </p>
             </div>
 
             <div className="bg-white rounded-xl p-5 shadow-sm">
               <h3 className="text-lg font-bold text-slate-900 mb-3">
-                よく使ってるサービス
+                ポイ活レベル
               </h3>
               <p className="text-slate-700 leading-relaxed">
-                モッピー、ハピタス
+                初心者
                 <br />
                 <span className="text-sm text-slate-600">
-                  シンプルで分かりやすいのが好き
+                  まだ始めたばかり！これから色々試していくよ
                 </span>
               </p>
             </div>
 
             <div className="bg-white rounded-xl p-5 shadow-sm">
               <h3 className="text-lg font-bold text-slate-900 mb-3">
-                月にどれくらい貯まる？
+                これからの目標
               </h3>
               <p className="text-slate-700 leading-relaxed">
-                だいたい2000円くらい
+                月1000円貯めたい
                 <br />
                 <span className="text-sm text-slate-600">
-                  スタバ2回分！大金持ちにはならないけどちょっと嬉しい
+                  まだ全然貯まってないけど、コツコツ頑張る！
                 </span>
               </p>
             </div>
@@ -157,7 +157,7 @@ export default function HinaPage() {
                 座右の銘
               </h3>
               <p className="text-slate-700 leading-relaxed">
-                「塵も積もれば山となる」
+                「塵も積もれば山となる」(ドヤ)
               </p>
             </div>
           </div>
@@ -175,7 +175,7 @@ export default function HinaPage() {
                 Q. ひなって何者？
               </h3>
               <p className="text-slate-700 leading-relaxed">
-                A. ポイ活好きすぎて気づいたら広報やってた人
+                A. お得情報を調べるのが好きで気づいたら広報やってた人
               </p>
             </div>
 
@@ -184,40 +184,42 @@ export default function HinaPage() {
                 Q. ポイ活始めたきっかけは？
               </h3>
               <p className="text-slate-700 leading-relaxed">
-                A. スイーツ買うお金欲しかったから笑
+                A. このサイトの広報になってから！
+                <br />
+                調べてるうちに「自分もやってみよう」ってなった
               </p>
             </div>
 
             <div className="border-l-4 border-blue-500 pl-5">
               <h3 className="font-bold text-slate-900 mb-2">
-                Q. 一番嬉しかったことは？
+                Q. ポイ活ってどう？
               </h3>
               <p className="text-slate-700 leading-relaxed">
-                A. ポイントだけでSwitch買えた時！
+                A. まだ始めたばかりだから大きなことは言えないけど、
                 <br />
-                1年コツコツ貯めたら意外といけた
+                少しずつでも貯まっていくのが楽しい！
               </p>
             </div>
 
             <div className="border-l-4 border-blue-500 pl-5">
               <h3 className="font-bold text-slate-900 mb-2">
-                Q. オススメのポイントの使い道は？
+                Q. これから何に使いたい？
               </h3>
               <p className="text-slate-700 leading-relaxed">
-                A. コンビニスイーツ！あと本とかゲーム
+                A. ポケカのパック買いたい！
                 <br />
-                「ポイントだから」って罪悪感なく買えるのが最高
+                あとコンビニスイーツとか本とか
               </p>
             </div>
 
             <div className="border-l-4 border-blue-500 pl-5">
               <h3 className="font-bold text-slate-900 mb-2">
-                Q. 続けるコツは？
+                Q. 初心者だけど大丈夫？
               </h3>
               <p className="text-slate-700 leading-relaxed">
-                A. 無理しないこと！
+                A. 私も初心者だから一緒に頑張ろう！
                 <br />
-                「絶対毎日やる！」とか決めると疲れるから、思い出した時にやるくらいでOK
+                分からないことがあったらサイトで調べながら進めてるよ
               </p>
             </div>
           </div>
