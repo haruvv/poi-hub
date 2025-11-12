@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "ひなちゃんのページ｜ポイ活なび",
-  description: "ポイ活なびの公式キャラクター「ひな」のプロフィールと最新情報",
+  description: "ポイ活なびの広報「ひな」のプロフィールと最新情報",
 };
 
 export default function HinaPage() {
@@ -17,7 +17,6 @@ export default function HinaPage() {
           <h1 className="text-4xl font-bold text-slate-900 tracking-tight">
             ひなちゃんのページ
           </h1>
-          <p className="text-slate-600 text-lg">ポイ活なび公式キャラクター</p>
         </div>
 
         {/* メインコンテンツ */}
@@ -75,13 +74,13 @@ export default function HinaPage() {
                   <li className="flex gap-3 items-start">
                     <span className="mt-2 h-2 w-2 flex-shrink-0 rounded-full bg-blue-500" />
                     <span className="leading-relaxed text-slate-700">
-                      お得情報とスイーツが大好きな、ちょっと真面目な広報ガール
+                      ポケカとお得情報を調べるのが好きな広報担当
                     </span>
                   </li>
                   <li className="flex gap-3 items-start">
                     <span className="mt-2 h-2 w-2 flex-shrink-0 rounded-full bg-blue-500" />
                     <span className="leading-relaxed text-slate-700">
-                      「難しいことをそのまま出されるとイヤ！」という人の味方として、キャンペーンやポイントの仕組みをやさしく噛み砕いて解説するよ
+                      ポイ活初心者だから、みんなと一緒に学んでいきたい！
                     </span>
                   </li>
                 </ul>
@@ -134,7 +133,7 @@ export default function HinaPage() {
                 初心者
                 <br />
                 <span className="text-sm text-slate-600">
-                  まだ始めたばかり！これから色々試していくよ
+                  まだ始めたばかり！これから色々試していくよー
                 </span>
               </p>
             </div>
