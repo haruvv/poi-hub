@@ -74,7 +74,7 @@ export default function HinaPage() {
                   <li className="flex gap-3 items-start">
                     <span className="mt-2 h-2 w-2 flex-shrink-0 rounded-full bg-blue-500" />
                     <span className="leading-relaxed text-slate-700">
-                      ポケカとお得情報を調べるのが好きな広報担当
+                      お得情報を調べるのが好きな広報担当
                     </span>
                   </li>
                   <li className="flex gap-3 items-start">
