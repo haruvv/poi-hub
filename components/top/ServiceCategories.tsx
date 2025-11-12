@@ -121,7 +121,7 @@ export const ServiceCategories = () => {
     {
       title: "お得にご飯",
       description:
-        "食べログやホットペッパーなど、お得にグルメを楽しめるサービスを紹介しています。",
+        "冷凍弁当や食事宅配など、日々のご飯準備を楽にしながらお得に健康的な食事を楽しめるサービスを紹介しています。",
       icon: (
         <svg
           className="w-8 h-8 text-rose-600"
