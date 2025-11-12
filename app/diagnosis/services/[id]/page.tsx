@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { HeaderBar } from "@/components/layout/HeaderBar";
 import { getServiceById } from "@/data/services";
+import { AffiliateScript } from "@/components/AffiliateScript";
 
 const categoryMeta = {
   "poi-katsu": {
@@ -178,13 +179,25 @@ export default async function ServiceDetailPage({
             <div className="relative space-y-8">
               {hasBannerImages && (
                 <div className="grid gap-4 sm:grid-cols-2 justify-items-center">
-                  {service.bigImage!.map((image) => (
-                    <div
-                      key={image.html}
-                      className="w-full max-w-sm overflow-hidden rounded-2xl border border-slate-200 bg-white/90 p-3 shadow-inner"
-                      dangerouslySetInnerHTML={{ __html: image.html }}
-                    />
-                  ))}
+                  {service.bigImage!.map((image, index) => {
+                    // スクリプトタグを含むかチェック
+                    const isScript = image.html.includes('<script');
+                    
+                    return isScript ? (
+                      <div
+                        key={`${image.html}-${index}`}
+                        className="w-full max-w-sm overflow-hidden rounded-2xl border border-slate-200 bg-white/90 p-3 shadow-inner"
+                      >
+                        <AffiliateScript scriptHtml={image.html} />
+                      </div>
+                    ) : (
+                      <div
+                        key={`${image.html}-${index}`}
+                        className="w-full max-w-sm overflow-hidden rounded-2xl border border-slate-200 bg-white/90 p-3 shadow-inner"
+                        dangerouslySetInnerHTML={{ __html: image.html }}
+                      />
+                    );
+                  })}
                 </div>
               )}
               <header className="space-y-4">
@@ -359,7 +372,12 @@ export default async function ServiceDetailPage({
               </div>
 
               <div className="space-y-3">
-                {primaryLink && (
+                {service.affiliateScript ? (
+                  // スクリプトタグ型のアフィリエイトリンク（JANetなど）
+                  <div className="rounded-2xl border-2 border-rose-200 bg-gradient-to-br from-rose-50 to-white p-6 shadow-lg">
+                    <AffiliateScript scriptHtml={service.affiliateScript} />
+                  </div>
+                ) : primaryLink ? (
                   <a
                     href={`/api/click/${service.id}`}
                     target="_blank"
@@ -383,7 +401,7 @@ export default async function ServiceDetailPage({
                       />
                     </svg>
                   </a>
-                )}
+                ) : null}
 
                 {hasSecondaryLinks && (
                   <div className="space-y-2 rounded-xl border border-blue-100 bg-blue-50/60 p-3">

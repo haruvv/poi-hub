@@ -1,5 +1,8 @@
+'use client';
+
 import Link from "next/link";
 import type { Service } from "@/types/service";
+import { AffiliateScript } from "@/components/AffiliateScript";
 
 interface RecommendedServicesProps {
   strategyTitle: string;
@@ -86,12 +89,18 @@ export const RecommendedServices = ({
                 <div className="flex items-start gap-5 mb-4">
                   {/* サービス画像 */}
                   {smallImageHtml ? (
-                    <div
-                      className="flex-shrink-0 w-24 sm:w-28 overflow-hidden rounded-2xl border border-slate-200/80 bg-white p-2.5 shadow-[0_2px_12px_rgba(0,0,0,0.08)] group-hover:shadow-[0_4px_16px_rgba(0,0,0,0.12)] transition-shadow"
-                      dangerouslySetInnerHTML={{
-                        __html: smallImageHtml,
-                      }}
-                    />
+                    service.smallImage && service.smallImage[0].html.includes('<script') ? (
+                      <div className="flex-shrink-0 w-24 sm:w-28 overflow-hidden rounded-2xl border border-slate-200/80 bg-white p-2.5 shadow-[0_2px_12px_rgba(0,0,0,0.08)] group-hover:shadow-[0_4px_16px_rgba(0,0,0,0.12)] transition-shadow">
+                        <AffiliateScript scriptHtml={service.smallImage[0].html} />
+                      </div>
+                    ) : (
+                      <div
+                        className="flex-shrink-0 w-24 sm:w-28 overflow-hidden rounded-2xl border border-slate-200/80 bg-white p-2.5 shadow-[0_2px_12px_rgba(0,0,0,0.08)] group-hover:shadow-[0_4px_16px_rgba(0,0,0,0.12)] transition-shadow"
+                        dangerouslySetInnerHTML={{
+                          __html: smallImageHtml,
+                        }}
+                      />
+                    )
                   ) : (
                     <div className="flex-shrink-0 w-24 sm:w-28 h-24 sm:h-28 rounded-2xl border border-slate-200/80 bg-gradient-to-br from-blue-100 via-cyan-50 to-blue-50 shadow-[0_2px_12px_rgba(0,0,0,0.08)] flex items-center justify-center text-2xl font-bold text-blue-600">
                       {service.name.charAt(0)}

@@ -27,6 +27,7 @@ export interface Service {
   description: string;
   category: ServiceCategory;
   affiliateLinks: AffiliateLink[];
+  affiliateScript?: string;
   bigImage?: AffiliateImage[];
   smallImage?: AffiliateImage[];
   affiliateContent?: string[];
@@ -39,6 +40,6 @@ export interface Service {
     perks?: string[];
     conditions?: string[];
   };
-  tags: string[]; // 例: ["年会費無料", "高還元", "初心者向け"]
-  imageUrl?: string; // 将来的にロゴ画像など
+  tags: string[];
+  imageUrl?: string;
 }

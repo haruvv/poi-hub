@@ -134,4 +134,57 @@ export const creditCardServices: Service[] = [
       "若年層向け",
     ],
   },
+  {
+    id: "epos-card",
+    name: "エポスカード",
+    description: "年会費無料で日常の優待が充実！はじめての一枚にちょうどいい！",
+    category: "credit-card",
+    affiliateLinks: [
+      {
+        label: "エポスカード",
+        url: "https://click.j-a-net.jp/2449178/939600/",
+      },
+    ],
+    bigImage: [
+      {
+        html: `<script language='javascript' src='https://ad-verification.j-a-net.jp/ad/js/brandsafe.js'></script>
+<div id='div_admane_async_1918_658_2969'>
+<script language='javascript'>
+<!--
+brandsafe_js_async('//ad-verification.j-a-net.jp/ad', '_site=1918&_article=658&_link=2969&_image=3216', '2449178', '837424', '');
+//-->
+</script>
+</div>`,
+        alt: "エポスカード サンプルバナー",
+      },
+    ],
+    smallImage: [
+      {
+        html: `<script language='javascript' src='https://ad-verification.j-a-net.jp/ad/js/brandsafe.js'></script>
+<div id='div_admane_async_1918_658_2966'>
+<script language='javascript'>
+<!--
+brandsafe_js_async('//ad-verification.j-a-net.jp/ad', '_site=1918&_article=658&_link=2966&_image=3213', '2449178', '837421', '');
+//-->
+</script>
+</div>`,
+        alt: "エポスカード サンプル小バナー",
+      },
+    ],
+    affiliateContent: [
+      "年会費永年無料で、全国10,000店舗以上の優待が使えるお得なクレジットカード！",
+      "マルイでのお買い物が年4回10%OFFになるマルコとマルオの7日間をはじめ、カラオケ・居酒屋・映画館など日常使いで割引や特典が受けられます。",
+      "海外旅行傷害保険が自動付帯で、年会費無料カードとしては充実した補償内容。はじめての海外旅行にも安心です。",
+      "アプリで利用明細やポイント管理がしやすく、初心者でも使いやすいシンプル設計。",
+    ],
+    affiliateHighlights: [
+      "年会費永年無料で優待充実！",
+      "全国10,000店舗以上で割引・特典！",
+      "海外旅行傷害保険が自動付帯！",
+      "マルイで年4回10%OFF！",
+      "はじめての1枚にちょうどいい！",
+    ],
+    affiliateCampaignNote: "新規入会で2,000円相当プレゼント！",
+    tags: ["年会費無料", "優待充実", "海外旅行保険", "初心者向け"],
+  },
 ];
