@@ -143,15 +143,6 @@ export default function HinaPage() {
           </div>
         </section>
 
-        {/* 注意事項 */}
-        <section className="bg-blue-50 rounded-2xl border border-blue-200 p-6 sm:p-8">
-          <p className="text-sm text-slate-600 leading-relaxed">
-            ※ひなちゃんの発信する内容は、ポイ活なび編集部が監修しています。
-            <br />
-            ※実在の個人ではなく、本サイトの案内役として生まれたキャラクターです。
-          </p>
-        </section>
-
         <div className="pt-8 text-center">
           <Link
             href="/"
