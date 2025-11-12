@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     siteName: "ポイ活なび",
     images: [
       {
-        url: "/og-image.png",
+        url: "/og-image.jpg",
         width: 1920,
         height: 1080,
         alt: "ポイ活なび - あなたに合ったお得な始め方が見つかる",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     title: "ポイ活なび｜あなたに合ったお得な始め方が見つかる",
     description:
       "ポイ活・クレジットカード・投資サービスの中から、あなたのライフスタイルに合う選択肢を探せるお得情報サイト。",
-    images: ["/og-image.png"],
+    images: ["/og-image.jpg"],
   },
 };
 
