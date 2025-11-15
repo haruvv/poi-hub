@@ -44,10 +44,10 @@ export const FeaturedSection = () => {
           <div className="relative flex flex-col md:flex-row md:items-center">
             {/* 左側：画像エリア（300x250の比率 = 6:5を維持） */}
             <div className="flex-shrink-0 w-full md:w-[45%] lg:w-[42%] md:flex md:items-center md:justify-center md:p-6 lg:p-8">
-              <div className="relative w-full" style={{ aspectRatio: '6/5' }}>
+              <div className="relative w-full" style={{ aspectRatio: "6/5" }}>
                 <img
-                  src="https://pub.a8.net/a8v2/A8ImageAction.do?eid=s00000024954&id=202504211426441130"
-                  alt="DOPA！オリパ"
+                  src="https://www24.a8.net/svt/bgt?aid=251112152332&wid=001&eno=01&mid=s00000026645001003000&mc=1"
+                  alt="どっかん！トレカ"
                   width="300"
                   height="250"
                   className="w-full h-full object-contain"
@@ -111,4 +111,3 @@ export const FeaturedSection = () => {
     </section>
   );
 };
-

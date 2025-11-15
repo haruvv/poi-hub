@@ -10,24 +10,22 @@ export const oripaServices: Service[] = [
     affiliateLinks: [
       {
         label: "どっかん！トレカ公式サイト",
-        url: "https://dokkan-toreca.com/",
+        url: "https://px.a8.net/svt/ejp?a8mat=45I7DK+5HNXMA+5PLE+5YZ75",
       },
     ],
     bigImage: [
       {
-        html: createImageHTML(
-          "https://pub.a8.net/a8v2/A8ImageAction.do?eid=s00000026645&id=202502120922367450",
-          "どっかん！トレカ"
-        ),
+        html: `<a href="https://px.a8.net/svt/ejp?a8mat=45I7DK+5HNXMA+5PLE+5YZ75" rel="nofollow">
+<img border="0" width="300" height="250" alt="" src="https://www24.a8.net/svt/bgt?aid=251112152332&wid=001&eno=01&mid=s00000026645001003000&mc=1"></a>
+<img border="0" width="1" height="1" src="https://www18.a8.net/0.gif?a8mat=45I7DK+5HNXMA+5PLE+5YZ75" alt="">`,
         alt: "どっかん！トレカ",
       },
     ],
     smallImage: [
       {
-        html: createImageHTML(
-          "https://pub.a8.net/a8v2/A8ImageAction.do?eid=s00000026645&id=202502120923011860",
-          "どっかん！トレカ"
-        ),
+        html: `<a href="https://px.a8.net/svt/ejp?a8mat=45I7DK+5HNXMA+5PLE+5YZ75" rel="nofollow">
+<img border="0" width="300" height="250" alt="" src="https://www24.a8.net/svt/bgt?aid=251112152332&wid=001&eno=01&mid=s00000026645001003000&mc=1"></a>
+<img border="0" width="1" height="1" src="https://www18.a8.net/0.gif?a8mat=45I7DK+5HNXMA+5PLE+5YZ75" alt="">`,
         alt: "どっかん！トレカ",
       },
     ],
@@ -51,23 +49,24 @@ export const oripaServices: Service[] = [
     description: "登録だけで0円ガチャ！ログボでタダ遊びスタート！",
     category: "oripa",
     affiliateLinks: [
-      { label: "オリくじ公式サイト", url: "https://orikuji.com/" },
+      {
+        label: "オリくじ公式サイト",
+        url: "https://px.a8.net/svt/ejp?a8mat=45I7DK+691VG2+5I52+5Z6WX",
+      },
     ],
     bigImage: [
       {
-        html: createImageHTML(
-          "https://pub.a8.net/a8v2/A8ImageAction.do?eid=s00000025679&id=202410031034375491L",
-          "オリくじ"
-        ),
+        html: `<a href="https://px.a8.net/svt/ejp?a8mat=45I7DK+691VG2+5I52+5Z6WX" rel="nofollow">
+<img border="0" width="300" height="250" alt="" src="https://www26.a8.net/svt/bgt?aid=251112152378&wid=001&eno=01&mid=s00000025679001004000&mc=1"></a>
+<img border="0" width="1" height="1" src="https://www10.a8.net/0.gif?a8mat=45I7DK+691VG2+5I52+5Z6WX" alt="">`,
         alt: "オリくじ",
       },
     ],
     smallImage: [
       {
-        html: createImageHTML(
-          "https://pub.a8.net/a8v2/A8ImageAction.do?eid=s00000025679&id=202410031034532241",
-          "オリくじ"
-        ),
+        html: `<a href="https://px.a8.net/svt/ejp?a8mat=45I7DK+691VG2+5I52+5Z6WX" rel="nofollow">
+<img border="0" width="300" height="250" alt="" src="https://www26.a8.net/svt/bgt?aid=251112152378&wid=001&eno=01&mid=s00000025679001004000&mc=1"></a>
+<img border="0" width="1" height="1" src="https://www10.a8.net/0.gif?a8mat=45I7DK+691VG2+5I52+5Z6WX" alt="">`,
         alt: "オリくじ",
       },
     ],

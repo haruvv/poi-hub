@@ -105,14 +105,14 @@ export const mealServices: Service[] = [
     affiliateLinks: [
       {
         label: "シェフの無添つくりおき公式サイト",
-        url: "https://fitfoodhome.life/tsukurioki_home-asp01/",
+        url: "https://px.a8.net/svt/ejp?a8mat=45I6LK+8QCW6Q+57YO+61C2P",
       },
     ],
     bigImage: [
       {
         html: `<a href="https://px.a8.net/svt/ejp?a8mat=45I6LK+8QCW6Q+57YO+61C2P" rel="nofollow">
-                <img border="0" width="300" height="250" alt="" src="https://www20.a8.net/svt/bgt?aid=251111144528&wid=001&eno=01&mid=s00000024360001014000&mc=1"></a>
-                <img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=45I6LK+8QCW6Q+57YO+61C2P" alt="">`,
+<img border="0" width="300" height="250" alt="" src="https://www20.a8.net/svt/bgt?aid=251111144528&wid=001&eno=01&mid=s00000024360001014000&mc=1"></a>
+<img border="0" width="1" height="1" src="https://www12.a8.net/0.gif?a8mat=45I6LK+8QCW6Q+57YO+61C2P" alt="">`,
         alt: "シェフの無添つくりおき",
       },
     ],
