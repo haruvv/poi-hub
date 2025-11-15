@@ -59,33 +59,20 @@ export const ResultHero = ({
   const colors = colorClasses[typeColor];
 
   return (
-    <section className="relative overflow-hidden rounded-3xl border border-slate-200/60 bg-white/80 backdrop-blur-sm p-8 sm:p-10 shadow-[0_12px_40px_rgba(0,0,0,0.1)] result-hero-card">
-      {/* 背景グラデーション */}
-      <div className={`absolute inset-0 bg-gradient-to-br ${colors.bg}`} />
-      {/* 光るエフェクト */}
-      <div
-        className={`absolute inset-0 bg-gradient-to-br ${colors.glow} result-hero-glow`}
-      />
-      {/* キラキラエフェクト */}
-      <div className={`sparkle sparkle-1 ${colors.sparkle}`} />
-      <div className={`sparkle sparkle-2 ${colors.sparkle}`} />
-      <div className={`sparkle sparkle-3 ${colors.sparkle}`} />
+    <section className="relative overflow-hidden rounded-2xl border border-slate-200 bg-white p-8 sm:p-10 shadow-md"
+>
 
-      <div className="relative z-10 space-y-7">
+      <div className="space-y-6">
         {/* タイトル */}
-        <div className="text-center space-y-4">
-          <div
-            className={`inline-flex items-center gap-2 rounded-full ${colors.badge} px-4 py-1.5 text-[12px] font-bold border shadow-sm`}
-          >
-            <span className="inline-block h-2 w-2 rounded-full bg-current animate-pulse" />
+        <div className="text-center space-y-3">
+          <div className="inline-flex items-center gap-2 rounded-full bg-blue-50 text-blue-700 px-4 py-1.5 text-xs font-bold border border-blue-200">
+            <span className="inline-block h-2 w-2 rounded-full bg-current" />
             診断結果
           </div>
-          <h1 className="text-[36px] sm:text-[42px] leading-tight font-black tracking-tight">
+          <h1 className="text-3xl sm:text-4xl leading-tight font-bold">
             <span className="text-slate-800">あなたは</span>
             <br />
-            <span
-              className={`text-transparent bg-clip-text bg-gradient-to-r ${colors.gradient}`}
-            >
+            <span className="text-blue-600">
               「{typeLabel}」
             </span>
             <br />
@@ -94,24 +81,24 @@ export const ResultHero = ({
         </div>
 
         {/* サブコピー */}
-        <p className="text-center text-[17px] sm:text-[19px] font-semibold text-slate-700 leading-relaxed max-w-2xl mx-auto">
+        <p className="text-center text-base font-medium text-slate-700 leading-relaxed max-w-2xl mx-auto">
           {subCopy}
         </p>
 
         {/* リスクバー */}
-        <div className="space-y-3">
-          <div className="flex items-center justify-between text-[13px] text-slate-600 font-medium">
+        <div className="space-y-2">
+          <div className="flex items-center justify-between text-xs text-slate-600 font-medium">
             <span>安全志向</span>
             <span>攻め志向</span>
           </div>
-          <div className="relative h-4 bg-slate-200/80 rounded-full overflow-hidden shadow-inner">
+          <div className="relative h-3 bg-slate-100 rounded-full overflow-hidden">
             <div
-              className={`absolute inset-y-0 left-0 bg-gradient-to-r ${colors.gradient} rounded-full transition-all duration-1000 shadow-sm`}
+              className="absolute inset-y-0 left-0 bg-blue-600 rounded-full transition-all duration-1000"
               style={{ width: `${riskLevel}%` }}
             />
             <div
-              className="absolute top-1/2 -translate-y-1/2 w-5 h-5 bg-white border-3 border-slate-800 rounded-full shadow-lg transition-all duration-1000 ring-2 ring-white"
-              style={{ left: `calc(${riskLevel}% - 10px)` }}
+              className="absolute top-1/2 -translate-y-1/2 w-4 h-4 bg-white border-2 border-slate-800 rounded-full transition-all duration-1000"
+              style={{ left: `calc(${riskLevel}% - 8px)` }}
             />
           </div>
         </div>
@@ -119,10 +106,9 @@ export const ResultHero = ({
         {/* メインCTA */}
         <Link
           href={ctaHref}
-          className={`group relative block w-full text-center rounded-2xl bg-gradient-to-r ${colors.gradient} text-white text-[17px] sm:text-[19px] font-bold py-4.5 px-8 shadow-[0_8px_24px_rgba(0,0,0,0.25)] hover:shadow-[0_12px_32px_rgba(0,0,0,0.35)] transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] overflow-hidden`}
+          className="group block w-full text-center rounded-xl bg-blue-600 text-white text-base font-bold py-4 px-8 shadow-md hover:shadow-lg hover:bg-blue-700 transition-all duration-200"
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/30 to-white/0 translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700" />
-          <span className="relative z-10 flex items-center justify-center gap-2">
+          <span className="flex items-center justify-center gap-2">
             {ctaText}
             <svg
               className="w-5 h-5 transition-transform group-hover:translate-x-1"
@@ -133,7 +119,7 @@ export const ResultHero = ({
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                strokeWidth={2.5}
+                strokeWidth={2}
                 d="M13 7l5 5m0 0l-5 5m5-5H6"
               />
             </svg>

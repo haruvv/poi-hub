@@ -209,23 +209,23 @@ export const ServiceCategories = () => {
           return (
             <div
               key={index}
-              className={`group relative overflow-hidden rounded-2xl border ${colors.border} bg-gradient-to-br ${colors.bg} ${colors.hoverBg} p-8 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1`}
+              className="relative overflow-hidden rounded-xl border border-slate-200 bg-white p-6 shadow-sm hover:shadow-md transition-shadow duration-200"
             >
-              <div className="space-y-5">
-                <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-white shadow-sm">
+              <div className="space-y-4">
+                <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-slate-50">
                   {category.icon}
                 </div>
-                <div className="space-y-3">
-                  <h3 className="text-[19px] font-bold text-slate-900">
+                <div className="space-y-2">
+                  <h3 className="text-base font-bold text-slate-900">
                     {category.title}
                   </h3>
-                  <p className="text-[14px] text-slate-600 leading-relaxed">
+                  <p className="text-sm text-slate-600 leading-relaxed">
                     {category.description}
                   </p>
                 </div>
                 <Link
                   href={category.href}
-                  className={`group/btn inline-flex items-center gap-2 rounded-xl bg-gradient-to-r ${colors.button} text-white text-[14px] font-semibold py-2.5 px-5 shadow-sm hover:shadow-md transition-all duration-300 hover:scale-[1.02]`}
+                  className="group/btn inline-flex items-center gap-2 rounded-lg bg-blue-600 text-white text-sm font-semibold py-2 px-4 hover:bg-blue-700 transition-colors duration-200"
                 >
                   サービス一覧を見る
                   <svg
@@ -237,7 +237,7 @@ export const ServiceCategories = () => {
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
-                      strokeWidth={2.5}
+                      strokeWidth={2}
                       d="M9 5l7 7-7 7"
                     />
                   </svg>
@@ -253,7 +253,7 @@ export const ServiceCategories = () => {
         <div className="text-center pt-2">
           <button
             onClick={() => setIsExpanded(!isExpanded)}
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border-2 border-slate-300 bg-white text-slate-700 font-semibold text-[15px] hover:bg-slate-50 hover:border-slate-400 transition-all duration-300 shadow-sm hover:shadow-md"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-slate-200 bg-white text-slate-700 font-semibold text-sm hover:bg-slate-50 transition-colors duration-200"
           >
             <span>
               {isExpanded
@@ -261,7 +261,7 @@ export const ServiceCategories = () => {
                 : `他のカテゴリを見る（${otherCategories.length}件）`}
             </span>
             <svg
-              className={`w-5 h-5 transition-transform duration-300 ${
+              className={`w-4 h-4 transition-transform duration-300 ${
                 isExpanded ? "rotate-180" : ""
               }`}
               fill="none"
@@ -271,7 +271,7 @@ export const ServiceCategories = () => {
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                strokeWidth={2.5}
+                strokeWidth={2}
                 d="M19 9l-7 7-7-7"
               />
             </svg>

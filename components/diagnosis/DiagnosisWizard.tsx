@@ -88,10 +88,10 @@ export const DiagnosisWizard = ({
       {/* ローディングオーバーレイ */}
       {isCalculating && (
         <div className="fixed inset-0 bg-slate-900/20 backdrop-blur-sm z-50 flex items-center justify-center">
-          <div className="bg-white rounded-2xl p-8 shadow-2xl max-w-sm mx-4 text-center space-y-4 border-2 border-blue-200">
+          <div className="bg-white rounded-xl p-8 shadow-xl max-w-sm mx-4 text-center space-y-4 border border-slate-200">
             <div className="inline-block h-12 w-12 rounded-full border-4 border-blue-600 border-t-transparent animate-spin" />
             <div className="space-y-2">
-              <p className="text-lg font-bold text-slate-900">
+              <p className="text-base font-bold text-slate-900">
                 診断結果を集計しています
               </p>
               <p className="text-sm text-slate-600">
@@ -104,11 +104,11 @@ export const DiagnosisWizard = ({
 
       <section className="relative">
         {/* 上部ヘッダー / ステップ情報 */}
-        <div className="sticky top-16 z-20 bg-white/95 backdrop-blur-sm border-b-2 border-blue-100 -mx-4 px-4 py-4 mb-6 shadow-sm">
-          <div className="max-w-2xl mx-auto space-y-3">
+        <div className="sticky top-16 z-20 bg-white/95 backdrop-blur-sm border-b border-slate-200 -mx-4 px-4 py-3 mb-6">
+          <div className="max-w-2xl mx-auto space-y-2">
             {/* タイトルとステップ番号 */}
             <div className="flex items-center justify-between">
-              <h1 className="text-[16px] font-bold text-slate-900">
+              <h1 className="text-sm font-bold text-slate-900">
                 お得な始め方診断
               </h1>
               <span className="inline-flex items-center gap-1.5 text-xs font-bold text-blue-700 bg-blue-50 px-3 py-1 rounded-full border border-blue-200">
@@ -117,14 +117,14 @@ export const DiagnosisWizard = ({
             </div>
 
             {/* 進捗バー */}
-            <div className="space-y-2">
-              <div className="w-full h-2.5 bg-blue-100 rounded-full overflow-hidden">
+            <div className="space-y-1.5">
+              <div className="w-full h-2 bg-slate-100 rounded-full overflow-hidden">
                 <div
-                  className="h-full bg-gradient-to-r from-blue-600 to-cyan-500 rounded-full transition-all duration-500 ease-out shadow-sm"
+                  className="h-full bg-blue-600 rounded-full transition-all duration-500 ease-out"
                   style={{ width: `${progressPercentage}%` }}
                 />
               </div>
-              <div className="flex justify-between text-[11px] font-medium text-slate-500">
+              <div className="flex justify-between text-[10px] font-medium text-slate-500">
                 <span>開始</span>
                 <span>完了まで残り {totalSteps - step} 問</span>
               </div>
@@ -133,9 +133,7 @@ export const DiagnosisWizard = ({
         </div>
 
         {/* 質問カード */}
-        <div className="relative overflow-hidden rounded-3xl border-2 border-blue-100 bg-white p-8 shadow-xl min-h-[500px] flex flex-col">
-          {/* 背景グラデーション */}
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-50/40 via-white to-cyan-50/20 pointer-events-none" />
+        <div className="relative overflow-hidden rounded-2xl border border-slate-200 bg-white p-8 shadow-md min-h-[500px] flex flex-col">
 
           <div className="relative z-10 flex-1 flex flex-col">
         {/* Q1 */}
@@ -259,14 +257,14 @@ export const DiagnosisWizard = ({
             )}
 
             {/* ナビゲーション */}
-            <div className="mt-8 pt-6 border-t-2 border-blue-100 flex items-center gap-3">
+            <div className="mt-8 pt-6 border-t border-slate-200 flex items-center gap-3">
               {/* 前へ戻るボタン */}
               {(step > 1 || onBack) && (
                 <button
                   type="button"
                   onClick={handlePrevStep}
                   disabled={isTransitioning}
-                  className="inline-flex items-center gap-2 px-5 py-3 rounded-xl border-2 border-slate-200 bg-white text-slate-700 text-[15px] font-semibold hover:bg-slate-50 hover:border-blue-300 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="inline-flex items-center gap-2 px-4 py-3 rounded-lg border border-slate-200 bg-white text-slate-700 text-sm font-semibold hover:bg-slate-50 transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   <svg
                     className="w-4 h-4"
@@ -277,7 +275,7 @@ export const DiagnosisWizard = ({
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
-                      strokeWidth={2.5}
+                      strokeWidth={2}
                       d="M15 19l-7-7 7-7"
                     />
                   </svg>
@@ -302,7 +300,7 @@ export const DiagnosisWizard = ({
                     if (step === 3 && canNext3) handleNextStep(4);
                     if (step === 4 && canNext4) handleNextStep(5);
                   }}
-                  className="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-blue-600 text-white text-[15px] font-bold shadow-lg hover:shadow-xl hover:bg-blue-700 transition-all duration-200 disabled:opacity-40 disabled:cursor-not-allowed disabled:bg-slate-300"
+                  className="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-blue-600 text-white text-sm font-bold shadow-sm hover:shadow-md hover:bg-blue-700 transition-all duration-200 disabled:opacity-40 disabled:cursor-not-allowed disabled:bg-slate-300"
                 >
                   次へ進む
                   <svg
@@ -314,7 +312,7 @@ export const DiagnosisWizard = ({
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
-                      strokeWidth={2.5}
+                      strokeWidth={2}
                       d="M9 5l7 7-7 7"
                     />
                   </svg>
@@ -324,7 +322,7 @@ export const DiagnosisWizard = ({
                   type="button"
                   disabled={!canNext5 || isCalculating}
                   onClick={handleShowDiagnosisResult}
-                  className="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-blue-600 text-white text-[15px] font-bold shadow-lg hover:shadow-xl hover:bg-blue-700 transition-all duration-200 disabled:opacity-40 disabled:cursor-not-allowed disabled:bg-slate-300"
+                  className="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-blue-600 text-white text-sm font-bold shadow-sm hover:shadow-md hover:bg-blue-700 transition-all duration-200 disabled:opacity-40 disabled:cursor-not-allowed disabled:bg-slate-300"
             >
               {isCalculating ? (
                     <>
@@ -335,7 +333,7 @@ export const DiagnosisWizard = ({
                     <>
                       結果を見る
                       <svg
-                        className="w-5 h-5"
+                        className="w-4 h-4"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -343,7 +341,7 @@ export const DiagnosisWizard = ({
                         <path
                           strokeLinecap="round"
                           strokeLinejoin="round"
-                          strokeWidth={2.5}
+                          strokeWidth={2}
                           d="M13 7l5 5m0 0l-5 5m5-5H6"
                         />
                       </svg>
@@ -369,13 +367,13 @@ const QuestionContent = ({
   description?: string;
   children: React.ReactNode;
 }) => (
-  <div className="space-y-6 flex-1 flex flex-col">
+  <div className="space-y-5 flex-1 flex flex-col">
     <div className="space-y-2">
-      <h2 className="text-[20px] sm:text-[22px] font-bold text-slate-900 leading-tight">
+      <h2 className="text-lg sm:text-xl font-bold text-slate-900 leading-tight">
         {question}
       </h2>
       {description && (
-        <p className="text-[14px] text-slate-600 leading-relaxed">
+        <p className="text-sm text-slate-600 leading-relaxed">
           {description}
         </p>
       )}
@@ -397,10 +395,10 @@ const OptionCard = ({
   <button
     type="button"
     onClick={onClick}
-    className={`w-full text-left px-5 py-4 rounded-xl border-2 transition-all duration-200 flex items-center gap-3 group ${
+    className={`w-full text-left px-4 py-3.5 rounded-lg border transition-all duration-200 flex items-center gap-3 ${
       selected
-        ? "bg-blue-50 border-blue-500 shadow-md"
-        : "bg-white border-slate-200 hover:bg-blue-50/50 hover:border-blue-300 shadow-sm"
+        ? "bg-blue-50 border-blue-500"
+        : "bg-white border-slate-200 hover:border-blue-300"
     }`}
   >
     {/* チェックボックス風のインジケーター */}
@@ -408,7 +406,7 @@ const OptionCard = ({
       className={`flex-shrink-0 w-5 h-5 rounded-full border-2 flex items-center justify-center transition-all ${
         selected
           ? "bg-blue-600 border-blue-600"
-          : "border-slate-300 group-hover:border-blue-400"
+          : "border-slate-300"
       }`}
     >
       {selected && (
@@ -429,8 +427,8 @@ const OptionCard = ({
     </div>
 
     <span
-      className={`text-[15px] leading-relaxed flex-1 font-semibold ${
-        selected ? "text-blue-900" : "text-slate-700 group-hover:text-blue-900"
+      className={`text-sm leading-relaxed flex-1 font-medium ${
+        selected ? "text-blue-900" : "text-slate-700"
     }`}
   >
       {label}

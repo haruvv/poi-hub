@@ -26,36 +26,33 @@ export const ComparisonTable = ({
   secondChoices,
 }: ComparisonTableProps) => {
   return (
-    <section className="space-y-8">
+    <section className="space-y-6">
       {secondChoices && secondChoices.length > 0 && (
-        <div className="relative overflow-hidden rounded-3xl border border-slate-200/60 bg-white/80 backdrop-blur-sm p-8 shadow-[0_8px_30px_rgba(0,0,0,0.08)]">
-          {/* 背景グラデーション */}
-          <div className="absolute inset-0 bg-gradient-to-br from-emerald-50/30 via-transparent to-teal-50/20" />
+        <div className="relative overflow-hidden rounded-2xl border border-slate-200 bg-white p-8 shadow-md">
 
-          <div className="relative z-10">
-            <h2 className="text-2xl font-bold text-slate-900 mb-6 tracking-tight">
+          <div>
+            <h2 className="text-xl font-bold text-slate-900 mb-5">
               セカンドチョイス
             </h2>
             {secondChoices.map((choice, idx) => (
-              <div key={idx} className="mb-8 last:mb-0">
-                <h3 className="text-lg font-bold text-slate-800 mb-2">
+              <div key={idx} className="mb-6 last:mb-0">
+                <h3 className="text-base font-bold text-slate-800 mb-2">
                   {choice.title}
                 </h3>
-                <p className="text-[14px] text-slate-600 mb-4 leading-relaxed">
+                <p className="text-sm text-slate-600 mb-3 leading-relaxed">
                   {choice.description}
                 </p>
-                <div className="space-y-3">
+                <div className="space-y-2">
                   {choice.services.map((service, sIdx) => (
                     <Link
                       key={sIdx}
                       href={service.href}
-                      className="group relative block w-full text-center rounded-xl bg-gradient-to-r from-emerald-600 via-teal-500 to-cyan-500 text-white text-[15px] font-bold py-3.5 px-6 shadow-[0_4px_16px_rgba(16,185,129,0.4)] hover:shadow-[0_6px_24px_rgba(16,185,129,0.5)] transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] overflow-hidden"
+                      className="group block w-full text-center rounded-lg bg-emerald-600 text-white text-sm font-bold py-3 px-6 shadow-sm hover:shadow-md hover:bg-emerald-700 transition-all duration-200"
                     >
-                      <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/30 to-white/0 translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700" />
-                      <span className="relative z-10 flex items-center justify-center gap-2">
+                      <span className="flex items-center justify-center gap-2">
                         {service.name}の詳細を見る
                         <svg
-                          className="w-4 h-4"
+                          className="w-4 h-4 transition-transform group-hover:translate-x-1"
                           fill="none"
                           stroke="currentColor"
                           viewBox="0 0 24 24"
@@ -63,7 +60,7 @@ export const ComparisonTable = ({
                           <path
                             strokeLinecap="round"
                             strokeLinejoin="round"
-                            strokeWidth={2.5}
+                            strokeWidth={2}
                             d="M13 7l5 5m0 0l-5 5m5-5H6"
                           />
                         </svg>
@@ -77,12 +74,9 @@ export const ComparisonTable = ({
         </div>
       )}
 
-      <div className="relative overflow-hidden rounded-3xl border border-slate-200/60 bg-white/80 backdrop-blur-sm p-8 shadow-[0_8px_30px_rgba(0,0,0,0.08)]">
-        {/* 背景グラデーション */}
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-50/50 via-transparent to-cyan-50/20" />
-
-        <div className="relative z-10">
-          <h2 className="text-2xl font-bold text-slate-900 mb-6 tracking-tight">
+      <div className="relative overflow-hidden rounded-2xl border border-slate-200 bg-white p-8 shadow-md">
+        <div>
+          <h2 className="text-xl font-bold text-slate-900 mb-5">
             カテゴリ比較
           </h2>
           <div className="overflow-x-auto -mx-2 px-2">

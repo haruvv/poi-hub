@@ -8,20 +8,17 @@ export const TypeExplanation = ({
   summary,
 }: TypeExplanationProps) => {
   return (
-    <section className="relative overflow-hidden rounded-3xl border border-slate-200/60 bg-white/80 backdrop-blur-sm p-8 shadow-[0_8px_30px_rgba(0,0,0,0.08)]">
-      {/* 背景グラデーション */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-50/50 via-transparent to-blue-50/30" />
-
-      <div className="relative z-10">
-        <h2 className="text-2xl font-bold text-slate-900 mb-6 tracking-tight">
+    <section className="relative overflow-hidden rounded-2xl border border-slate-200 bg-white p-8 shadow-md">
+      <div>
+        <h2 className="text-xl font-bold text-slate-900 mb-5">
           あなたの特徴
         </h2>
-        <ul className="space-y-4 mb-8">
+        <ul className="space-y-3 mb-6">
           {features.map((feature, index) => (
-            <li key={index} className="flex items-start gap-4 group">
-              <div className="mt-1 flex-shrink-0 w-6 h-6 rounded-lg bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center shadow-sm group-hover:shadow-md transition-shadow">
+            <li key={index} className="flex items-start gap-3">
+              <div className="mt-0.5 flex-shrink-0 w-5 h-5 rounded-lg bg-blue-600 flex items-center justify-center">
                 <svg
-                  className="w-3.5 h-3.5 text-white"
+                  className="w-3 h-3 text-white"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -34,15 +31,15 @@ export const TypeExplanation = ({
                   />
                 </svg>
               </div>
-              <span className="text-[15px] text-slate-700 leading-relaxed font-medium pt-0.5">
+              <span className="text-sm text-slate-700 leading-relaxed font-medium">
                 {feature}
               </span>
             </li>
           ))}
         </ul>
-        <div className="relative rounded-2xl bg-gradient-to-br from-blue-50/80 via-cyan-50/50 to-blue-50/30 border border-blue-100/60 p-6 backdrop-blur-sm">
-          <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 via-blue-600 to-cyan-500 rounded-t-2xl" />
-          <p className="text-[15px] text-slate-800 leading-relaxed font-semibold">
+        <div className="rounded-xl bg-blue-50 border border-blue-200 p-5">
+          <div className="h-1 w-16 bg-blue-600 rounded-full mb-3" />
+          <p className="text-sm text-slate-800 leading-relaxed font-medium">
             {summary}
           </p>
         </div>
