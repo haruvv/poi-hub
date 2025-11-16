@@ -8,6 +8,8 @@ import { ServiceDetailTopCTA } from "@/components/service-detail/ServiceDetailTo
 import { ServiceDetailRecommendedFor } from "@/components/service-detail/ServiceDetailRecommendedFor";
 import { ServiceDetailPrecautions } from "@/components/service-detail/ServiceDetailPrecautions";
 import { ServiceDetailBottomCTA } from "@/components/service-detail/ServiceDetailBottomCTA";
+import { NextActionsSection } from "@/components/next-actions/NextActionsSection";
+import { getNextActionsForCategory } from "@/lib/next-actions-rules";
 
 const categoryMeta = {
   "poi-katsu": {
@@ -124,6 +126,9 @@ export default async function ServiceDetailPage({
   const hasSecondaryLinks = affiliateLinks.length > 1;
   const hasBannerImages = service.bigImage && service.bigImage.length > 0;
   const referralDetails = service.affiliateReferralDetails;
+
+  // カテゴリに応じた次のアクションを取得
+  const nextActions = getNextActionsForCategory(service.category);
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-blue-50 via-white to-white">
@@ -542,6 +547,15 @@ export default async function ServiceDetailPage({
             serviceId={service.id}
             serviceName={service.name}
           />
+
+          {/* 次にやると良いことセクション */}
+          {nextActions.items.length > 0 && (
+            <NextActionsSection
+              title={nextActions.title}
+              description={nextActions.description}
+              items={nextActions.items}
+            />
+          )}
         </div>
       </div>
     </main>

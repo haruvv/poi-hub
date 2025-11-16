@@ -3,6 +3,8 @@ import { HeaderBar } from "@/components/layout/HeaderBar";
 import { ServiceCard } from "@/components/diagnosis/ServiceCard";
 import { getServicesByCategory } from "@/data/services";
 import Link from "next/link";
+import { NextActionsSection } from "@/components/next-actions/NextActionsSection";
+import { getNextActionsForCategory } from "@/lib/next-actions-rules";
 
 export const metadata: Metadata = {
   title: "ポイ活なび｜お得にご飯",
@@ -15,6 +17,7 @@ interface PageProps {
 
 export default async function MealPage({ searchParams }: PageProps) {
   const services = getServicesByCategory("meal");
+  const nextActions = getNextActionsForCategory("meal");
 
   return (
     <main className="min-h-screen bg-slate-50">
@@ -52,6 +55,15 @@ export default async function MealPage({ searchParams }: PageProps) {
             ))}
           </div>
         </div>
+
+        {/* 次にやると良いことセクション */}
+        {nextActions.items.length > 0 && (
+          <NextActionsSection
+            title={nextActions.title}
+            description={nextActions.description}
+            items={nextActions.items}
+          />
+        )}
 
         {/* もう一度診断する */}
         <div className="pt-4">
