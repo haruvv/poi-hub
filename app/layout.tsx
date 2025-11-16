@@ -7,7 +7,7 @@ import { Footer } from "@/components/layout/Footer";
 
 export const metadata = {
   title: "ポイ活なび",
-  description: "ムダなくお得を積み上げるための、シンプルな30秒お得診断サイト。",
+  description: "ムダなくお得を積み上げるための、シンプルな30秒お得診断サイト",
   other: {
     "google-adsense-account": "ca-pub-2028703181823597",
   },

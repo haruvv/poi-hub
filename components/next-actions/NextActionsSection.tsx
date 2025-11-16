@@ -15,7 +15,7 @@ interface NextActionsSectionProps {
 
 export const NextActionsSection = ({
   title = "次にやっておきたいこと",
-  description = "今のサービスだけで終わらせず、次の一手までセットで固めておくと、お得度とラクさが一気に跳ね上がる。",
+  description = "今のサービスだけで終わらせず、次の一手までセットで固めておくと、お得度とラクさが一気に跳ね上がる",
   items,
 }: NextActionsSectionProps) => {
   if (!items || items.length === 0) {

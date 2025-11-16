@@ -6,7 +6,7 @@ export const investmentServices: Service[] = [
     id: "inv-1",
     name: "楽天証券",
     description:
-      "つみたてNISAから米国株まで幅広く対応。楽天ポイント投資で気軽に始められる人気ネット証券。",
+      "つみたてNISAから米国株まで幅広く対応楽天ポイント投資で気軽に始められる人気ネット証券",
     category: "investment",
     affiliateLinks: [
       {
@@ -35,7 +35,7 @@ export const investmentServices: Service[] = [
     id: "inv-2",
     name: "SBI証券",
     description:
-      "国内株・米国株ともに取扱銘柄が豊富。低コスト＆高機能でメイン証券として愛用する人多数。",
+      "国内株・米国株ともに取扱銘柄が豊富低コスト＆高機能でメイン証券として愛用する人多数",
     category: "investment",
     affiliateLinks: [
       {

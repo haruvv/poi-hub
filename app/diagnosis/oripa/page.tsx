@@ -20,7 +20,7 @@ interface PageProps {
 export default async function OripaPage({ searchParams }: PageProps) {
   const services = getServicesByCategory("oripa");
   const nextActions = getNextActionsForCategory("oripa");
-  const adPolicy = getAdPolicy('category-list');
+  const adPolicy = getAdPolicy("category-list");
 
   return (
     <main className="min-h-screen bg-slate-50">
@@ -33,10 +33,10 @@ export default async function OripaPage({ searchParams }: PageProps) {
           </h2>
           <div className="space-y-2 text-[14px] md:text-[15px] text-slate-700 leading-relaxed">
             <p>
-              ここでは、運営実績があり信頼性の高いオリパサイトだけを厳選して紹介しています。
+              ここでは、運営実績があり信頼性の高いオリパサイトだけを厳選して紹介しています
             </p>
             <p>
-              当選確率や封入カードが明示されているサイトを中心に掲載。初めての方でも安心してトレカガチャを楽しめます。
+              当選確率や封入カードが明示されているサイトを中心に掲載初めての方でも安心してトレカガチャを楽しめます
             </p>
           </div>
         </section>
@@ -47,7 +47,9 @@ export default async function OripaPage({ searchParams }: PageProps) {
             <h2 className="text-lg md:text-xl font-semibold text-slate-900">
               オリパおすすめサイト
             </h2>
-            <span className="text-xs md:text-sm text-slate-500">{services.length}件</span>
+            <span className="text-xs md:text-sm text-slate-500">
+              {services.length}件
+            </span>
           </div>
           <div className="grid grid-cols-1 gap-4 md:gap-5">
             {services.map((service, index) => (
@@ -93,4 +95,3 @@ export default async function OripaPage({ searchParams }: PageProps) {
     </main>
   );
 }
-

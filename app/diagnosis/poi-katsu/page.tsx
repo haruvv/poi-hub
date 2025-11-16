@@ -20,7 +20,7 @@ interface PageProps {
 export default async function PoiKatsuPage({ searchParams }: PageProps) {
   const services = getServicesByCategory("poi-katsu");
   const nextActions = getNextActionsForCategory("poi-katsu");
-  const adPolicy = getAdPolicy('category-list');
+  const adPolicy = getAdPolicy("category-list");
 
   return (
     <main className="min-h-screen bg-slate-50">
@@ -33,10 +33,10 @@ export default async function PoiKatsuPage({ searchParams }: PageProps) {
           </h2>
           <div className="space-y-2 text-[14px] md:text-[15px] text-slate-700 leading-relaxed">
             <p>
-              ここでは、毎日のネットショッピングやアプリ利用でポイントが貯めやすい定番サービスを厳選して紹介しています。
+              ここでは、毎日のネットショッピングやアプリ利用でポイントが貯めやすい定番サービスを厳選して紹介しています
             </p>
             <p>
-              「怪しい案件」は避け、実績のあるサービスを中心に掲載。ひなちゃんと一緒に、今日から気軽にポイ活デビューしよう。
+              「怪しい案件」は避け、実績のあるサービスを中心に掲載ひなちゃんと一緒に、今日から気軽にポイ活デビューしよう
             </p>
           </div>
         </section>
@@ -47,7 +47,9 @@ export default async function PoiKatsuPage({ searchParams }: PageProps) {
             <h2 className="text-lg md:text-xl font-semibold text-slate-900">
               ポイ活サービス
             </h2>
-            <span className="text-xs md:text-sm text-slate-500">{services.length}件</span>
+            <span className="text-xs md:text-sm text-slate-500">
+              {services.length}件
+            </span>
           </div>
           <div className="grid grid-cols-1 gap-4 md:gap-5">
             {services.map((service, index) => (

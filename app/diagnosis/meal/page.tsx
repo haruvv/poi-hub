@@ -20,7 +20,7 @@ interface PageProps {
 export default async function MealPage({ searchParams }: PageProps) {
   const services = getServicesByCategory("meal");
   const nextActions = getNextActionsForCategory("meal");
-  const adPolicy = getAdPolicy('category-list');
+  const adPolicy = getAdPolicy("category-list");
 
   return (
     <main className="min-h-screen bg-slate-50">
@@ -33,10 +33,10 @@ export default async function MealPage({ searchParams }: PageProps) {
           </h2>
           <div className="space-y-2 text-[14px] md:text-[15px] text-slate-700 leading-relaxed">
             <p>
-              テイクアウト・デリバリー・飲食店予約など、日常のご飯代をお得にできるサービスをまとめています。
+              テイクアウト・デリバリー・飲食店予約など、日常のご飯代をお得にできるサービスをまとめています
             </p>
             <p>
-              ポイント還元やクーポン内容は定期的に変わるため、利用前に各公式ページの最新情報をチェックしてください。
+              ポイント還元やクーポン内容は定期的に変わるため、利用前に各公式ページの最新情報をチェックしてください
             </p>
           </div>
         </section>
@@ -44,8 +44,12 @@ export default async function MealPage({ searchParams }: PageProps) {
         {/* サービス一覧 */}
         <div className="space-y-4">
           <div className="flex items-center justify-between">
-            <h2 className="text-lg md:text-xl font-semibold text-slate-900">お得にご飯</h2>
-            <span className="text-xs md:text-sm text-slate-500">{services.length}件</span>
+            <h2 className="text-lg md:text-xl font-semibold text-slate-900">
+              お得にご飯
+            </h2>
+            <span className="text-xs md:text-sm text-slate-500">
+              {services.length}件
+            </span>
           </div>
           <div className="grid grid-cols-1 gap-4 md:gap-5">
             {services.map((service, index) => (

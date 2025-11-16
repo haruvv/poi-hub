@@ -55,9 +55,9 @@ export const DiagnosisHero = ({ onStart }: DiagnosisHeroProps) => {
             </span>
           </h1>
           <p className="text-sm text-slate-600 leading-relaxed max-w-xl mx-auto">
-            ポイ活・クレカ・投資…どこから手をつければいいかわからない。
+            ポイ活・クレカ・投資…どこから手をつければいいかわからない
             <br />
-            そんなあなたのために、5つの質問で最適な選択肢を提案します。
+            そんなあなたのために、5つの質問で最適な選択肢を提案します
           </p>
         </div>
 

@@ -6,7 +6,7 @@ export const shoppingServices: Service[] = [
     id: "shop-1",
     name: "楽天市場",
     description:
-      "楽天ポイントが貯まるネットショッピング。ポイント還元率が高く、セールやキャンペーンも豊富。",
+      "楽天ポイントが貯まるネットショッピングポイント還元率が高く、セールやキャンペーンも豊富",
     category: "shopping",
     affiliateLinks: [
       {
@@ -27,9 +27,9 @@ export const shoppingServices: Service[] = [
       },
     ],
     affiliateContent: [
-      "楽天市場は、国内最大級のショッピングモール。",
-      "豊富な商品ラインナップと高い還元率が魅力です。",
-      "楽天ポイントは楽天グループ全体で使えるため、貯まったポイントの使い道も豊富。",
+      "楽天市場は、国内最大級のショッピングモール",
+      "豊富な商品ラインナップと高い還元率が魅力です",
+      "楽天ポイントは楽天グループ全体で使えるため、貯まったポイントの使い道も豊富",
     ],
     affiliateHighlights: [
       "楽天ポイントがザクザク貯まる",
@@ -44,7 +44,7 @@ export const shoppingServices: Service[] = [
     id: "shop-2",
     name: "Amazon",
     description:
-      "Amazonプライム会員なら送料無料・お急ぎ便が使い放題。豊富な商品と迅速な配送が魅力。",
+      "Amazonプライム会員なら送料無料・お急ぎ便が使い放題豊富な商品と迅速な配送が魅力",
     category: "shopping",
     affiliateLinks: [
       {
@@ -65,9 +65,9 @@ export const shoppingServices: Service[] = [
       },
     ],
     affiliateContent: [
-      "Amazonは、世界最大級のオンラインショッピングサイト。",
-      "プライム会員なら送料無料・お急ぎ便・Prime Videoなど特典が豊富。",
-      "タイムセールやAmazonブラックフライデーなどお得なセールも開催されます。",
+      "Amazonは、世界最大級のオンラインショッピングサイト",
+      "プライム会員なら送料無料・お急ぎ便・Prime Videoなど特典が豊富",
+      "タイムセールやAmazonブラックフライデーなどお得なセールも開催されます",
     ],
     affiliateHighlights: [
       "プライム会員なら送料無料・お急ぎ便が使い放題",
@@ -82,7 +82,7 @@ export const shoppingServices: Service[] = [
     id: "shop-3",
     name: "Yahoo!ショッピング",
     description:
-      "PayPayポイントが貯まるネットショッピング。5のつく日やゾロ目の日はポイント還元率アップ。",
+      "PayPayポイントが貯まるネットショッピング5のつく日やゾロ目の日はポイント還元率アップ",
     category: "shopping",
     affiliateLinks: [
       {
@@ -103,9 +103,9 @@ export const shoppingServices: Service[] = [
       },
     ],
     affiliateContent: [
-      "Yahoo!ショッピングは、PayPayポイントが貯まるネットショッピングサイト。",
-      "5のつく日やゾロ目の日はポイント還元率がアップするキャンペーンを実施。",
-      "貯まったPayPayポイントは、PayPay加盟店で1ポイント＝1円として使えます。",
+      "Yahoo!ショッピングは、PayPayポイントが貯まるネットショッピングサイト",
+      "5のつく日やゾロ目の日はポイント還元率がアップするキャンペーンを実施",
+      "貯まったPayPayポイントは、PayPay加盟店で1ポイント＝1円として使えます",
     ],
     affiliateHighlights: [
       "PayPayポイントが貯まる",

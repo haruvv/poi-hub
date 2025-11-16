@@ -62,7 +62,7 @@ export const FeaturedSection = () => {
                   🎴 オリパ特集 🎴
                 </h3>
                 <p className="text-[16px] font-medium text-slate-800 leading-relaxed">
-                  安心して楽しめるオリパサイトを厳選紹介。ポケカ・遊戯王・ワンピースなど人気カードのガチャが楽しめます。
+                  安心して楽しめるオリパサイトを厳選紹介ポケカ・遊戯王・ワンピースなど人気カードのガチャが楽しめます
                 </p>
               </div>
 

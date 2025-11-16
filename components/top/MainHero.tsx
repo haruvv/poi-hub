@@ -13,14 +13,14 @@ export const MainHero = () => {
         </div>
 
         <h1 className="text-[36px] sm:text-[42px] leading-tight font-bold text-slate-900 tracking-tight">
-          どれから始めるか、もう迷わない。
+          どれから始めるか、もう迷わない
           <br />
           <span className="text-blue-600">あなたにぴったりのサービス</span>
           を診断
         </h1>
 
         <p className="text-[17px] sm:text-[18px] text-slate-600 leading-relaxed max-w-2xl mx-auto">
-          たった30秒の無料診断で、今の自分にちょうどいい&ldquo;お得な一手&rdquo;だけをサクッと絞り込む。
+          たった30秒の無料診断で、今の自分にちょうどいい「お得な一手」だけをサクッと絞り込む
         </p>
 
         {/* メインCTA */}

@@ -5,11 +5,11 @@ import { DiagnosisPageClient } from "./DiagnosisPageClient";
 export const metadata: Metadata = {
   title: "ポイ活なび｜30秒お得診断",
   description:
-    "質問3つに答えるだけで、今の自分がやるべき節約アクションだけを絞って表示します。",
+    "質問3つに答えるだけで、今の自分がやるべき節約アクションだけを絞って表示します",
   openGraph: {
     title: "ポイ活なび｜30秒お得診断",
     description:
-      "質問3つに答えるだけで、今の自分がやるべき節約アクションだけを絞って表示します。",
+      "質問3つに答えるだけで、今の自分がやるべき節約アクションだけを絞って表示します",
     url: "https://poikatsu-navi.com/diagnosis",
     siteName: "ポイ活なび",
     images: [
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "ポイ活なび｜30秒お得診断",
     description:
-      "質問3つに答えるだけで、今の自分がやるべき節約アクションだけを絞って表示します。",
+      "質問3つに答えるだけで、今の自分がやるべき節約アクションだけを絞って表示します",
     images: ["/og-image.jpg"],
   },
 };

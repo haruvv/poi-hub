@@ -9,7 +9,7 @@ export const ServiceCategories = () => {
     {
       title: "ポイ活でコツコツ貯める",
       description:
-        "普段のネット通販やアプリ登録を&ldquo;ついでに&rdquo;ポイント化して、コツコツ貯めていく系のサービスをまとめてる。",
+        "普段のネット通販やアプリ登録をついでにポイント化して、コツコツ貯めていく系のサービスをまとめてます",
       icon: (
         <svg
           className="w-8 h-8 text-blue-600"
@@ -31,7 +31,7 @@ export const ServiceCategories = () => {
     {
       title: "クレジットカードで還元",
       description:
-        "年会費無料＆還元率高めのカードだけに絞って、&ldquo;とりあえず1枚持つならここ&rdquo;ってやつを比べやすくしてる。",
+        "年会費無料＆還元率高めのカードだけに絞って、とりあえず1枚持つならここってやつを比べやすくしてます",
       icon: (
         <svg
           className="w-8 h-8 text-purple-600"
@@ -53,7 +53,7 @@ export const ServiceCategories = () => {
     {
       title: "投資で資産形成",
       description:
-        "いきなり難しい商品に突っ込むんじゃなくて、少額から始めやすい投資サービスだけピックアップ。余裕資金でじわっと増やしていく前提。",
+        "いきなり難しい商品に突っ込むんじゃなくて、少額から始めやすい投資サービスだけピックアップ余裕資金でじわっと増やしていく前提",
       icon: (
         <svg
           className="w-8 h-8 text-emerald-600"
@@ -75,7 +75,7 @@ export const ServiceCategories = () => {
     // {
     //   title: "お得に買い物",
     //   description:
-    //     "楽天市場やAmazonなど、ポイント還元や割引が充実したショッピングサイトを紹介しています。",
+    //     "楽天市場やAmazonなど、ポイント還元や割引が充実したショッピングサイトを紹介しています",
     //   icon: (
     //     <svg
     //       className="w-8 h-8 text-orange-600"
@@ -97,7 +97,7 @@ export const ServiceCategories = () => {
     // {
     //   title: "お得にゲーム",
     //   description:
-    //     "Steamのセールやゲームサブスクなど、お得にゲームを楽しめるサービスを紹介しています。",
+    //     "Steamのセールやゲームサブスクなど、お得にゲームを楽しめるサービスを紹介しています",
     //   icon: (
     //     <svg
     //       className="w-8 h-8 text-indigo-600"
@@ -125,7 +125,7 @@ export const ServiceCategories = () => {
     {
       title: "お得にご飯",
       description:
-        "冷蔵惣菜や冷凍弁当の宅配サービスを中心に、&ldquo;自炊の手間は減らしたいけど食費はできるだけ抑えたい&rdquo;って人向けのサービスを集めてる。",
+        "冷蔵惣菜や冷凍弁当の宅配サービスを中心に、自炊の手間は減らしたいけど食費はできるだけ抑えたいって人向けのサービスを集めてます",
       icon: (
         <svg
           className="w-8 h-8 text-rose-600"
@@ -143,6 +143,28 @@ export const ServiceCategories = () => {
       ),
       href: "/diagnosis/meal",
       color: "rose",
+    },
+    {
+      title: "サブスクでポイントもらう",
+      description:
+        "動画配信・音楽・学習サービスなど、どうせサブスク入るならポイントやキャッシュバックが付く案件から拾っていきたいって人向け",
+      icon: (
+        <svg
+          className="w-8 h-8 text-indigo-600"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"
+          />
+        </svg>
+      ),
+      href: "/diagnosis/subscription",
+      color: "indigo",
     },
   ];
 

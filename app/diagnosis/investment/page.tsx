@@ -20,7 +20,7 @@ interface PageProps {
 export default async function InvestmentPage({ searchParams }: PageProps) {
   const services = getServicesByCategory("investment");
   const nextActions = getNextActionsForCategory("investment");
-  const adPolicy = getAdPolicy('category-list');
+  const adPolicy = getAdPolicy("category-list");
 
   return (
     <main className="min-h-screen bg-slate-50">
@@ -33,10 +33,10 @@ export default async function InvestmentPage({ searchParams }: PageProps) {
           </h2>
           <div className="space-y-2 text-[14px] md:text-[15px] text-slate-700 leading-relaxed">
             <p>
-              ここでは、つみたてNISA対応や少額から始めやすい投資サービスを中心に紹介しています。
+              ここでは、つみたてNISA対応や少額から始めやすい投資サービスを中心に紹介しています
             </p>
             <p>
-              元本保証ではないため、メリットだけでなく注意点もあわせて解説。焦らず、自分のペースで判断するための情報だけを集めました。
+              元本保証ではないため、メリットだけでなく注意点もあわせて解説焦らず、自分のペースで判断するための情報だけを集めました
             </p>
           </div>
         </section>
@@ -47,7 +47,9 @@ export default async function InvestmentPage({ searchParams }: PageProps) {
             <h2 className="text-lg md:text-xl font-semibold text-slate-900">
               投資サービス
             </h2>
-            <span className="text-xs md:text-sm text-slate-500">{services.length}件</span>
+            <span className="text-xs md:text-sm text-slate-500">
+              {services.length}件
+            </span>
           </div>
           <div className="grid grid-cols-1 gap-4 md:gap-5">
             {services.map((service, index) => (

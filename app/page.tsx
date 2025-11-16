@@ -10,11 +10,11 @@ import { getServiceById } from "@/data/services";
 export const metadata: Metadata = {
   title: "ポイ活なび｜あなたに合ったお得な始め方が見つかる",
   description:
-    "様々なサービスの中から、あなたのライフスタイルに合う選択肢を探せるお得情報サイト。",
+    "様々なサービスの中から、あなたのライフスタイルに合う選択肢を探せるお得情報サイト",
   openGraph: {
     title: "ポイ活なび｜あなたに合ったお得な始め方が見つかる",
     description:
-      "様々なサービスの中から、あなたのライフスタイルに合う選択肢を探せるお得情報サイト。",
+      "様々なサービスの中から、あなたのライフスタイルに合う選択肢を探せるお得情報サイト",
     url: "https://poikatsu-navi.com",
     siteName: "ポイ活なび",
     images: [
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "ポイ活なび｜あなたに合ったお得な始め方が見つかる",
     description:
-      "様々なサービスの中から、あなたのライフスタイルに合う選択肢を探せるお得情報サイト。",
+      "様々なサービスの中から、あなたのライフスタイルに合う選択肢を探せるお得情報サイト",
     images: ["/og-image.jpg"],
   },
 };

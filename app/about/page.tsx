@@ -20,12 +20,12 @@ export default function AboutPage() {
           <section className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm">
             <p className="leading-relaxed text-base">
               <strong className="text-slate-900">ポイ活なび</strong>{" "}
-              は、「これからお得を始めたい人」が安心してサービスを選べるように情報をまとめたサイトです。
+              は、「これからお得を始めたい人」が安心してサービスを選べるように情報をまとめたサイトです
             </p>
             <p className="leading-relaxed text-base mt-4">
               本サイトは{" "}
               <strong className="text-slate-900">ポイ活なび編集部</strong>{" "}
-              が運営しています。
+              が運営しています
             </p>
           </section>
 
@@ -35,7 +35,7 @@ export default function AboutPage() {
             </h2>
 
             <p className="leading-relaxed mb-4">
-              ポイ活なびは、次のような方に向けて情報を発信しています。
+              ポイ活なびは、次のような方に向けて情報を発信しています
             </p>
 
             <ul className="space-y-2 ml-4 mb-6">
@@ -66,7 +66,7 @@ export default function AboutPage() {
             </ul>
 
             <p className="leading-relaxed mb-4">
-              そのために、以下を大切にしています。
+              そのために、以下を大切にしています
             </p>
 
             <ul className="space-y-2 ml-4">
@@ -97,7 +97,7 @@ export default function AboutPage() {
             </h2>
 
             <p className="leading-relaxed mb-4">
-              ポイ活なび編集部では、主に以下の観点からサービスを選定しています。
+              ポイ活なび編集部では、主に以下の観点からサービスを選定しています
             </p>
 
             <ul className="space-y-2 ml-4 mb-6">
@@ -122,7 +122,7 @@ export default function AboutPage() {
             </ul>
 
             <p className="leading-relaxed text-slate-700 bg-emerald-50 border border-emerald-200 rounded-xl p-4">
-              案件提供の有無にかかわらず、「読者にとっておすすめできるか」を基準に紹介するサービスを判断しています。
+              案件提供の有無にかかわらず、「読者にとっておすすめできるか」を基準に紹介するサービスを判断しています
             </p>
           </section>
 
@@ -132,28 +132,28 @@ export default function AboutPage() {
             </h2>
 
             <p className="leading-relaxed mb-4">
-              ポイ活なびの一部コンテンツには、広告・アフィリエイトリンクを含みます。
+              ポイ活なびの一部コンテンツには、広告・アフィリエイトリンクを含みます
               <br />
-              経由してお申込み・ご利用いただくことで、当サイトに成果報酬が発生する場合があります。
+              経由してお申込み・ご利用いただくことで、当サイトに成果報酬が発生する場合があります
             </p>
 
             <ul className="space-y-2 ml-4">
               <li className="flex gap-2 items-start">
                 <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-amber-500" />
                 <span className="leading-relaxed">
-                  ユーザーの皆さまのご負担で追加料金が発生することはありません。
+                  ユーザーの皆さまのご負担で追加料金が発生することはありません
                 </span>
               </li>
               <li className="flex gap-2 items-start">
                 <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-amber-500" />
                 <span className="leading-relaxed">
-                  広告収益は、サイト運営費およびコンテンツ品質向上に活用させていただきます。
+                  広告収益は、サイト運営費およびコンテンツ品質向上に活用させていただきます
                 </span>
               </li>
             </ul>
 
             <p className="leading-relaxed mt-4 text-sm text-slate-600">
-              広告が含まれるページでは、その旨を分かりやすく明記するよう努めています。
+              広告が含まれるページでは、その旨を分かりやすく明記するよう努めています
             </p>
           </section>
 
@@ -166,19 +166,19 @@ export default function AboutPage() {
               <li className="flex gap-2 items-start">
                 <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-slate-600" />
                 <span className="leading-relaxed">
-                  掲載情報はできる限り正確な内容を心がけていますが、最新の情報・条件は必ず各公式サイトにてご確認ください。
+                  掲載情報はできる限り正確な内容を心がけていますが、最新の情報・条件は必ず各公式サイトにてご確認ください
                 </span>
               </li>
               <li className="flex gap-2 items-start">
                 <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-slate-600" />
                 <span className="leading-relaxed">
-                  当サイト経由でのサービス利用において生じた損害・トラブルについて、当サイトは責任を負いかねます。
+                  当サイト経由でのサービス利用において生じた損害・トラブルについて、当サイトは責任を負いかねます
                 </span>
               </li>
               <li className="flex gap-2 items-start">
                 <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-slate-600" />
                 <span className="leading-relaxed">
-                  投資・資産運用に関する情報は、特定の金融商品の勧誘・推奨を目的としたものではありません。投資判断はご自身の責任で行ってください。
+                  投資・資産運用に関する情報は、特定の金融商品の勧誘・推奨を目的としたものではありません投資判断はご自身の責任で行ってください
                 </span>
               </li>
             </ul>
@@ -190,7 +190,7 @@ export default function AboutPage() {
             </h2>
 
             <p className="leading-relaxed mb-4">
-              掲載内容に関するご質問・ご意見・修正依頼などは、下記フォームよりご連絡ください。
+              掲載内容に関するご質問・ご意見・修正依頼などは、下記フォームよりご連絡ください
             </p>
 
             <div className="space-y-2 mb-6">
@@ -211,7 +211,7 @@ export default function AboutPage() {
 
             <div className="pt-4 border-t border-slate-200">
               <p className="leading-relaxed text-slate-700 text-center">
-                ひなちゃんと一緒に、「無理せず・楽しく・ちょっと賢く」お得を始めていきましょう。
+                ひなちゃんと一緒に、「無理せず・楽しく・ちょっと賢く」お得を始めていきましょう
               </p>
             </div>
           </section>

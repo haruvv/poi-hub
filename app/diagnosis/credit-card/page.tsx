@@ -20,7 +20,7 @@ interface PageProps {
 export default async function CreditCardPage({ searchParams }: PageProps) {
   const services = getServicesByCategory("credit-card");
   const nextActions = getNextActionsForCategory("credit-card");
-  const adPolicy = getAdPolicy('category-list');
+  const adPolicy = getAdPolicy("category-list");
 
   return (
     <main className="min-h-screen bg-slate-50">
@@ -33,10 +33,10 @@ export default async function CreditCardPage({ searchParams }: PageProps) {
           </h2>
           <div className="space-y-2 text-[14px] md:text-[15px] text-slate-700 leading-relaxed">
             <p>
-              年会費・還元率・安心感を重視して選びやすいクレジットカードだけをピックアップしています。
+              年会費・還元率・安心感を重視して選びやすいクレジットカードだけをピックアップしています
             </p>
             <p>
-              ポイント重視派・シンプル派などタイプ別のおすすめも紹介。申し込み前に公式サイトで最新の特典を必ずチェックしてください。
+              ポイント重視派・シンプル派などタイプ別のおすすめも紹介申し込み前に公式サイトで最新の特典を必ずチェックしてください
             </p>
           </div>
         </section>

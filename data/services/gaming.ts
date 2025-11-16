@@ -6,7 +6,7 @@ export const gamingServices: Service[] = [
     id: "game-1",
     name: "Steam",
     description:
-      "PC向けゲーム配信プラットフォーム。セールで大幅割引が頻繁に行われ、お得にゲームが購入できる。",
+      "PC向けゲーム配信プラットフォームセールで大幅割引が頻繁に行われ、お得にゲームが購入できる",
     category: "gaming",
     affiliateLinks: [
       {
@@ -27,9 +27,9 @@ export const gamingServices: Service[] = [
       },
     ],
     affiliateContent: [
-      "Steamは、世界最大級のPCゲーム配信プラットフォーム。",
-      "定期的に開催されるセールでは、人気タイトルが最大90%オフになることも。",
-      "ウィッシュリストに入れておけば、セール時に通知が届きます。",
+      "Steamは、世界最大級のPCゲーム配信プラットフォーム",
+      "定期的に開催されるセールでは、人気タイトルが最大90%オフになることも",
+      "ウィッシュリストに入れておけば、セール時に通知が届きます",
     ],
     affiliateHighlights: [
       "定期的な大型セール（サマーセール、ウィンターセールなど）",
@@ -44,7 +44,7 @@ export const gamingServices: Service[] = [
     id: "game-2",
     name: "Nintendo Switch Online",
     description:
-      "Nintendo Switchのオンラインサービス。ファミコン・スーパーファミコンのゲームが遊び放題。",
+      "Nintendo Switchのオンラインサービスファミコン・スーパーファミコンのゲームが遊び放題",
     category: "gaming",
     affiliateLinks: [
       {
@@ -65,9 +65,9 @@ export const gamingServices: Service[] = [
       },
     ],
     affiliateContent: [
-      "Nintendo Switch Onlineは、Nintendo Switchのオンラインサービス。",
-      "月額306円（税込）で、オンラインプレイやファミコン・スーパーファミコンのゲームが遊び放題。",
-      "12ヶ月プランなら月額約204円とさらにお得。",
+      "Nintendo Switch Onlineは、Nintendo Switchのオンラインサービス",
+      "月額306円（税込）で、オンラインプレイやファミコン・スーパーファミコンのゲームが遊び放題",
+      "12ヶ月プランなら月額約204円とさらにお得",
     ],
     affiliateHighlights: [
       "月額306円でオンラインプレイが楽しめる",
@@ -82,7 +82,7 @@ export const gamingServices: Service[] = [
     id: "game-3",
     name: "PlayStation Plus",
     description:
-      "PlayStationのサブスクリプションサービス。フリープレイやオンラインマルチプレイが楽しめる。",
+      "PlayStationのサブスクリプションサービスフリープレイやオンラインマルチプレイが楽しめる",
     category: "gaming",
     affiliateLinks: [
       {
@@ -103,9 +103,9 @@ export const gamingServices: Service[] = [
       },
     ],
     affiliateContent: [
-      "PlayStation Plusは、PlayStationのサブスクリプションサービス。",
-      "毎月2〜3本のフリープレイゲームが提供され、オンラインマルチプレイも楽しめます。",
-      "上位プランでは、PS5・PS4・PS3・PSPのゲームが遊び放題のカタログも利用可能。",
+      "PlayStation Plusは、PlayStationのサブスクリプションサービス",
+      "毎月2〜3本のフリープレイゲームが提供され、オンラインマルチプレイも楽しめます",
+      "上位プランでは、PS5・PS4・PS3・PSPのゲームが遊び放題のカタログも利用可能",
     ],
     affiliateHighlights: [
       "毎月2〜3本のフリープレイゲーム",

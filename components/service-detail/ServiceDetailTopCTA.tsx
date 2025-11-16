@@ -12,8 +12,8 @@ export const ServiceDetailTopCTA = ({
   serviceId,
   serviceName,
   ctaText = "今すぐ登録する",
-  message = "今なら新規登録＆条件クリアで、ポイントや特典を一気に狙えるチャンス。",
-  supplement = "キャンペーン内容やポイント付与のタイミングは時期や案件ごとに変わるから、申し込み前に公式ページの最新条件をチェックしておこう。",
+  message = "今なら新規登録＆条件クリアで、ポイントや特典を一気に狙えるチャンス",
+  supplement = "キャンペーン内容やポイント付与のタイミングは時期や案件ごとに変わるから、申し込み前に公式ページの最新条件をチェックしておこう",
 }: ServiceDetailTopCTAProps) => {
   return (
     <div className="rounded-2xl border-2 border-blue-200 bg-gradient-to-br from-blue-50 via-white to-blue-50 p-6 shadow-lg">

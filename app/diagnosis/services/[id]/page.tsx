@@ -40,6 +40,10 @@ const categoryMeta = {
     label: "オリパ一覧へ戻る",
     href: "/diagnosis/oripa",
   },
+  subscription: {
+    label: "サブスク一覧へ戻る",
+    href: "/diagnosis/subscription",
+  },
 } as const;
 
 type PageProps = {
@@ -86,7 +90,7 @@ export default async function ServiceDetailPage({
 
   // 遷移元に応じた戻るリンクを構築
   const from = searchParamsData.from;
-  
+
   // 診断結果ページから来た場合
   const isFromResults = from === "results";
   const resultsBackUrl = isFromResults
@@ -103,8 +107,9 @@ export default async function ServiceDetailPage({
   const isFromTop = from === "top";
 
   // カテゴリページから来た場合
-  const isFromCategory = from && categoryMeta[from as keyof typeof categoryMeta];
-  
+  const isFromCategory =
+    from && categoryMeta[from as keyof typeof categoryMeta];
+
   const categoryInfo = categoryMeta[service.category] ?? {
     label: "診断一覧へ戻る",
     href: "/diagnosis",
@@ -121,7 +126,7 @@ export default async function ServiceDetailPage({
       ? service.affiliateHighlights
       : service.tags.length > 0
         ? service.tags
-        : ["まずは無料で登録して、掲載案件をチェックしてみましょう。"];
+        : ["まずは無料で登録して、掲載案件をチェックしてみましょう"];
 
   const hasSecondaryLinks = affiliateLinks.length > 1;
   const hasBannerImages = service.bigImage && service.bigImage.length > 0;
@@ -247,8 +252,8 @@ export default async function ServiceDetailPage({
                 <div className="grid gap-4 sm:grid-cols-2 justify-items-center">
                   {service.bigImage!.map((image, index) => {
                     // スクリプトタグを含むかチェック
-                    const isScript = image.html.includes('<script');
-                    
+                    const isScript = image.html.includes("<script");
+
                     return isScript ? (
                       <div
                         key={`${image.html}-${index}`}
@@ -308,7 +313,7 @@ export default async function ServiceDetailPage({
                         )}
                         <p className="text-[10px] text-red-600/80">
                           ※
-                          特典や条件はタイミングによって変動する場合があります。必ず紹介ページで最新情報を確認してください。
+                          特典や条件はタイミングによって変動する場合があります必ず紹介ページで最新情報を確認してください
                         </p>
                       </div>
                       <div className="referral-glow" />
@@ -533,9 +538,9 @@ export default async function ServiceDetailPage({
                     リンクの取り扱いについて
                   </summary>
                   <div className="mt-2 space-y-1">
-                    <p>・リンクは新しいタブで開きます。</p>
+                    <p>・リンクは新しいタブで開きます</p>
                     <p>
-                      ・条件が変わる場合があるため、遷移先の案内を必ず確認してください。
+                      ・条件が変わる場合があるため、遷移先の案内を必ず確認してください
                     </p>
                   </div>
                 </details>
