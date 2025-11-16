@@ -50,7 +50,7 @@ export const ComparisonTable = ({
                       className="group block w-full text-center rounded-lg bg-emerald-600 text-white text-sm font-bold py-3 px-6 shadow-sm hover:shadow-md hover:bg-emerald-700 transition-all duration-200"
                     >
                       <span className="flex items-center justify-center gap-2">
-                        {service.name}の詳細を見る
+                        <span className="service-name">{service.name}</span>の詳細を見る
                         <svg
                           className="w-4 h-4 transition-transform group-hover:translate-x-1"
                           fill="none"

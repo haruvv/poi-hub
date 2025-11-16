@@ -1,10 +1,40 @@
 @import "tailwindcss";
 
+/* フォント定義 */
+@font-face {
+  font-family: "Zen Kaku Gothic New";
+  src: url("/fonts/ZenKakuGothicNew-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Zen Maru Gothic";
+  src: url("/fonts/ZenMaruGothic-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Rampart One";
+  src: url("/fonts/RampartOne-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --background: #f8fafc;
   --foreground: #0f172a;
 
-  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-sans: "Zen Kaku Gothic New", system-ui, -apple-system,
+    BlinkMacSystemFont, sans-serif;
+  --font-heading: "Zen Maru Gothic", "Zen Kaku Gothic New", system-ui,
+    -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-service-name: "Rampart One", "Zen Maru Gothic", "Zen Kaku Gothic New",
+    system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, monospace;
 
   color-scheme: light;
@@ -14,6 +44,8 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-sans);
+  --font-heading: var(--font-heading);
+  --font-service-name: var(--font-service-name);
   --font-mono: var(--font-mono);
 }
 
@@ -29,6 +61,29 @@ body {
   background-color: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans);
+}
+
+/* 見出しにZen Maru Gothicを適用 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+}
+
+/* サービス名にRampart Oneを適用 */
+.service-name {
+  font-family: var(--font-service-name);
+  color: #dc2626; /* 赤色 */
+  line-height: 1.3;
+}
+
+/* ボタン内のサービス名は白にする */
+a .service-name,
+button .service-name {
+  color: white;
 }
 
 .hero-gradient {

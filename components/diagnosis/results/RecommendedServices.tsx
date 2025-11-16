@@ -116,7 +116,7 @@ export const RecommendedServices = ({
                       >
                         {getServiceLabel(index)}
                       </span>
-                      <h3 className="text-xl font-bold text-slate-900 tracking-tight">
+                      <h3 className="service-name text-2xl font-bold tracking-tight sm:text-3xl">
                         {service.name}
                       </h3>
                     </div>

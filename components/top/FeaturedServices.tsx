@@ -30,7 +30,7 @@ export const FeaturedServices = ({ services }: FeaturedServicesProps) => {
           >
             {/* サービス名 */}
             <div className="space-y-3 mb-4 flex-shrink-0">
-              <h3 className="text-xl font-bold text-slate-900">
+              <h3 className="service-name text-4xl font-bold sm:text-5xl">
                 {service.name}
               </h3>
 

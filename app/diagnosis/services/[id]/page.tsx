@@ -277,7 +277,7 @@ export default async function ServiceDetailPage({
               )}
               <header className="space-y-4">
                 <div>
-                  <h1 className="text-2xl font-semibold text-slate-900 sm:text-3xl">
+                  <h1 className="service-name text-3xl font-semibold sm:text-4xl">
                     {service.name}
                   </h1>
                   <p className="mt-2 text-sm leading-relaxed text-slate-600">

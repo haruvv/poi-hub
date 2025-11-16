@@ -104,7 +104,7 @@ export const ServiceCard = ({ service, rank, from }: ServiceCardProps) => {
           )}
 
           <div className="flex-1 min-w-0">
-            <h3 className="text-[15px] sm:text-base lg:text-[17px] font-semibold text-slate-900 leading-snug">
+            <h3 className="service-name text-[28px] sm:text-[32px] lg:text-[36px] font-semibold leading-snug">
               {service.name}
             </h3>
             {service.affiliateCampaignNote && (
