@@ -4,6 +4,10 @@ import { notFound } from "next/navigation";
 import { HeaderBar } from "@/components/layout/HeaderBar";
 import { getServiceById } from "@/data/services";
 import { AffiliateScript } from "@/components/AffiliateScript";
+import { ServiceDetailTopCTA } from "@/components/service-detail/ServiceDetailTopCTA";
+import { ServiceDetailRecommendedFor } from "@/components/service-detail/ServiceDetailRecommendedFor";
+import { ServiceDetailPrecautions } from "@/components/service-detail/ServiceDetailPrecautions";
+import { ServiceDetailBottomCTA } from "@/components/service-detail/ServiceDetailBottomCTA";
 
 const categoryMeta = {
   "poi-katsu": {
@@ -389,6 +393,13 @@ export default async function ServiceDetailPage({
                 )}
               </header>
 
+              {/* 上部CTAブロック */}
+              <ServiceDetailTopCTA
+                serviceId={service.id}
+                serviceName={service.name}
+                supplementText={service.affiliateCampaignNote}
+              />
+
               <div className="grid gap-6 sm:grid-cols-2">
                 <div className="space-y-3 text-sm text-slate-700 leading-relaxed">
                   <h2 className="text-xs font-semibold tracking-wide text-slate-500">
@@ -427,6 +438,12 @@ export default async function ServiceDetailPage({
                   )}
                 </div>
               </div>
+
+              {/* こんな人におすすめセクション */}
+              <ServiceDetailRecommendedFor />
+
+              {/* やる前の注意点セクション */}
+              <ServiceDetailPrecautions />
 
               <div className="space-y-3">
                 {service.affiliateScript ? (
@@ -519,6 +536,12 @@ export default async function ServiceDetailPage({
               </div>
             </div>
           </section>
+
+          {/* 下部CTAブロック */}
+          <ServiceDetailBottomCTA
+            serviceId={service.id}
+            serviceName={service.name}
+          />
         </div>
       </div>
     </main>
