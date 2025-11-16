@@ -1,22 +1,24 @@
-'use client';
+"use client";
 
 interface ServiceDetailBottomCTAProps {
   serviceId: string;
   serviceName: string;
   ctaText?: string;
+  message?: string;
 }
 
 export const ServiceDetailBottomCTA = ({
   serviceId,
   serviceName,
   ctaText = "今すぐ登録する",
+  message = "TODO: ここまで読んでアリかもと思った人への一言",
 }: ServiceDetailBottomCTAProps) => {
   return (
     <section className="rounded-3xl border-2 border-blue-300 bg-gradient-to-br from-blue-100 via-blue-50 to-white p-8 sm:p-10 shadow-xl text-center space-y-6">
       {/* 締めの一言 */}
       <div className="space-y-2">
         <p className="text-lg sm:text-xl font-bold text-slate-900 leading-relaxed">
-          TODO: ここまで読んでアリかもと思った人への一言
+          {message}
         </p>
         <p className="text-sm sm:text-base text-slate-600">
           {serviceName}で、お得な生活を始めましょう
@@ -60,10 +62,7 @@ export const ServiceDetailBottomCTA = ({
       </a>
 
       {/* 補足 */}
-      <p className="text-xs text-slate-500">
-        ※ 外部サイトへ移動します
-      </p>
+      <p className="text-xs text-slate-500">※ 外部サイトへ移動します</p>
     </section>
   );
 };
-

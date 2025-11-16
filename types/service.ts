@@ -42,4 +42,10 @@ export interface Service {
   };
   tags: string[];
   imageUrl?: string;
+  // カスタムテキスト（サービス詳細ページ用）
+  topCtaMessage?: string;
+  topCtaSupplement?: string;
+  recommendedFor?: string[];
+  precautions?: string[];
+  bottomCtaMessage?: string;
 }

@@ -14,12 +14,12 @@ export function getNextActionsForCategory(category: ServiceCategory): {
       return {
         title: "次にやっておきたいこと",
         description:
-          "TODO: ポイ活で貯めたポイントを、さらに効率よく増やすための次のステップ",
+          "ポイ活で生まれた「浮いたお金」や貯めたポイントは、還元率の高いクレジットカードと組み合わせることで、普段の支払いからさらに効率よく増やせます。",
         items: [
           {
             title: "ポイント還元率の高いクレカを1枚持つ",
             description:
-              "TODO: ポイントサイト経由の買い物に加えて、クレカ払いでダブルで貯まる説明",
+              "ポイントサイト経由の買い物に加えて、還元率の高いクレカで支払えばポイントの二重取りができ、同じ支出でもお得度が大きくなります。",
             href: "/diagnosis/credit-card",
             label: "おすすめクレカを見る",
           },
@@ -46,12 +46,12 @@ export function getNextActionsForCategory(category: ServiceCategory): {
       return {
         title: "オリパの軍資金を増やす",
         description:
-          "TODO: オリパに使うお金をポイ活で稼いで、実質負担を減らす方法",
+          "オリパに使う予算の一部を、ポイントサイトやお小遣いアプリで事前に稼いでおけば、実質の持ち出しを抑えながら趣味を楽しむことができます。",
         items: [
           {
             title: "ポイ活で軍資金を稼ぐ",
             description:
-              "TODO: 無料案件やアンケートでコツコツ貯めたポイントを、オリパ資金に回す説明",
+              "無料会員登録やアンケート回答などでコツコツ貯めたポイントを換金してオリパ資金に回せば、お財布へのダメージを抑えながら楽しめます。",
             href: "/diagnosis/poi-katsu",
             label: "ポイ活を始める",
           },

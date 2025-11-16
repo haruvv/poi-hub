@@ -13,15 +13,13 @@ export const MainHero = () => {
         </div>
 
         <h1 className="text-[36px] sm:text-[42px] leading-tight font-bold text-slate-900 tracking-tight">
-          TODO: キャッチコピー
+          どれから始めるか、もう迷わない。
           <br />
           <span className="text-blue-600">あなたにぴったりのサービス</span>を診断
         </h1>
 
         <p className="text-[17px] sm:text-[18px] text-slate-600 leading-relaxed max-w-2xl mx-auto">
-          TODO: サブコピー - 簡単な質問に答えるだけで、
-          <br className="hidden sm:block" />
-          あなたに最適なサービスが見つかります
+          簡単な質問に答えるだけで、ポイ活・クレジットカード・投資・オリパなどの中から、今のあなたに合ったサービスを診断します。
         </p>
 
         {/* メインCTA */}

@@ -402,7 +402,8 @@ export default async function ServiceDetailPage({
               <ServiceDetailTopCTA
                 serviceId={service.id}
                 serviceName={service.name}
-                supplementText={service.affiliateCampaignNote}
+                message={service.topCtaMessage}
+                supplement={service.topCtaSupplement}
               />
 
               <div className="grid gap-6 sm:grid-cols-2">
@@ -445,10 +446,10 @@ export default async function ServiceDetailPage({
               </div>
 
               {/* こんな人におすすめセクション */}
-              <ServiceDetailRecommendedFor />
+              <ServiceDetailRecommendedFor items={service.recommendedFor} />
 
               {/* やる前の注意点セクション */}
-              <ServiceDetailPrecautions />
+              <ServiceDetailPrecautions items={service.precautions} />
 
               <div className="space-y-3">
                 {service.affiliateScript ? (
@@ -546,6 +547,7 @@ export default async function ServiceDetailPage({
           <ServiceDetailBottomCTA
             serviceId={service.id}
             serviceName={service.name}
+            message={service.bottomCtaMessage}
           />
 
           {/* 次にやると良いことセクション */}

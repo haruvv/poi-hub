@@ -4,14 +4,16 @@ interface ServiceDetailTopCTAProps {
   serviceId: string;
   serviceName: string;
   ctaText?: string;
-  supplementText?: string;
+  message?: string;
+  supplement?: string;
 }
 
 export const ServiceDetailTopCTA = ({
   serviceId,
   serviceName,
   ctaText = "今すぐ登録する",
-  supplementText,
+  message = "TODO: 今申し込むとどんなメリットがあるかの短い文",
+  supplement = "TODO: ポイント付与のタイミングやキャンペーン期間などの補足",
 }: ServiceDetailTopCTAProps) => {
   return (
     <div className="rounded-2xl border-2 border-blue-200 bg-gradient-to-br from-blue-50 via-white to-blue-50 p-6 shadow-lg">
@@ -19,13 +21,8 @@ export const ServiceDetailTopCTA = ({
         {/* 今やる理由 */}
         <div className="text-center space-y-2">
           <p className="text-base sm:text-lg font-bold text-slate-900 leading-relaxed">
-            TODO: 今申し込むとどんなメリットがあるかの短い文
+            {message}
           </p>
-          {supplementText && (
-            <p className="text-sm text-slate-600">
-              {supplementText}
-            </p>
-          )}
         </div>
 
         {/* メインCTAボタン */}
@@ -55,7 +52,7 @@ export const ServiceDetailTopCTA = ({
 
         {/* 補足テキスト */}
         <p className="text-xs text-center text-slate-500">
-          TODO: ポイント付与のタイミングやキャンペーン期間などの補足
+          {supplement}
         </p>
       </div>
     </div>
