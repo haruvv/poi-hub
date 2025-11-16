@@ -19,10 +19,6 @@ export const MainHero = () => {
           を診断
         </h1>
 
-        <p className="text-sm text-slate-600 leading-relaxed max-w-2xl mx-auto">
-          診断結果ページでは、ひなちゃんが&ldquo;今これやっとくと良さそうなサービス&rdquo;をゆるく案内してくれる。
-        </p>
-
         <p className="text-[17px] sm:text-[18px] text-slate-600 leading-relaxed max-w-2xl mx-auto">
           たった30秒の無料診断で、今の自分にちょうどいい&ldquo;お得な一手&rdquo;だけをサクッと絞り込む。
         </p>
