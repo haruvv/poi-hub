@@ -26,7 +26,7 @@ export const FeaturedServices = ({ services }: FeaturedServicesProps) => {
         {services.map((service) => (
           <div
             key={service.id}
-            className="group relative overflow-hidden rounded-2xl border-2 border-slate-200 bg-white p-6 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+            className="group relative overflow-hidden rounded-2xl border-2 border-slate-200 bg-white p-6 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-[320px]"
           >
             {/* サービス名 */}
             <div className="space-y-3 mb-4">
@@ -41,25 +41,27 @@ export const FeaturedServices = ({ services }: FeaturedServicesProps) => {
             </div>
 
             {/* タグ */}
-            {service.tags && service.tags.length > 0 && (
-              <div className="flex flex-wrap gap-2 mb-5">
-                {service.tags.slice(0, 3).map((tag, index) => (
-                  <span
-                    key={index}
-                    className={`inline-block text-xs font-semibold px-3 py-1 rounded-full ${
-                      index === 0
-                        ? "bg-amber-100 text-amber-700 border border-amber-200"
-                        : "bg-slate-100 text-slate-700 border border-slate-200"
-                    }`}
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            )}
+            <div className="flex-1 min-h-0 overflow-hidden">
+              {service.tags && service.tags.length > 0 && (
+                <div className="flex flex-wrap gap-2 mb-5">
+                  {service.tags.slice(0, 3).map((tag, index) => (
+                    <span
+                      key={index}
+                      className={`inline-block text-xs font-semibold px-3 py-1 rounded-full ${
+                        index === 0
+                          ? "bg-amber-100 text-amber-700 border border-amber-200"
+                          : "bg-slate-100 text-slate-700 border border-slate-200"
+                      }`}
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              )}
+            </div>
 
             {/* ボタン */}
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-2 mt-auto">
               {/* 詳細を見るボタン */}
               <Link
                 href={`/diagnosis/services/${service.id}?from=top`}
