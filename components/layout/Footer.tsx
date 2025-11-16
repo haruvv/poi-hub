@@ -142,7 +142,7 @@ export const Footer = () => {
           <div className="space-y-4">
             <h4 className="text-sm font-semibold text-white">ご注意</h4>
             <p className="text-xs text-slate-400 leading-relaxed">
-              本サイトは広告を含みます最新情報は各公式サイトをご確認ください投資は元本保証ではありません
+              本サイトは広告を含みます。最新情報は各公式サイトをご確認ください。投資は元本保証ではありません
             </p>
           </div>
         </div>

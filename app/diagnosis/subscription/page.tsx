@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { HeaderBar } from "@/components/layout/HeaderBar";
 import { ServiceCard } from "@/components/diagnosis/ServiceCard";
 import { getServicesByCategory } from "@/data/services";
-import Link from "next/link";
 import { NextActionsSection } from "@/components/next-actions/NextActionsSection";
 import { getNextActionsForCategory } from "@/lib/next-actions-rules";
 import { GoogleAdSense } from "@/components/ads/GoogleAdSense";
@@ -13,11 +12,7 @@ export const metadata: Metadata = {
   description: "サブスク契約でポイントやキャッシュバックが狙える案件一覧",
 };
 
-interface PageProps {
-  searchParams: Promise<{ type?: string }>;
-}
-
-export default async function SubscriptionPage({ searchParams }: PageProps) {
+export default async function SubscriptionPage() {
   const services = getServicesByCategory("subscription");
   const nextActions = getNextActionsForCategory("subscription");
   const adPolicy = getAdPolicy("category-list");
@@ -155,16 +150,6 @@ export default async function SubscriptionPage({ searchParams }: PageProps) {
             />
           </div>
         )}
-
-        {/* もう一度診断する */}
-        <div className="pt-4">
-          <Link
-            href="/diagnosis"
-            className="block w-full text-center rounded-2xl border border-slate-200 text-sm text-slate-600 py-3 hover:bg-slate-50 transition"
-          >
-            もう一度診断する
-          </Link>
-        </div>
       </div>
     </main>
   );
