@@ -5,6 +5,8 @@ import { getServicesByCategory } from "@/data/services";
 import Link from "next/link";
 import { NextActionsSection } from "@/components/next-actions/NextActionsSection";
 import { getNextActionsForCategory } from "@/lib/next-actions-rules";
+import { GoogleAdSense } from "@/components/ads/GoogleAdSense";
+import { getAdPolicy, AD_SLOTS } from "@/lib/ad-policy";
 
 export const metadata: Metadata = {
   title: "ポイ活なび｜お得にご飯",
@@ -18,6 +20,7 @@ interface PageProps {
 export default async function MealPage({ searchParams }: PageProps) {
   const services = getServicesByCategory("meal");
   const nextActions = getNextActionsForCategory("meal");
+  const adPolicy = getAdPolicy('category-list');
 
   return (
     <main className="min-h-screen bg-slate-50">
@@ -63,6 +66,16 @@ export default async function MealPage({ searchParams }: PageProps) {
             description={nextActions.description}
             items={nextActions.items}
           />
+        )}
+
+        {/* 下部広告（控えめに） */}
+        {adPolicy.showBottomAd && (
+          <div className="pt-4">
+            <GoogleAdSense
+              adSlot={AD_SLOTS.general.bottom}
+              className="max-w-3xl mx-auto"
+            />
+          </div>
         )}
 
         {/* もう一度診断する */}

@@ -22,6 +22,7 @@ export const HeaderBar = () => {
   const menuItems = [
     { href: "/", label: "トップページ" },
     { href: "/diagnosis", label: "お得診断" },
+    { href: "/articles", label: "お得情報コラム" },
     { href: "/diagnosis/poi-katsu", label: "ポイ活サイト" },
     { href: "/diagnosis/credit-card", label: "クレジットカード" },
     { href: "/diagnosis/investment", label: "投資・資産づくり" },
