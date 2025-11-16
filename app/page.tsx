@@ -10,11 +10,11 @@ import { getServiceById } from "@/data/services";
 export const metadata: Metadata = {
   title: "ポイ活なび｜あなたに合ったお得な始め方が見つかる",
   description:
-    "ポイ活・クレジットカード・投資サービスの中から、あなたのライフスタイルに合う選択肢を探せるお得情報サイト。",
+    "様々なサービスの中から、あなたのライフスタイルに合う選択肢を探せるお得情報サイト。",
   openGraph: {
     title: "ポイ活なび｜あなたに合ったお得な始め方が見つかる",
     description:
-      "ポイ活・クレジットカード・投資サービスの中から、あなたのライフスタイルに合う選択肢を探せるお得情報サイト。",
+      "様々なサービスの中から、あなたのライフスタイルに合う選択肢を探せるお得情報サイト。",
     url: "https://poikatsu-navi.com",
     siteName: "ポイ活なび",
     images: [
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "ポイ活なび｜あなたに合ったお得な始め方が見つかる",
     description:
-      "ポイ活・クレジットカード・投資サービスの中から、あなたのライフスタイルに合う選択肢を探せるお得情報サイト。",
+      "様々なサービスの中から、あなたのライフスタイルに合う選択肢を探せるお得情報サイト。",
     images: ["/og-image.jpg"],
   },
 };
@@ -40,11 +40,13 @@ export const metadata: Metadata = {
 export default function Home() {
   // いち押し案件のサービスID（後で編集可能）
   const featuredServiceIds = ["poi-1", "oripa-1", "credit-1"];
-  
+
   // サービスデータを取得
   const featuredServices = featuredServiceIds
-    .map(id => getServiceById(id))
-    .filter((service): service is NonNullable<typeof service> => service !== undefined);
+    .map((id) => getServiceById(id))
+    .filter(
+      (service): service is NonNullable<typeof service> => service !== undefined
+    );
 
   return (
     <main className="min-h-screen bg-slate-50 text-slate-900">

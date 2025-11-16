@@ -15,11 +15,12 @@ export const MainHero = () => {
         <h1 className="text-[36px] sm:text-[42px] leading-tight font-bold text-slate-900 tracking-tight">
           どれから始めるか、もう迷わない。
           <br />
-          <span className="text-blue-600">あなたにぴったりのサービス</span>を診断
+          <span className="text-blue-600">あなたにぴったりのサービス</span>
+          を診断
         </h1>
 
         <p className="text-[17px] sm:text-[18px] text-slate-600 leading-relaxed max-w-2xl mx-auto">
-          簡単な質問に答えるだけで、ポイ活・クレカ・投資・オリパの中から、今のあなたにぴったりのお得な選択肢が見つかる！
+          簡単な質問に答えるだけで、今のあなたにぴったりのお得な選択肢が見つかる！
         </p>
 
         {/* メインCTA */}
@@ -56,7 +57,7 @@ export const MainHero = () => {
               />
             </svg>
           </Link>
-          
+
           {/* 所要時間の補足 */}
           <div className="flex items-center gap-2 text-sm text-slate-600">
             <svg

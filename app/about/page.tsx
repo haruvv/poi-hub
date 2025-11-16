@@ -20,7 +20,7 @@ export default function AboutPage() {
           <section className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm">
             <p className="leading-relaxed text-base">
               <strong className="text-slate-900">ポイ活なび</strong>{" "}
-              は、「これからお得を始めたい人」が安心してポイ活・クレジットカード・投資サービスを選べるように情報をまとめたサイトです。
+              は、「これからお得を始めたい人」が安心してサービスを選べるように情報をまとめたサイトです。
             </p>
             <p className="leading-relaxed text-base mt-4">
               本サイトは{" "}
