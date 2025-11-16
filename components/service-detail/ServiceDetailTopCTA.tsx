@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 interface ServiceDetailTopCTAProps {
   serviceId: string;
@@ -12,8 +12,8 @@ export const ServiceDetailTopCTA = ({
   serviceId,
   serviceName,
   ctaText = "今すぐ登録する",
-  message = "TODO: 今申し込むとどんなメリットがあるかの短い文",
-  supplement = "TODO: ポイント付与のタイミングやキャンペーン期間などの補足",
+  message = "今なら新規登録＆条件クリアで、ポイントや特典を一気に狙えるチャンス。",
+  supplement = "キャンペーン内容やポイント付与のタイミングは時期や案件ごとに変わるから、申し込み前に公式ページの最新条件をチェックしておこう。",
 }: ServiceDetailTopCTAProps) => {
   return (
     <div className="rounded-2xl border-2 border-blue-200 bg-gradient-to-br from-blue-50 via-white to-blue-50 p-6 shadow-lg">
@@ -51,11 +51,8 @@ export const ServiceDetailTopCTA = ({
         </a>
 
         {/* 補足テキスト */}
-        <p className="text-xs text-center text-slate-500">
-          {supplement}
-        </p>
+        <p className="text-xs text-center text-slate-500">{supplement}</p>
       </div>
     </div>
   );
 };
-

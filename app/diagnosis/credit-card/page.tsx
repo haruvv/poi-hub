@@ -51,7 +51,7 @@ export default async function CreditCardPage({ searchParams }: PageProps) {
               {services.length}件
             </span>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-5">
+          <div className="grid grid-cols-1 gap-4 md:gap-5">
             {services.map((service, index) => (
               <ServiceCard
                 key={service.id}

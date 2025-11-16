@@ -3,9 +3,9 @@ interface ServiceDetailPrecautionsProps {
 }
 
 const defaultItems = [
-  "TODO: 最低交換額に関する注意",
-  "TODO: ポイント付与までの期間に関する注意",
-  "TODO: 解約・退会時の注意",
+  "ポイント交換には最低交換額があることが多いので、少額利用だけだと交換まで時間がかかりがち。",
+  "ポイントが反映されるまでに数日〜数カ月かかる案件もあるので、「すぐ使える前提」では見ないほうが安心。",
+  "退会や登録情報の変更をする前に、貯まっているポイントや申請中のポイントがどう扱われるかだけは事前にチェックしておきたい。",
 ];
 
 export const ServiceDetailPrecautions = ({
@@ -29,7 +29,7 @@ export const ServiceDetailPrecautions = ({
         </svg>
         やる前の注意点
       </h2>
-      
+
       <div className="rounded-2xl border border-amber-200 bg-gradient-to-br from-amber-50/50 to-white p-6">
         <ul className="space-y-3">
           {items.map((item, index) => (
@@ -47,4 +47,3 @@ export const ServiceDetailPrecautions = ({
     </section>
   );
 };
-

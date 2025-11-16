@@ -15,7 +15,7 @@ interface NextActionsSectionProps {
 
 export const NextActionsSection = ({
   title = "次にやっておきたいこと",
-  description = "TODO: なぜこの次の行動が良いのか、1〜2行程度の短い説明",
+  description = "今のサービスだけで終わらせず、次の一手までセットで固めておくと、お得度とラクさが一気に跳ね上がる。",
   items,
 }: NextActionsSectionProps) => {
   if (!items || items.length === 0) {
@@ -51,7 +51,11 @@ export const NextActionsSection = ({
         </div>
 
         {/* カードリスト */}
-        <div className={`grid gap-4 ${items.length === 1 ? 'grid-cols-1' : 'grid-cols-1 md:grid-cols-2'} ${items.length >= 3 ? 'lg:grid-cols-3' : ''}`}>
+        <div
+          className={`grid gap-4 ${
+            items.length === 1 ? "grid-cols-1" : "grid-cols-1 md:grid-cols-2"
+          } ${items.length >= 3 ? "lg:grid-cols-3" : ""}`}
+        >
           {items.map((item, index) => (
             <Link
               key={index}
@@ -60,18 +64,18 @@ export const NextActionsSection = ({
             >
               {/* 背景エフェクト */}
               <div className="absolute inset-0 bg-gradient-to-br from-blue-50/0 via-blue-50/0 to-blue-100/0 group-hover:from-blue-50/50 group-hover:via-blue-50/30 group-hover:to-blue-100/20 transition-all duration-300" />
-              
+
               <div className="relative space-y-3">
                 {/* タイトル */}
                 <h3 className="text-lg font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
                   {item.title}
                 </h3>
-                
+
                 {/* 説明 */}
                 <p className="text-sm text-slate-600 leading-relaxed">
                   {item.description}
                 </p>
-                
+
                 {/* リンク */}
                 <div className="flex items-center gap-2 text-sm font-semibold text-blue-600 group-hover:gap-3 transition-all">
                   <span>{item.label || "詳しく見る"}</span>
@@ -97,4 +101,3 @@ export const NextActionsSection = ({
     </section>
   );
 };
-

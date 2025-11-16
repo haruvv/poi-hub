@@ -277,10 +277,10 @@ export default async function ServiceDetailPage({
                 </div>
 
                 {service.affiliateCampaignNote && (
-                  <div className="campaign-callout rounded-3xl px-5 py-4">
-                    <div className="relative z-10 space-y-2">
+                  <div className="campaign-callout rounded-3xl px-5 py-4 w-full max-w-full overflow-hidden">
+                    <div className="relative z-10 space-y-2 min-w-0">
                       <span className="campaign-badge">キャンペーン情報</span>
-                      <p className="campaign-text">
+                      <p className="campaign-text break-words">
                         {service.affiliateCampaignNote}
                       </p>
                     </div>

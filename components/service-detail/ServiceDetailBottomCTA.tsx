@@ -11,7 +11,7 @@ export const ServiceDetailBottomCTA = ({
   serviceId,
   serviceName,
   ctaText = "今すぐ登録する",
-  message = "TODO: ここまで読んでアリかもと思った人への一言",
+  message = "ここまで読んで「アリかも」と感じたなら、あとは実際に使ってみて、自分の生活にハマるかどうか確かめてみよう。",
 }: ServiceDetailBottomCTAProps) => {
   return (
     <section className="rounded-3xl border-2 border-blue-300 bg-gradient-to-br from-blue-100 via-blue-50 to-white p-8 sm:p-10 shadow-xl text-center space-y-6">

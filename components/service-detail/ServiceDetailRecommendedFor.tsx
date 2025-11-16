@@ -3,9 +3,9 @@ interface ServiceDetailRecommendedForProps {
 }
 
 const defaultItems = [
-  "TODO: よくネット通販を使う人の説明",
-  "TODO: ポイントサイトを1つだけメインで決めたい人の説明",
-  "TODO: 初めてでも迷いたくない人の説明",
+  "いつもの支払いを、どうせならちょっとでもお得にしたい人",
+  "あれこれ手を出すより、まずはメインのサービスを1つ決めて育てたい人",
+  "難しいことは抜きで、シンプルなやり方からサクッと始めたい人",
 ];
 
 export const ServiceDetailRecommendedFor = ({
@@ -29,7 +29,7 @@ export const ServiceDetailRecommendedFor = ({
         </svg>
         こんな人におすすめ
       </h2>
-      
+
       <div className="rounded-2xl border border-green-200 bg-gradient-to-br from-green-50/50 to-white p-6">
         <ul className="space-y-3">
           {items.map((item, index) => (
@@ -47,4 +47,3 @@ export const ServiceDetailRecommendedFor = ({
     </section>
   );
 };
-

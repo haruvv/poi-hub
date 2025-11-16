@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import Link from "next/link";
 import type { Service } from "@/types/service";
@@ -20,18 +20,25 @@ export const ServiceCard = ({ service, rank, from }: ServiceCardProps) => {
       : null;
 
   // fromパラメータがある場合はクエリパラメータとして追加
-  const detailHref = from 
+  const detailHref = from
     ? `/diagnosis/services/${service.id}?from=${encodeURIComponent(from)}`
     : `/diagnosis/services/${service.id}`;
-  
+
   // アフィリエイトリンク（今すぐ登録用）
-  const affiliateHref = service.affiliateLinks && service.affiliateLinks.length > 0
-    ? `/api/click/${service.id}`
-    : null;
+  const affiliateHref =
+    service.affiliateLinks && service.affiliateLinks.length > 0
+      ? `/api/click/${service.id}`
+      : null;
+
+  // キャッチコピー（affiliateHighlights の先頭を使う）
+  const catchCopy =
+    service.affiliateHighlights && service.affiliateHighlights.length > 0
+      ? service.affiliateHighlights[0]
+      : null;
 
   return (
     <div
-      className={`group rounded-xl border p-4 md:p-5 shadow-sm hover:shadow-lg transition-all relative overflow-hidden ${
+      className={`group rounded-xl border p-4 md:p-5 shadow-sm hover:shadow-lg transition-all relative overflow-hidden flex flex-col h-[320px] md:h-[340px] ${
         isTopThree
           ? rank === 1
             ? "border-yellow-400 bg-gradient-to-br from-yellow-50 to-amber-50 rank-card-1"
@@ -60,7 +67,7 @@ export const ServiceCard = ({ service, rank, from }: ServiceCardProps) => {
       {/* 光るエフェクト */}
       {isTopThree && <div className="rank-glow" />}
 
-      <div className="relative z-10 space-y-3">
+      <div className="relative z-10 flex flex-col h-full space-y-3">
         {isTopThree && (
           <span
             className={`absolute -top-3 -left-3 inline-flex h-8 w-8 items-center justify-center rounded-full text-xs font-bold text-white shadow-lg ${
@@ -77,7 +84,8 @@ export const ServiceCard = ({ service, rank, from }: ServiceCardProps) => {
 
         <div className="flex items-center gap-3">
           {smallImageHtml ? (
-            service.smallImage && service.smallImage[0].html.includes('<script') ? (
+            service.smallImage &&
+            service.smallImage[0].html.includes("<script") ? (
               <div className="flex-shrink-0 w-20 sm:w-24 lg:w-28 overflow-hidden rounded-xl border border-slate-200 bg-white/90 p-2 shadow-inner">
                 <AffiliateScript scriptHtml={service.smallImage[0].html} />
               </div>
@@ -116,10 +124,16 @@ export const ServiceCard = ({ service, rank, from }: ServiceCardProps) => {
             )}
           </div>
         </div>
+
         {/* 説明文とキャッチコピー */}
-        <div className="space-y-2">
-          {/* TODO: キャッチコピー（後で追加予定） */}
-          
+        <div className="space-y-2 flex-1 min-h-0 overflow-hidden">
+          {/* キャッチコピー（あれば表示） */}
+          {catchCopy && (
+            <p className="text-[12px] lg:text-[13px] font-semibold text-amber-700 leading-relaxed line-clamp-1">
+              {catchCopy}
+            </p>
+          )}
+
           {/* 説明文 */}
           <p className="text-[12px] lg:text-[13px] text-slate-700 leading-relaxed line-clamp-2">
             {service.description}
@@ -141,7 +155,7 @@ export const ServiceCard = ({ service, rank, from }: ServiceCardProps) => {
         </div>
 
         {/* アクションボタン */}
-        <div className="flex flex-col sm:flex-row gap-2 pt-3">
+        <div className="flex flex-col sm:flex-row gap-2 pt-3 mt-auto">
           {/* 詳細を見るボタン */}
           <Link
             href={detailHref}
