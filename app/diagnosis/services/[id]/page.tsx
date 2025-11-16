@@ -44,6 +44,10 @@ const categoryMeta = {
     label: "サブスク一覧へ戻る",
     href: "/diagnosis/subscription",
   },
+  travel: {
+    label: "旅行一覧へ戻る",
+    href: "/diagnosis/travel",
+  },
 } as const;
 
 type PageProps = {

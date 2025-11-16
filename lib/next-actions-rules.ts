@@ -166,6 +166,29 @@ export function getNextActionsForCategory(category: ServiceCategory): {
         ],
       };
 
+    case "travel":
+      return {
+        title: "旅行予約をもっとお得に",
+        description:
+          "旅行の予定が決まったタイミングで、複数の旅行会社のセールページをざっとチェックしておくと、お得プランを見つけやすい",
+        items: [
+          {
+            title: "複数の旅行会社のセールページをチェック",
+            description:
+              "同じエリア・同じ日程でも、旅行会社ごとにセールや限定プランのタイミングが違うので、予約前に各社のセールページだけでもざっと見ておくとお得プランが見つかりやすい",
+            href: "/diagnosis/travel",
+            label: "旅行サイトを見る",
+          },
+          {
+            title: "交通＋宿セットと別々を一度見比べる",
+            description:
+              "セットプランと、交通と宿を別々に取るパターンを一度くらいは見比べておくと、「実は別々の方が安かった」みたいなパターンも拾える",
+            href: "/diagnosis/travel",
+            label: "旅行サイトを見る",
+          },
+        ],
+      };
+
     default:
       return {
         items: [],
