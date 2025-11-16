@@ -6,7 +6,7 @@ export const poiKatsuServices: Service[] = [
     id: "poi-1",
     name: "アメフリ",
     description:
-      "高還元案件と毎日ポイントがもらえるガチャでサクサク貯まるポイ活サイト！！“ベストポイント”企画で他社よりお得な案件も狙えるから、ガチ勢にもおすすめ！！",
+      "毎日ガチャ＆高還元の激アツポイ活サイト🔥\n\n「ベストポイント」企画では、他よりお得な案件がゴロゴロ出てくる！\n\nサクッと始めて、しっかり稼ぎたいならココ！",
     category: "poi-katsu",
     affiliateLinks: [
       {
@@ -81,7 +81,7 @@ export const poiKatsuServices: Service[] = [
     id: "poi-2",
     name: "ワラウ",
     description:
-      "ゲームや記事読むだけでもポイント貯まる初心者向けポイ活サイト！！1P=1円でわかりやすくて、少額から交換OKなのが嬉しい！！",
+      "ゲームや記事読むだけでもポイント貯まる初心者向けポイ活サイト！！1P=1円でわかりやすくて、少額から交換OK！！",
     category: "poi-katsu",
     affiliateLinks: [
       {

@@ -27,15 +27,29 @@ export default async function OripaPage({ searchParams }: PageProps) {
       <div className="mx-auto max-w-md md:max-w-2xl lg:max-w-4xl px-4 pt-8 pb-16 space-y-6">
         {/* 導入セクション */}
         <section className="bg-white rounded-2xl border border-slate-200 p-6 md:p-8 shadow-sm">
-          <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3 tracking-tight">
-            オリパを「安心して・お得に」楽しみたい人へ
+          <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-4 tracking-tight">
+            引けるかどうかじゃない、引きたくなるかどうかだ🎴🔥
           </h2>
-          <div className="space-y-2 text-[14px] md:text-[15px] text-slate-700 leading-relaxed">
-            <p>
-              ここでは、運営実績があり信頼性の高いオリパサイトだけを厳選して紹介しています
+          <div className="space-y-3 text-[14px] md:text-[15px] text-slate-700 leading-relaxed">
+            <p className="font-medium text-slate-900">
+              開封のドキドキをそのままオンラインで体験できる "オリパ特集" 爆誕！
             </p>
             <p>
-              当選確率や封入カードが明示されているサイトを中心に掲載初めての方でも安心してトレカガチャを楽しめます
+              ポケカ・遊戯王・ワンピースなど、人気カードの激アツオリパをピックアップ
+              <br />
+              当たりカード2倍封入とか、BOX還元チャンスとか
+              <br />
+              とにかく"爆アド"狙えるやつだけ厳選！
+            </p>
+            <p>
+              しかも、ちゃんと届く＆実績アリの安心サイトだけ載せてるから
+              <br />
+              ガチ勢も初心者も安心して楽しめる！
+            </p>
+            <p className="font-bold text-slate-900 text-base">
+              さあ、今すぐチェック
+              <br />
+              引ける未来はそこにある🔥
             </p>
           </div>
         </section>

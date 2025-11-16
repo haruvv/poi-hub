@@ -27,15 +27,27 @@ export default async function PoiKatsuPage({ searchParams }: PageProps) {
       <div className="mx-auto max-w-md md:max-w-2xl lg:max-w-4xl px-4 pt-8 pb-16 space-y-6">
         {/* 導入セクション */}
         <section className="bg-white rounded-2xl border border-slate-200 p-6 md:p-8 shadow-sm">
-          <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3 tracking-tight">
+          <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-4 tracking-tight">
             ポイ活で「ムリなく・コツコツ」始めたい人へ
           </h2>
-          <div className="space-y-2 text-[14px] md:text-[15px] text-slate-700 leading-relaxed">
-            <p>
-              ここでは、毎日のネットショッピングやアプリ利用でポイントが貯めやすい定番サービスを厳選して紹介しています
+          <div className="space-y-3 text-[14px] md:text-[15px] text-slate-700 leading-relaxed">
+            <p className="font-medium">
+              スキマ時間でちょっとずつ稼ぎたいなら、まずはポイ活から始めてみるのがおすすめ！
             </p>
             <p>
-              「怪しい案件」は避け、実績のあるサービスを中心に掲載ひなちゃんと一緒に、今日から気軽にポイ活デビューしよう
+              買い物ついでにポイントを貯めたり
+              <br />
+              アプリ登録するだけでお小遣いがもらえたり
+              <br />
+              意外とカンタン！
+            </p>
+            <p>
+              スマホひとつでOK
+              <br />
+              初めてでもノーリスクで始められるから安心だよ！
+            </p>
+            <p className="font-medium text-slate-900">
+              まずは自分に合ったサービスをチェックしてみてね！
             </p>
           </div>
         </section>

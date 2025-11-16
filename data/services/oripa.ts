@@ -5,7 +5,8 @@ export const oripaServices: Service[] = [
   {
     id: "oripa-1",
     name: "どっかん！トレカ",
-    description: "当選カード2倍封入で“引ける感”強め！高還元がうれしい！",
+    description:
+      "当たりカード2倍封入の激アツオリパ！\n\n開封するだけでテンション上がる…そんなオリパがここにある！\n\nポケカ・遊戯王・ワンピ系好きならマジでおすすめ！\n\n▶ 見てみる",
     category: "oripa",
     affiliateLinks: [
       {

@@ -27,15 +27,22 @@ export default async function CreditCardPage({ searchParams }: PageProps) {
       <div className="mx-auto max-w-md md:max-w-2xl lg:max-w-4xl px-4 pt-8 pb-16 space-y-6">
         {/* 導入セクション */}
         <section className="bg-white rounded-2xl border border-slate-200 p-6 md:p-8 shadow-sm">
-          <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3 tracking-tight">
-            自分に合った「一枚目・乗り換え候補」を選びたい人へ
+          <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-4 tracking-tight">
+            自分に合った"はじめての一枚"や"乗り換え候補"を探してるならここ！
           </h2>
-          <div className="space-y-2 text-[14px] md:text-[15px] text-slate-700 leading-relaxed">
+          <div className="space-y-3 text-[14px] md:text-[15px] text-slate-700 leading-relaxed">
             <p>
-              年会費・還元率・安心感を重視して選びやすいクレジットカードだけをピックアップしています
+              年会費ゼロ・高還元・安心感ありなカードだけを厳選してるから
+              <br />
+              初心者でも選びやすいラインナップになってるよ🔥
             </p>
             <p>
-              ポイント重視派・シンプル派などタイプ別のおすすめも紹介申し込み前に公式サイトで最新の特典を必ずチェックしてください
+              ポイントをしっかり貯めたい人も、とにかくシンプル派もOK
+              <br />
+              タイプ別におすすめを紹介してるから、自分に合うカードが見つかるはず！
+            </p>
+            <p className="font-semibold text-slate-900 bg-amber-50 px-4 py-3 rounded-lg border border-amber-200">
+              ✅ 特典や条件は日々変わるから、申し込み前に公式サイトで必ずチェックしてね！
             </p>
           </div>
         </section>

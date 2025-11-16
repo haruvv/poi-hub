@@ -27,15 +27,22 @@ export default async function MealPage({ searchParams }: PageProps) {
       <div className="mx-auto max-w-md md:max-w-2xl lg:max-w-4xl px-4 pt-8 pb-16 space-y-6">
         {/* 導入セクション */}
         <section className="bg-white rounded-2xl border border-slate-200 p-6 md:p-8 shadow-sm">
-          <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3 tracking-tight">
-            外食やデリバリーでも「お得」を積み重ねたい人へ
+          <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-4 tracking-tight">
+            毎日のごはん代、うまく節約したい人におすすめ🍱
           </h2>
-          <div className="space-y-2 text-[14px] md:text-[15px] text-slate-700 leading-relaxed">
+          <div className="space-y-3 text-[14px] md:text-[15px] text-slate-700 leading-relaxed">
             <p>
-              テイクアウト・デリバリー・飲食店予約など、日常のご飯代をお得にできるサービスをまとめています
+              ここでは、毎週届く冷凍ごはんやミールキット、宅配ごはん系のサービスをピックアップ
+              <br />
+              コンビニや外食に頼りがちな人でも、バランスよく＆お得に食費を見直せる！
             </p>
             <p>
-              ポイント還元やクーポン内容は定期的に変わるため、利用前に各公式ページの最新情報をチェックしてください
+              初回割や限定クーポンがあるサービスも多いから
+              <br />
+              気になるやつは早めにチェックしてみて🔥
+            </p>
+            <p className="text-xs text-slate-600 bg-slate-50 px-4 py-2 rounded-lg border border-slate-200">
+              ※クーポン内容や還元率は変動するから、申し込み前に公式サイトの最新情報は要チェック！
             </p>
           </div>
         </section>

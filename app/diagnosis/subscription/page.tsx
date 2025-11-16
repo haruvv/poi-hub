@@ -23,65 +23,26 @@ export default async function SubscriptionPage() {
       <div className="mx-auto max-w-md md:max-w-2xl lg:max-w-4xl px-4 pt-8 pb-16 space-y-6">
         {/* 導入セクション */}
         <section className="bg-white rounded-2xl border border-slate-200 p-6 md:p-8 shadow-sm">
-          <h1 className="text-xl md:text-2xl font-bold text-slate-900 mb-3 tracking-tight">
-            サブスクでポイントもらう
+          <h1 className="text-xl md:text-2xl font-bold text-slate-900 mb-4 tracking-tight">
+            ちょっとテンション上がる "届く系サブスク" をまとめて紹介🎁
           </h1>
-          <div className="space-y-2 text-[14px] md:text-[15px] text-slate-700 leading-relaxed">
+          <div className="space-y-3 text-[14px] md:text-[15px] text-slate-700 leading-relaxed">
             <p>
-              今ってサブスクだらけだよね気づいたらいくつも入ってて、毎月けっこうな額が飛んでいきがち
+              ごはん・コスメ・ファッション・日用品まで
+              <br />
+              定期的に届くことで、毎日の"ちょっとめんどくさい"をまるっと解決！
             </p>
             <p>
-              どうせどこかのサブスクには入るなら、ポイントやキャッシュバック付きの案件から順番に拾っていきたい
+              初回割・送料無料・気軽に試せるサービスも多いから
+              <br />
+              まずは1ヶ月だけ使ってみるのもアリ🔥
             </p>
-            <p>
-              このページでは、サブスクに入りつつ、ポイントやキャッシュバックも狙うための考え方をざっくり整理しています
+            <p className="font-medium text-slate-900">
+              生活の質を上げつつ、実はコスパも悪くない
+              <br />
+              そんな賢いサブスク、集めました！
             </p>
           </div>
-        </section>
-
-        {/* サブスクに入る前に決めておきたいこと */}
-        <section className="bg-white rounded-2xl border border-slate-200 p-6 md:p-8 shadow-sm">
-          <h2 className="text-lg md:text-xl font-bold text-slate-900 mb-4 tracking-tight">
-            サブスクに入る前に決めておきたいこと
-          </h2>
-          <ul className="space-y-3 text-[14px] md:text-[15px] text-slate-700 leading-relaxed">
-            <li className="flex gap-3 items-start">
-              <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-blue-500" />
-              <span>
-                無料期間だけ試すつもりなのか、しばらく使う前提なのかを決めてから入る
-              </span>
-            </li>
-            <li className="flex gap-3 items-start">
-              <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-blue-500" />
-              <span>
-                すでに入っているサブスクと役割がかぶってないかをざっくり確認する
-              </span>
-            </li>
-            <li className="flex gap-3 items-start">
-              <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-blue-500" />
-              <span>
-                解約し忘れないように、更新日や無料期間の終わりだけはどこかにメモしておく
-              </span>
-            </li>
-          </ul>
-        </section>
-
-        {/* ポイント・キャッシュバックを狙うコツ */}
-        <section className="bg-white rounded-2xl border border-slate-200 p-6 md:p-8 shadow-sm">
-          <h2 className="text-lg md:text-xl font-bold text-slate-900 mb-4 tracking-tight">
-            ポイントやキャッシュバックを狙うコツ
-          </h2>
-          <ol className="space-y-3 text-[14px] md:text-[15px] text-slate-700 leading-relaxed list-decimal list-inside">
-            <li>
-              ポイントサイトやキャンペーンページを経由して申し込むことで、サブスク料金とは別にポイントやキャッシュバックが狙える
-            </li>
-            <li>
-              還元率の高いクレカ払いにして、サブスク料金からもカードポイントを拾う
-            </li>
-            <li>
-              無料期間だけで終わらせるつもりでも、条件達成までちゃんと利用しないと成果が否認されることがあるので、そのあたりの条件を事前にチェックしておく
-            </li>
-          </ol>
         </section>
 
         {/* サービス一覧 */}
@@ -122,24 +83,6 @@ export default async function SubscriptionPage() {
             items={nextActions.items}
           />
         )}
-
-        {/* 注意・まとめセクション */}
-        <section className="bg-white rounded-2xl border border-slate-200 p-6 md:p-8 shadow-sm">
-          <h2 className="text-lg md:text-xl font-bold text-slate-900 mb-4 tracking-tight">
-            ポイント目当てでも、入りっぱなしには気をつけたい
-          </h2>
-          <div className="space-y-2 text-[14px] md:text-[15px] text-slate-700 leading-relaxed">
-            <p>
-              サブスクは一度入るとそのまま放置しがちなので、ポイントやキャッシュバック目当てで入ったあとも見直しが必要
-            </p>
-            <p>
-              キャンペーン条件やポイント数、判定条件は変わるので、申し込むときは必ず公式ページと広告主側の条件を確認したほうがいい
-            </p>
-            <p>
-              「登録すれば誰でも必ず◯◯円もらえる」というものではなく、条件を満たした場合にだけ成果になる、という前提を頭に入れておく
-            </p>
-          </div>
-        </section>
 
         {/* 下部広告（控えめに） */}
         {adPolicy.showBottomAd && (

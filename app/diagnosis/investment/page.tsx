@@ -27,15 +27,22 @@ export default async function InvestmentPage({ searchParams }: PageProps) {
       <div className="mx-auto max-w-md md:max-w-2xl lg:max-w-4xl px-4 pt-8 pb-16 space-y-6">
         {/* 導入セクション */}
         <section className="bg-white rounded-2xl border border-slate-200 p-6 md:p-8 shadow-sm">
-          <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3 tracking-tight">
-            少額から始める「はじめての投資・資産形成」
+          <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-4 tracking-tight">
+            少額からコツコツ始めたい人向けの"やさしい投資特集"📈
           </h2>
-          <div className="space-y-2 text-[14px] md:text-[15px] text-slate-700 leading-relaxed">
+          <div className="space-y-3 text-[14px] md:text-[15px] text-slate-700 leading-relaxed">
             <p>
-              ここでは、つみたてNISA対応や少額から始めやすい投資サービスを中心に紹介しています
+              つみたてNISA対応や、スマホで気軽に始められる投資サービスを中心に紹介中
+              <br />
+              投資って聞くとハードル高そうだけど、今は500円とか1000円からでもOKなサービスが増えてる！
             </p>
             <p>
-              元本保証ではないため、メリットだけでなく注意点もあわせて解説焦らず、自分のペースで判断するための情報だけを集めました
+              もちろんリスクもゼロじゃないけど
+              <br />
+              メリット・注意点どっちもちゃんとまとめてるから安心してチェックしてほしい
+            </p>
+            <p className="font-medium text-slate-900">
+              焦らず、自分のペースで始められる選択肢だけをピックアップ🔥
             </p>
           </div>
         </section>

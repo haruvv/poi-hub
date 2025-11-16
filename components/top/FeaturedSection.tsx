@@ -12,8 +12,12 @@ export const FeaturedSection = () => {
         <h2 className="text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-amber-600 via-orange-500 to-red-500 mb-2 tracking-tight">
           🔥 今月のピックアップ 🔥
         </h2>
-        <p className="text-[16px] font-semibold text-slate-700">
-          編集部おすすめの注目サービスをご紹介
+        <p className="text-[16px] font-semibold text-slate-700 leading-relaxed max-w-3xl mx-auto">
+          今"ガチで使える"副業・ポイ活サービスを厳選！
+          <br />
+          編集部が今月注目してる案件をまとめたから、まずはここからスタート！
+          <br />
+          今だけの限定キャンペーンもあるかも🎁
         </p>
       </div>
 
@@ -59,10 +63,14 @@ export const FeaturedSection = () => {
             <div className="relative flex-1 flex flex-col justify-center text-center md:text-left space-y-4 p-6 md:p-8 lg:p-10">
               <div>
                 <h3 className="text-3xl md:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-amber-600 via-orange-500 to-red-500 mb-3 tracking-tight">
-                  🎴 オリパ特集 🎴
+                  オリパ特集🎯
                 </h3>
                 <p className="text-[16px] font-medium text-slate-800 leading-relaxed">
-                  安心して楽しめるオリパサイトを厳選紹介ポケカ・遊戯王・ワンピースなど人気カードのガチャが楽しめます
+                  本当に引けるの？って疑う前に見てほしい
+                  <br />
+                  信頼できるオリパサイトを厳選して紹介中！
+                  <br />
+                  オンラインで開封できるから、いつでもワクワクが止まらない！
                 </p>
               </div>
 
@@ -88,7 +96,7 @@ export const FeaturedSection = () => {
                   className="relative group/btn inline-flex items-center gap-3 rounded-2xl bg-gradient-to-r from-amber-600 via-orange-500 to-red-500 text-white text-[17px] font-black py-4 px-8 shadow-2xl hover:shadow-[0_0_30px_rgba(251,146,60,0.8)] transition-all duration-300 hover:scale-110 border-2 border-white"
                 >
                   <span className="animate-pulse">🎯</span>
-                  特集ページを見る
+                  ▶ 特集を見る
                   <svg
                     className="w-5 h-5 transition-transform group-hover/btn:translate-x-2 group-hover/btn:scale-125"
                     fill="none"

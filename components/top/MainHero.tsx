@@ -13,14 +13,14 @@ export const MainHero = () => {
         </div>
 
         <h1 className="text-[36px] sm:text-[42px] leading-tight font-bold text-slate-900 tracking-tight">
-          どれから始めるか、もう迷わない
-          <br />
-          <span className="text-blue-600">あなたにぴったりのサービス</span>
-          を診断
+          副業とかポイ活とか、やってみたいけど…どれがいいのか分からない
         </h1>
 
         <p className="text-[17px] sm:text-[18px] text-slate-600 leading-relaxed max-w-2xl mx-auto">
-          たった30秒の無料診断で、今の自分にちょうどいい「お得な一手」だけをサクッと絞り込む
+          そんな人のための30秒でピッタリのサービスを診断できる無料ツール
+          <br />
+          <br />
+          質問に答えるだけで、自分に合った"お得なスタート"がサクッと分かる！
         </p>
 
         {/* メインCTA */}
@@ -42,7 +42,7 @@ export const MainHero = () => {
                 d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"
               />
             </svg>
-            <span>診断してみる</span>
+            <span>▶ 診断してみる</span>
             <svg
               className="w-5 h-5 transition-transform group-hover/btn:translate-x-1"
               fill="none"
@@ -60,7 +60,9 @@ export const MainHero = () => {
 
           {/* 補足テキスト */}
           <p className="text-sm text-slate-600 text-center">
-            完全無料・約30秒で診断完了
+            💡 登録不要・所要時間たった30秒！
+            <br />
+            まずは気軽に診断してみよう！
           </p>
         </div>
       </div>

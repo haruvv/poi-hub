@@ -59,9 +59,7 @@ export const ResultHero = ({
   const colors = colorClasses[typeColor];
 
   return (
-    <section className="relative overflow-hidden rounded-2xl border border-slate-200 bg-white p-8 sm:p-10 shadow-md"
->
-
+    <section className="relative overflow-hidden rounded-2xl border border-slate-200 bg-white p-8 sm:p-10 shadow-md">
       <div className="space-y-6">
         {/* タイトル */}
         <div className="text-center space-y-3">
@@ -72,9 +70,7 @@ export const ResultHero = ({
           <h1 className="text-3xl sm:text-4xl leading-tight font-bold">
             <span className="text-slate-800">あなたは</span>
             <br />
-            <span className="text-blue-600">
-              「{typeLabel}」
-            </span>
+            <span className="text-blue-600">「{typeLabel}」</span>
             <br />
             <span className="text-slate-800">タイプです</span>
           </h1>
@@ -84,6 +80,18 @@ export const ResultHero = ({
         <p className="text-center text-base font-medium text-slate-700 leading-relaxed max-w-2xl mx-auto">
           {subCopy}
         </p>
+
+        {/* 追加メッセージ */}
+        <div className="text-center space-y-3 max-w-2xl mx-auto">
+          <p className="text-base font-medium text-slate-800 leading-relaxed">
+            今のあなたにぴったりなサービスを専門のAIが厳選！
+            <br />
+            ▼気になるサービスをチェック！
+          </p>
+          <p className="text-sm font-semibold text-amber-700 bg-amber-50 px-4 py-3 rounded-lg border border-amber-200">
+            🔉 今だけの限定キャンペーンがある場合もあるかも🔉
+          </p>
+        </div>
 
         {/* リスクバー */}
         <div className="space-y-2">

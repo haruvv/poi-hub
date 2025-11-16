@@ -29,15 +29,17 @@ export const FeaturedServices = ({ services }: FeaturedServicesProps) => {
             className="group relative overflow-hidden rounded-2xl border-2 border-slate-200 bg-white p-6 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-[320px]"
           >
             {/* サービス名 */}
-            <div className="space-y-3 mb-4">
+            <div className="space-y-3 mb-4 flex-shrink-0">
               <h3 className="text-xl font-bold text-slate-900">
                 {service.name}
               </h3>
 
               {/* 一言キャッチ */}
-              <p className="text-sm text-slate-600 leading-relaxed line-clamp-2">
-                {service.description}
-              </p>
+              <div className="max-h-[72px] overflow-hidden">
+                <p className="text-sm text-slate-600 leading-relaxed whitespace-pre-line">
+                  {service.description}
+                </p>
+              </div>
             </div>
 
             {/* タグ */}

@@ -48,16 +48,16 @@ export const DiagnosisHero = ({ onStart }: DiagnosisHeroProps) => {
           </div>
 
           <h1 className="text-2xl sm:text-3xl font-bold text-slate-900 leading-tight">
-            迷ったら、まず診断！
-            <br />
-            <span className="text-blue-600">
-              30秒であなたにピッタリがわかる
-            </span>
+            副業・ポイ活診断
           </h1>
           <p className="text-sm text-slate-600 leading-relaxed max-w-xl mx-auto">
-            ポイ活・クレカ・投資…どこから手をつければいいかわからない
+            質問に答えるだけで、今の自分に合ったリアルに使えるサービスをサクッと判定！
             <br />
-            そんなあなたのために、5つの質問で最適な選択肢を提案します
+            所要時間たったの30秒
+            <br />
+            しかも無料＆登録ナシでOK！
+            <br />
+            今すぐチェックしてみよう！
           </p>
         </div>
 
