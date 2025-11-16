@@ -20,14 +20,18 @@ export const ServiceCard = ({ service, rank, from }: ServiceCardProps) => {
       : null;
 
   // fromパラメータがある場合はクエリパラメータとして追加
-  const href = from 
+  const detailHref = from 
     ? `/diagnosis/services/${service.id}?from=${encodeURIComponent(from)}`
     : `/diagnosis/services/${service.id}`;
+  
+  // アフィリエイトリンク（今すぐ登録用）
+  const affiliateHref = service.affiliateLinks && service.affiliateLinks.length > 0
+    ? `/api/click/${service.id}`
+    : null;
 
   return (
-    <Link
-      href={href}
-      className={`group block rounded-xl border p-4 shadow-sm hover:shadow-lg transition-all relative overflow-hidden ${
+    <div
+      className={`group rounded-xl border p-4 md:p-5 shadow-sm hover:shadow-lg transition-all relative overflow-hidden ${
         isTopThree
           ? rank === 1
             ? "border-yellow-400 bg-gradient-to-br from-yellow-50 to-amber-50 rank-card-1"
@@ -112,17 +116,22 @@ export const ServiceCard = ({ service, rank, from }: ServiceCardProps) => {
             )}
           </div>
         </div>
+        {/* 説明文とキャッチコピー */}
         <div className="space-y-2">
-          <p className="text-[11px] lg:text-[12px] text-slate-600 leading-relaxed line-clamp-3">
+          {/* TODO: キャッチコピー（後で追加予定） */}
+          
+          {/* 説明文 */}
+          <p className="text-[12px] lg:text-[13px] text-slate-700 leading-relaxed line-clamp-2">
             {service.description}
           </p>
 
+          {/* タグ/ラベル */}
           {service.tags.length > 0 && (
-            <div className="flex flex-wrap gap-1 lg:gap-1.5">
-              {service.tags.map((tag) => (
+            <div className="flex flex-wrap gap-1.5">
+              {service.tags.slice(0, 5).map((tag) => (
                 <span
                   key={tag}
-                  className="inline-flex items-center rounded-full bg-blue-50 px-2 py-0.5 text-[9px] lg:text-[10px] font-medium text-blue-700"
+                  className="inline-flex items-center rounded-full bg-blue-50 px-2.5 py-1 text-[10px] lg:text-[11px] font-semibold text-blue-700 border border-blue-100"
                 >
                   {tag}
                 </span>
@@ -130,40 +139,56 @@ export const ServiceCard = ({ service, rank, from }: ServiceCardProps) => {
             </div>
           )}
         </div>
-        <div className="flex items-center justify-between pt-2">
-          <span className="inline-flex items-center gap-2 rounded-full bg-red-600/90 px-4 py-1.5 text-[11px] lg:text-[12px] font-semibold text-white shadow-[0_8px_18px_rgba(37,99,235,0.3)] transition group-hover:bg-blue-600">
+
+        {/* アクションボタン */}
+        <div className="flex flex-col sm:flex-row gap-2 pt-3">
+          {/* 詳細を見るボタン */}
+          <Link
+            href={detailHref}
+            className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg border-2 border-slate-300 bg-white text-slate-900 text-[13px] font-semibold hover:bg-slate-50 hover:border-slate-400 transition-colors duration-200"
+          >
             <svg
-              className="w-3.5 h-3.5 lg:w-4 lg:h-4"
+              className="w-4 h-4"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
             >
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth={2}
-                d="M13 7l5 5m0 0l-5 5m5-5H6"
+                d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
               />
             </svg>
-            <span>今すぐ登録！</span>
-          </span>
-          <svg
-            className="w-4 h-4 text-blue-500 transition-transform group-hover:translate-x-1"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M9 5l7 7-7 7"
-            />
-          </svg>
+            <span>詳細を見る</span>
+          </Link>
+
+          {/* 今すぐ登録ボタン */}
+          {affiliateHref && (
+            <a
+              href={affiliateHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-gradient-to-r from-blue-600 to-blue-500 text-white text-[13px] font-bold hover:from-blue-700 hover:to-blue-600 transition-all duration-200 shadow-md hover:shadow-lg"
+            >
+              <svg
+                className="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M14 5l7 7m0 0l-7 7m7-7H3"
+                />
+              </svg>
+              <span>今すぐ登録</span>
+            </a>
+          )}
         </div>
       </div>
-    </Link>
+    </div>
   );
 };
