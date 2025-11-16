@@ -51,6 +51,7 @@ export default async function CreditCardPage({ searchParams }: PageProps) {
                 key={service.id}
                 service={service}
                 rank={index + 1}
+                from="credit-card"
               />
             ))}
           </div>

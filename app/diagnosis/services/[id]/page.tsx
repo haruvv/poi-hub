@@ -78,8 +78,11 @@ export default async function ServiceDetailPage({
     notFound();
   }
 
-  // 診断結果ページから来た場合の戻るリンクを構築
-  const isFromResults = searchParamsData.from === "results";
+  // 遷移元に応じた戻るリンクを構築
+  const from = searchParamsData.from;
+  
+  // 診断結果ページから来た場合
+  const isFromResults = from === "results";
   const resultsBackUrl = isFromResults
     ? `/diagnosis/results?${new URLSearchParams({
         cardUse: searchParamsData.cardUse || "",
@@ -90,6 +93,12 @@ export default async function ServiceDetailPage({
       }).toString()}`
     : null;
 
+  // トップページから来た場合
+  const isFromTop = from === "top";
+
+  // カテゴリページから来た場合
+  const isFromCategory = from && categoryMeta[from as keyof typeof categoryMeta];
+  
   const categoryInfo = categoryMeta[service.category] ?? {
     label: "診断一覧へ戻る",
     href: "/diagnosis",
@@ -122,6 +131,7 @@ export default async function ServiceDetailPage({
         <div className="relative flex flex-col gap-6">
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
             {isFromResults && resultsBackUrl ? (
+              // 診断結果から来た場合
               <Link
                 href={resultsBackUrl}
                 className="inline-flex items-center gap-1 text-[11px] font-semibold text-blue-600 hover:text-blue-500 transition"
@@ -143,7 +153,54 @@ export default async function ServiceDetailPage({
                 </svg>
                 診断結果へ戻る
               </Link>
+            ) : isFromTop ? (
+              // トップページから来た場合
+              <Link
+                href="/"
+                className="inline-flex items-center gap-1 text-[11px] font-semibold text-blue-600 hover:text-blue-500 transition"
+              >
+                <svg
+                  className="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M15 19l-7-7 7-7"
+                  />
+                </svg>
+                トップページへ戻る
+              </Link>
+            ) : isFromCategory ? (
+              // カテゴリページから来た場合
+              <Link
+                href={categoryMeta[from as keyof typeof categoryMeta].href}
+                className="inline-flex items-center gap-1 text-[11px] font-semibold text-blue-600 hover:text-blue-500 transition"
+              >
+                <svg
+                  className="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M15 19l-7-7 7-7"
+                  />
+                </svg>
+                {categoryMeta[from as keyof typeof categoryMeta].label}
+              </Link>
             ) : (
+              // その他の場合はデフォルトでカテゴリページへ
               <Link
                 href={categoryInfo.href}
                 className="inline-flex items-center gap-1 text-[11px] font-semibold text-blue-600 hover:text-blue-500 transition"

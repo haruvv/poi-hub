@@ -7,20 +7,26 @@ import { AffiliateScript } from "@/components/AffiliateScript";
 interface ServiceCardProps {
   service: Service;
   rank?: number;
+  from?: string;
 }
 
 const stripAnchorTags = (html: string) => html.replace(/<\/?a\b[^>]*>/gi, "");
 
-export const ServiceCard = ({ service, rank }: ServiceCardProps) => {
+export const ServiceCard = ({ service, rank, from }: ServiceCardProps) => {
   const isTopThree = rank !== undefined && rank <= 3;
   const smallImageHtml =
     service.smallImage && service.smallImage.length > 0
       ? stripAnchorTags(service.smallImage[0].html)
       : null;
 
+  // fromパラメータがある場合はクエリパラメータとして追加
+  const href = from 
+    ? `/diagnosis/services/${service.id}?from=${encodeURIComponent(from)}`
+    : `/diagnosis/services/${service.id}`;
+
   return (
     <Link
-      href={`/diagnosis/services/${service.id}`}
+      href={href}
       className={`group block rounded-xl border p-4 shadow-sm hover:shadow-lg transition-all relative overflow-hidden ${
         isTopThree
           ? rank === 1

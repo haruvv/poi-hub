@@ -49,6 +49,7 @@ export default async function PoiKatsuPage({ searchParams }: PageProps) {
                 key={service.id}
                 service={service}
                 rank={index + 1}
+                from="poi-katsu"
               />
             ))}
           </div>

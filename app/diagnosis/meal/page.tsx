@@ -47,6 +47,7 @@ export default async function MealPage({ searchParams }: PageProps) {
                 key={service.id}
                 service={service}
                 rank={index + 1}
+                from="meal"
               />
             ))}
           </div>

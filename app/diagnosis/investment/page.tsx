@@ -49,6 +49,7 @@ export default async function InvestmentPage({ searchParams }: PageProps) {
                 key={service.id}
                 service={service}
                 rank={index + 1}
+                from="investment"
               />
             ))}
           </div>
