@@ -21,7 +21,11 @@ export const ServiceDetailBottomCTA = ({
           {message}
         </p>
         <p className="text-sm sm:text-base text-slate-600">
-          {serviceName}で、お得な生活を始めましょう
+          {serviceName === "アメフリ"
+            ? "アメフリで、お得な毎日を始めよう！"
+            : serviceName === "どっかん！トレカ"
+              ? "どっかん！トレカで、オリパを楽しもう！"
+              : `${serviceName}で、お得な生活を始めよう！`}
         </p>
       </div>
 

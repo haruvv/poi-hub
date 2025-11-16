@@ -19,7 +19,7 @@ export const MainHero = () => {
         </h1>
 
         <p className="text-[17px] sm:text-[18px] text-slate-600 leading-relaxed max-w-2xl mx-auto">
-          簡単な質問に答えるだけで、ポイ活・クレジットカード・投資・オリパなどの中から、今のあなたに合ったサービスを診断します。
+          簡単な質問に答えるだけで、ポイ活・クレカ・投資・オリパの中から、今のあなたにぴったりのお得な選択肢が見つかる！
         </p>
 
         {/* メインCTA */}
