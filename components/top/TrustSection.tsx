@@ -8,34 +8,30 @@ export const TrustSection = () => {
 
       <div className="relative z-10 space-y-6">
         <h2 className="text-2xl font-bold text-slate-900 text-center tracking-tight">
-          ご利用にあたって
+          このサイトについて
         </h2>
 
         <div className="space-y-5 text-[15px] text-slate-700 leading-relaxed">
           <div>
-            <h3 className="font-semibold text-slate-900 mb-2">
-              中立的な情報提供
-            </h3>
             <p>
-              当サイトは、金融サービスについて、中立的な立場から比較・情報提供を行っています。各サービスの特徴やメリット・デメリットを分かりやすく整理し、あなたに最適な選択をサポートします。
+              <strong className="text-slate-900">【中立的な情報提供】</strong>
+              金融サービスや投資商品は、中立的な立場から比較・情報提供を行っています。各サービスの特徴やメリット・デメリットを分かりやすく整理して、あなたに最適な選択をサポートします。
             </p>
           </div>
 
           <div>
-            <h3 className="font-semibold text-slate-900 mb-2">
-              アフィリエイトリンクについて
-            </h3>
             <p>
-              本サイトの一部のリンクはアフィリエイトリンク・広告を含みます。これによりサイト運営費を賄い、無料で診断サービスを提供しています。リンク先のサービス内容や条件は、各公式サイトで最新情報をご確認ください。
+              <strong className="text-slate-900">
+                【アフィリエイトについて】
+              </strong>
+              一部のリンクはアフィリエイトリンクになっていて、これによりサイト運営費を賄い、無料で診断サービスを提供しています。リンク先のサービス内容や条件は、各公式サイトで最新情報を確認してください。
             </p>
           </div>
 
           <div>
-            <h3 className="font-semibold text-slate-900 mb-2">
-              投資に関する注意事項
-            </h3>
             <p>
-              投資は元本保証ではありません。投資判断は自己責任で行ってください。投資の結果により損失が発生する可能性があります。
+              <strong className="text-slate-900">【投資リスク】</strong>
+              投資は元本保証ではなく、投資判断は自己責任で行う必要があります。投資の結果により損失が発生する可能性があります。
             </p>
           </div>
         </div>

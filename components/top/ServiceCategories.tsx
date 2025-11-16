@@ -9,7 +9,7 @@ export const ServiceCategories = () => {
     {
       title: "ポイ活でコツコツ貯める",
       description:
-        "日常の買い物やネット利用でポイントを貯められるサービスを紹介。初心者でも始めやすいポイ活サイトを厳選しています。",
+        "普段のネット通販やアプリ登録を&ldquo;ついでに&rdquo;ポイント化して、コツコツ貯めていく系のサービスをまとめてる。",
       icon: (
         <svg
           className="w-8 h-8 text-blue-600"
@@ -31,7 +31,7 @@ export const ServiceCategories = () => {
     {
       title: "クレジットカードで還元",
       description:
-        "キャッシュレス決済で還元率を上げたい方へ。年会費無料で高還元のクレジットカードを比較できます。",
+        "年会費無料＆還元率高めのカードだけに絞って、&ldquo;とりあえず1枚持つならここ&rdquo;ってやつを比べやすくしてる。",
       icon: (
         <svg
           className="w-8 h-8 text-purple-600"
@@ -53,7 +53,7 @@ export const ServiceCategories = () => {
     {
       title: "投資で資産形成",
       description:
-        "少額から始められる投資サービスを紹介。投資初心者でも無理なく資産形成を始められるサービスを厳選しています。",
+        "いきなり難しい商品に突っ込むんじゃなくて、少額から始めやすい投資サービスだけピックアップ。余裕資金でじわっと増やしていく前提。",
       icon: (
         <svg
           className="w-8 h-8 text-emerald-600"
@@ -125,7 +125,7 @@ export const ServiceCategories = () => {
     {
       title: "お得にご飯",
       description:
-        "冷凍弁当や食事宅配など、日々のご飯準備を楽にしながらお得に健康的な食事を楽しめるサービスを紹介しています。",
+        "冷蔵惣菜や冷凍弁当の宅配サービスを中心に、&ldquo;自炊の手間は減らしたいけど食費はできるだけ抑えたい&rdquo;って人向けのサービスを集めてる。",
       icon: (
         <svg
           className="w-8 h-8 text-rose-600"

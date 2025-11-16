@@ -19,8 +19,12 @@ export const MainHero = () => {
           を診断
         </h1>
 
+        <p className="text-sm text-slate-600 leading-relaxed max-w-2xl mx-auto">
+          診断結果ページでは、ひなちゃんが&ldquo;今これやっとくと良さそうなサービス&rdquo;をゆるく案内してくれる。
+        </p>
+
         <p className="text-[17px] sm:text-[18px] text-slate-600 leading-relaxed max-w-2xl mx-auto">
-          簡単な質問に答えるだけで、今のあなたにぴったりのお得な選択肢が見つかる！
+          たった30秒の無料診断で、今の自分にちょうどいい&ldquo;お得な一手&rdquo;だけをサクッと絞り込む。
         </p>
 
         {/* メインCTA */}
@@ -58,23 +62,10 @@ export const MainHero = () => {
             </svg>
           </Link>
 
-          {/* 所要時間の補足 */}
-          <div className="flex items-center gap-2 text-sm text-slate-600">
-            <svg
-              className="w-5 h-5 text-blue-500"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-              />
-            </svg>
-            <span className="font-semibold">約30秒で診断できます</span>
-          </div>
+          {/* 補足テキスト */}
+          <p className="text-sm text-slate-600 text-center">
+            完全無料・約30秒で診断完了
+          </p>
         </div>
       </div>
     </section>

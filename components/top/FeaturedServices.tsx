@@ -33,7 +33,7 @@ export const FeaturedServices = ({ services }: FeaturedServicesProps) => {
               <h3 className="text-xl font-bold text-slate-900">
                 {service.name}
               </h3>
-              
+
               {/* 一言キャッチ */}
               <p className="text-sm text-slate-600 leading-relaxed line-clamp-2">
                 {service.description}
@@ -114,4 +114,3 @@ export const FeaturedServices = ({ services }: FeaturedServicesProps) => {
     </section>
   );
 };
-
