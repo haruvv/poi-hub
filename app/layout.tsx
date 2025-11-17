@@ -1,5 +1,6 @@
 import "./globals.css";
 import type { ReactNode } from "react";
+import { Suspense } from "react";
 import Script from "next/script";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -47,7 +48,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2028703181823597"
           crossOrigin="anonymous"
         />
-        <GoogleAnalytics />
+        <Suspense fallback={null}>
+          <GoogleAnalytics />
+        </Suspense>
         <div className="flex-1">{children}</div>
         <Footer />
         <Analytics />

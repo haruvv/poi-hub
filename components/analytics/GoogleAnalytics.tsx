@@ -31,9 +31,9 @@ declare global {
       targetId: string | Date,
       config?: {
         page_path?: string;
-        [key: string]: any;
+        [key: string]: unknown;
       }
     ) => void;
-    dataLayer: any[];
+    dataLayer: unknown[];
   }
 }
