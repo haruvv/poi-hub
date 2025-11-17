@@ -10,6 +10,7 @@ export const metadata = {
   description: "ムダなくお得を積み上げるための、シンプルな30秒お得診断サイト",
   other: {
     "google-adsense-account": "ca-pub-2028703181823597",
+    "google-site-verification": "3YcYK7xzTPgn4F3Ii5ayHB_ktTd5qEcIUit3T0CPZy4",
   },
 };
 
