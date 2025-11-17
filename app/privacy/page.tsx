@@ -72,7 +72,34 @@ export default function PrivacyPage() {
                 アクセス解析ツールについて
               </h2>
               <p className="leading-relaxed">
-                当サイトでは、サイトの利用状況を把握するため、Googleアナリティクス等のアクセス解析ツールを使用していますこれらのツールはCookieを使用して情報を収集しますが、個人を特定する情報は含まれません
+                当サイトでは、サイトの利用状況を把握するため、Google Analytics 4（GA4）を使用しています。
+              </p>
+              <p className="leading-relaxed mt-4">
+                Google Analytics 4は、クッキー（Cookie）等を使用して匿名のトラフィックデータを収集します。これにより、ページの閲覧数やユーザーの行動パターンなどの統計情報を取得していますが、個人を特定する情報は含まれません。
+              </p>
+              <p className="leading-relaxed mt-4">
+                収集されたデータは、Googleのプライバシーポリシーに基づいて管理されます。詳細については、
+                <a
+                  href="https://policies.google.com/privacy?hl=ja"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 hover:underline"
+                >
+                  Googleのプライバシーポリシー
+                </a>
+                をご確認ください。
+              </p>
+              <p className="leading-relaxed mt-4">
+                また、Google Analyticsの利用規約については、
+                <a
+                  href="https://marketingplatform.google.com/about/analytics/terms/jp/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 hover:underline"
+                >
+                  Google Analytics利用規約
+                </a>
+                をご確認ください。
               </p>
             </section>
 
