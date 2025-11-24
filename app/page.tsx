@@ -8,13 +8,13 @@ import { TrustSection } from "@/components/top/TrustSection";
 import { getServiceById } from "@/data/services";
 
 export const metadata: Metadata = {
-  title: "ポイ活なび｜あなたに合ったお得な始め方が見つかる",
+  title: "ポイ活おすすめ｜人気サービス比較・診断サイト【ポイ活なび】",
   description:
-    "様々なサービスの中から、あなたのライフスタイルに合う選択肢を探せるお得情報サイト",
+    "ポイ活おすすめサービスを厳選紹介！高還元・初心者向け・人気のポイ活サイトを比較できます。30秒の無料診断で、あなたに合ったおすすめポイ活サービスが見つかります。",
   openGraph: {
-    title: "ポイ活なび｜あなたに合ったお得な始め方が見つかる",
+    title: "ポイ活おすすめ｜人気サービス比較・診断サイト【ポイ活なび】",
     description:
-      "様々なサービスの中から、あなたのライフスタイルに合う選択肢を探せるお得情報サイト",
+      "ポイ活おすすめサービスを厳選紹介！高還元・初心者向け・人気のポイ活サイトを比較できます。30秒の無料診断で、あなたに合ったおすすめポイ活サービスが見つかります。",
     url: "https://poikatsu-navi.com",
     siteName: "ポイ活なび",
     images: [
@@ -30,9 +30,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "ポイ活なび｜あなたに合ったお得な始め方が見つかる",
+    title: "ポイ活おすすめ｜人気サービス比較・診断サイト【ポイ活なび】",
     description:
-      "様々なサービスの中から、あなたのライフスタイルに合う選択肢を探せるお得情報サイト",
+      "ポイ活おすすめサービスを厳選紹介！高還元・初心者向け・人気のポイ活サイトを比較できます。30秒の無料診断で、あなたに合ったおすすめポイ活サービスが見つかります。",
     images: ["/logo.png"],
   },
 };
@@ -48,9 +48,31 @@ export default function Home() {
       (service): service is NonNullable<typeof service> => service !== undefined
     );
 
+  // 構造化データ（JSON-LD）
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "ポイ活なび",
+    url: "https://poikatsu-navi.com",
+    description:
+      "ポイ活おすすめサービスを厳選紹介！高還元・初心者向け・人気のポイ活サイトを比較できます。",
+    potentialAction: {
+      "@type": "SearchAction",
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate: "https://poikatsu-navi.com/diagnosis",
+      },
+      "query-input": "required name=search_term_string",
+    },
+  };
+
   return (
     <main className="min-h-screen bg-slate-50 text-slate-900">
       <HeaderBar />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       <div className="mx-auto max-w-4xl px-4 pt-8 pb-20 space-y-12 sm:space-y-16">
         {/* (1) メインヒーロー - 診断メイン構成 */}
         <MainHero />

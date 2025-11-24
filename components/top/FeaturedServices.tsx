@@ -15,10 +15,10 @@ export const FeaturedServices = ({ services }: FeaturedServicesProps) => {
           </span>
         </div>
         <h2 className="text-3xl font-extrabold text-slate-900 mb-2 tracking-tight">
-          今日のいち押し案件
+          ポイ活おすすめサービス
         </h2>
         <p className="text-[16px] font-medium text-slate-600">
-          今すぐ始めたい、おすすめサービスをピックアップ
+          今すぐ始めたい、おすすめポイ活サービスをピックアップ
         </p>
       </div>
 
