@@ -37,8 +37,8 @@ export const FeaturedServices = ({ services }: FeaturedServicesProps) => {
               {/* 一言キャッチ */}
               <div className="max-h-[72px] overflow-hidden">
                 <p className="text-sm text-slate-600 leading-relaxed whitespace-pre-line">
-                  {service.description}
-                </p>
+                {service.description}
+              </p>
               </div>
             </div>
 

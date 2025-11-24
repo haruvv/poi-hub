@@ -12,6 +12,11 @@ const GA_MEASUREMENT_ID = "G-BGDMJWS85C";
 export const metadata = {
   title: "ポイ活なび",
   description: "ムダなくお得を積み上げるための、シンプルな30秒お得診断サイト",
+  icons: {
+    icon: "/logo.png", // favicon用（.ico, .png, .svg対応）
+    apple: "/logo.png", // Apple Touch Icon用
+    shortcut: "/logo.png", // ショートカットアイコン用
+  },
   other: {
     "google-adsense-account": "ca-pub-2028703181823597",
     "google-site-verification": "3YcYK7xzTPgn4F3Ii5ayHB_ktTd5qEcIUit3T0CPZy4",
